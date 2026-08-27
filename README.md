@@ -13,11 +13,11 @@ detrás de un código de acceso.
 También se puede mandar el enlace con el código adentro y entra directo:
 `.../odontologia/?c=DENTAL-19`
 
-## Estado del dominio
+## Dominio
 
-Mientras no exista el registro `CNAME demos → unonuevecr.github.io.` en Google Cloud DNS
-(proyecto `unonueve`), el sitio vive en la URL de GitHub Pages. Para pasarlo al dominio propio:
-crear el archivo `CNAME` con `demos.unonuevecr.com` y volver a publicar.
+En vivo en **https://demos.unonuevecr.com**. El DNS lo administra **Squarespace** (los nameservers
+`ns-cloud-c*.googledomains.com` son los viejos de Google Domains, que Squarespace heredó). El
+registro es `CNAME demos → unonuevecr.github.io`, TTL 4 horas, en Registros personalizados.
 
 ## Cómo está hecho el candado
 
