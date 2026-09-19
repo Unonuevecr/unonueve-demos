@@ -93,6 +93,7 @@ select option{color:var(--tinta)}
 .next b{font:700 22px var(--serif);color:var(--ciruela)}
 .pill{font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;border-radius:999px;padding:7px 12px;background:var(--suave);color:var(--ciruela)}
 .pill.pay{background:var(--ciruela);color:#fff}
+@media(max-width:600px){.next{grid-template-columns:66px 1fr;gap:6px 12px}.next .pill{grid-column:2;justify-self:start}}
 details{background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:12px}
 summary{cursor:pointer;font-weight:600;color:var(--ciruela);list-style:none}
 summary::after{content:"+";float:right;color:var(--mauve)}
