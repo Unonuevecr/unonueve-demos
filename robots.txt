@@ -1,2 +1,24 @@
+# Las demostraciones no se indexan, pero los bots sociales sí pueden leer la
+# portada para generar la vista previa de los enlaces (LinkedIn, Facebook, etc.)
+User-agent: LinkedInBot
+Allow: /$
+Allow: /assets/
+Disallow: /
+
+User-agent: facebookexternalhit
+Allow: /$
+Allow: /assets/
+Disallow: /
+
+User-agent: Twitterbot
+Allow: /$
+Allow: /assets/
+Disallow: /
+
+User-agent: WhatsApp
+Allow: /$
+Allow: /assets/
+Disallow: /
+
 User-agent: *
 Disallow: /
