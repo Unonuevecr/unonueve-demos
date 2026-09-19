@@ -47,6 +47,7 @@ h2 em,h1 em{font-style:italic;font-weight:600;color:var(--mauve)}
 .count b{display:block;font:700 30px/1 var(--serif)}
 .count small{font:600 11px var(--cond);letter-spacing:.18em;text-transform:uppercase;color:var(--suave)}
 @media(min-width:900px){.hero .ph{left:38%}.hero .gr{background:linear-gradient(90deg,#5C464E 0,#5C464E 36%,rgba(92,70,78,.6) 48%,rgba(92,70,78,0) 66%),linear-gradient(180deg,rgba(46,42,43,.35),rgba(46,42,43,0) 30%)}.hero{align-items:center}.hero .in{padding-top:90px}}
+@media(max-width:899px){.hero{min-height:auto}.hero .ph{bottom:auto;height:440px;background-position:center 4%}.hero .gr{background:linear-gradient(180deg,rgba(46,42,43,.45) 0,rgba(46,42,43,0) 16%,rgba(92,70,78,0) 50%,#5C464E 440px)}.hero .in{padding-top:380px}}
 /* secciones */
 section.s{padding:92px 0}
 .grid{display:grid;gap:20px}
@@ -100,7 +101,7 @@ details p{margin-top:10px;color:#5d5155}
 footer{background:var(--tinta);color:#bfb1b4;padding:46px 0;font-size:14px}
 footer img{height:40px;margin-bottom:12px}
 .sticky{position:fixed;left:14px;right:14px;bottom:14px;z-index:40;display:none}
-@media(max-width:760px){.sticky{display:block}.sticky .btn{width:100%;justify-content:center}}
+@media(max-width:760px){.sticky.on{display:block}.sticky .btn{width:100%;justify-content:center}}
 </style>
 </head>
 <body>
@@ -241,6 +242,9 @@ function tick(){
   box.innerHTML = [[d,'días'],[h,'horas'],[m,'min'],[s,'seg']].map(([v,t])=>`<div><b>${String(v).padStart(2,'0')}</b><small>${t}</small></div>`).join('');
 }
 tick(); setInterval(tick,1000);
+// botón fijo en celular: aparece después del hero y se esconde en el formulario
+const st=document.querySelector('.sticky'), reg=document.getElementById('registro');
+addEventListener('scroll',()=>{const r=reg.getBoundingClientRect(); st.classList.toggle('on', scrollY>650 && !(r.top<innerHeight && r.bottom>0));},{passive:true});
 
 // registro de muestra: valida y muestra la confirmación (no envía datos a ningún lado)
 document.getElementById('f').addEventListener('submit', e => {
