@@ -58,7 +58,7 @@ input:focus{border-color:var(--mauve);background:#fff}
 .it{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 34px -26px rgba(92,70,78,.6);transition:box-shadow .3s}
 .it.open{box-shadow:0 22px 50px -26px rgba(92,70,78,.7)}
 .hd{width:100%;display:flex;gap:16px;align-items:center;text-align:left;background:none;border:0;padding:20px 22px;cursor:pointer;color:var(--tinta)}
-.hd .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--suave);color:var(--ciruela);display:grid;place-items:center;font:700 22px var(--serif);transition:.3s}
+.hd .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--suave);color:var(--ciruela);display:grid;place-items:center;font:700 22px var(--cond);transition:.3s}
 .it.open .hd .n{background:var(--ciruela);color:#fff;box-shadow:0 0 0 6px rgba(140,113,120,.18)}
 .hd .tt{flex:1}
 .hd .tt b{display:block;font:700 21px/1.15 var(--serif);color:var(--ciruela)}
@@ -142,7 +142,7 @@ document.querySelectorAll('.acc').forEach(acc=>{acc.querySelectorAll('.hd').forE
  if(!was){it.classList.add('open');h.setAttribute('aria-expanded','true');setTimeout(()=>{const r=it.getBoundingClientRect();if(r.top<70||r.top>innerHeight*.6)it.scrollIntoView({behavior:'smooth',block:'start'})},420)}
 }))});
 
-const fmt=v=>'₡'+Math.round(v).toLocaleString('es-CR');
+const fmt=v=>'₡'+String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
 function calc(){const g=id=>+document.getElementById(id).value||0;const m=g('c1')*g('c2')*g('c3')*g('c4');document.getElementById('cm').textContent=fmt(m);document.getElementById('ca').textContent=fmt(m*12)}
 ['c1','c2','c3','c4'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
 
