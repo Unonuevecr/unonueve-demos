@@ -1,87 +1,161 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Test: ¿cuánto permiso pedís? · Fabiola Murillo</title><meta name="description" content="Diez preguntas para ver dónde se te va la voz: cuando te disculpás, cuando esperás estar lista, cuando cobrás menos. Y tres prácticas para recuperarla."><meta name="robots" content="noindex">
+<title>Test: ¿cuánto permiso pedís? · Fabiola Murillo</title><meta name="description" content="Test gratis de Fabiola Murillo: ¿cuánto permiso pedís? Diez preguntas y tu resultado al instante."><meta name="robots" content="noindex">
 <meta property="og:title" content="Test: ¿cuánto permiso pedís?"><meta property="og:description" content="Gratis · Fabiola Murillo · EN VOZ ALTA®"><meta property="og:image" content="../img/og.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--mauve:#8C7178;--ciruela:#5C464E;--blush:#F5EFEF;--crema:#F0E6E6;--suave:#E6D7D9;--tinta:#2E2A2B;--serif:'Cormorant Garamond',Georgia,serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--mauve:#8C7178;--ciruela:#5C464E;--hondo:#4A3840;--blush:#F5EFEF;--crema:#F0E6E6;--suave:#E6D7D9;--tinta:#2E2A2B;--serif:'Cormorant Garamond',Georgia,serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--blush);color:var(--tinta);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}a{color:inherit}
+img{max-width:100%;display:block}a{color:inherit}button{font:inherit}
 .lbl{font:600 12px/1.3 var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--mauve)}
-.demo{position:fixed;top:14px;right:-44px;transform:rotate(45deg);background:var(--tinta);color:#fff;font:600 11px var(--cond);letter-spacing:.2em;padding:6px 52px;z-index:50;opacity:.85}
+.demo{position:fixed;top:14px;right:-44px;transform:rotate(45deg);background:var(--tinta);color:#fff;font:600 11px var(--cond);letter-spacing:.2em;padding:6px 52px;z-index:60;opacity:.85}
 .top{background:var(--ciruela);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;color:#fff}
 .top img{height:36px}.top span{font:600 12px var(--cond);letter-spacing:.3em}
-.hero{background:var(--ciruela);padding:34px 22px 60px}
-.in{max-width:1080px;margin:0 auto;display:grid;gap:34px;align-items:start}
-.head{grid-area:head}.card{grid-area:card}.list{grid-area:list}.in{grid-template-areas:'head' 'card' 'list'}
-.list{color:var(--crema)}.list li{border-top:1px solid rgba(240,230,230,.18)}.list li b{color:#fff}.list .lbl{margin-bottom:4px;color:var(--suave)}
-@media(min-width:900px){.in{grid-template-columns:1.05fr .95fr;grid-template-areas:'head card' 'list card'}.list{color:var(--crema)}.list li{border-top-color:rgba(240,230,230,.18)}.list li b{color:#fff}.list .lbl{color:var(--suave)}.hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 78%,var(--blush) 78%);padding:60px 22px 70px}}
-.copy{color:var(--crema)}
-.copy .lbl{color:var(--suave)}
-h1{font:700 clamp(40px,6.4vw,70px)/1 var(--serif);color:#fff;margin:14px 0 16px;letter-spacing:-.01em}
-h1 em{font-style:italic;font-weight:600;color:var(--suave)}
-.sub{font-size:clamp(16px,1.8vw,19px);max-width:560px}
-.mock{margin:26px 0 0;max-width:300px;border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(-3deg)}
-ul{list-style:none;margin-top:8px}
-li{position:relative;padding:9px 0 9px 30px}
-li:before{content:"✓";position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;background:var(--suave);color:var(--ciruela);font:700 12px/20px Inter;text-align:center}
-.card{background:#fff;border-radius:26px;padding:clamp(24px,4vw,38px);box-shadow:0 30px 70px -30px rgba(92,70,78,.5)}
-.card h2{font:700 30px/1.05 var(--serif);color:var(--ciruela);margin:8px 0 6px}
-.card p.m{color:#6d6164;font-size:15px}
-form{display:grid;gap:13px;margin-top:18px}
-label{font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block;margin-bottom:5px}
-input{width:100%;border:1px solid var(--suave);background:var(--blush);border-radius:13px;padding:14px 15px;font:16px Inter,sans-serif;outline:none;color:var(--tinta)}
-input:focus{border-color:var(--mauve);background:#fff}
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--ciruela);color:#fff;border:0;border-radius:999px;padding:17px 26px;font:700 15px/1 var(--cond);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;width:100%}
-.btn:hover{background:#4a3840}
+.dark{background:var(--ciruela);color:var(--crema)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1{font:700 clamp(38px,6vw,66px)/1 var(--serif);color:#fff;letter-spacing:-.01em;margin:12px 0 14px}
+h1 em,h2 em{font-style:italic;font-weight:600}
+h1 em{color:var(--suave)}
+h2{font:700 clamp(30px,4vw,44px)/1.05 var(--serif);color:var(--ciruela);margin:10px 0 14px}
+h2 em{color:var(--mauve)}
+.dark .lbl{color:var(--suave)}
+.sub{font-size:clamp(16px,1.8vw,19px);max-width:620px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--ciruela);color:#fff;border:0;border-radius:999px;padding:16px 26px;font:700 15px/1 var(--cond);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--hondo)}
+.btn.light{background:#fff;color:var(--ciruela)}
 .btn.ghost{background:transparent;color:var(--ciruela);border:1.5px solid var(--ciruela)}
-.note{font-size:12.5px;color:#8a7d80;text-align:center}
-.ok{display:none}.ok.on{display:block}
-.ok .row{display:grid;gap:10px;margin-top:18px}
+.dark .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+section.s{padding:70px 0}
+.card{background:#fff;border-radius:24px;padding:clamp(22px,4vw,36px);box-shadow:0 26px 60px -34px rgba(92,70,78,.55)}
+/* formulario */
+.formcard h2{font-size:30px}
+form{display:grid;gap:13px;margin-top:16px}
+@media(min-width:760px){form.row{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
+label{font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block;margin-bottom:5px}
+input,select{width:100%;border:1px solid var(--suave);background:var(--blush);border-radius:13px;padding:14px 15px;font:16px Inter,sans-serif;outline:none;color:var(--tinta)}
+input:focus{border-color:var(--mauve);background:#fff}
 .bad{border-color:#c77 !important}
-.after{max-width:1080px;margin:0 auto;padding:0 22px 70px;display:grid;gap:18px}
-@media(min-width:900px){.after{grid-template-columns:1fr 1fr}}
-.box{background:#fff;border-radius:22px;padding:28px}
-.box.dark{background:var(--ciruela);color:var(--crema)}
+.note{font-size:12.5px;color:#8a7d80;margin-top:10px}
+.ok{display:none}.ok.on{display:block}
+.ok .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+/* bases */
+.bases{display:grid;gap:14px}
+@media(min-width:860px){.bases{grid-template-columns:1fr 1fr}}
+.src{background:#fff;border-radius:18px;padding:18px 20px;border-left:4px solid var(--mauve)}
+.src b{display:block;color:var(--ciruela);font:700 19px/1.2 var(--serif);margin-bottom:4px}
+.src span{font-size:14.5px;color:#5d5155}
+.base{background:var(--crema);border-radius:16px;padding:14px 16px;margin-top:14px;font-size:14.5px;color:#4d4245}
+.base .t{font:700 12px var(--cond);letter-spacing:.18em;text-transform:uppercase;color:var(--mauve);display:flex;gap:8px;align-items:center;margin-bottom:4px}
+.base i{font-style:italic}
+.ba{display:grid;gap:10px;margin-top:14px}
+@media(min-width:620px){.ba{grid-template-columns:1fr 1fr}}
+.ba div{border-radius:14px;padding:13px 15px;font-size:14.5px}
+.ba .a{background:var(--blush);color:#7a6d70}.ba .b{background:var(--ciruela);color:#fff}
+.ba .h{font:600 11px var(--cond);letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:3px}
+.try{border:1.5px dashed var(--mauve);border-radius:14px;padding:12px 15px;margin-top:14px;font-size:14.5px}
+.try b{font:700 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block}
+/* acordeón */
+.acc{display:grid;gap:12px}
+.it{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 34px -26px rgba(92,70,78,.6);transition:box-shadow .3s}
+.it.open{box-shadow:0 22px 50px -26px rgba(92,70,78,.7)}
+.hd{width:100%;display:flex;gap:16px;align-items:center;text-align:left;background:none;border:0;padding:20px 22px;cursor:pointer;color:var(--tinta)}
+.hd .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--suave);color:var(--ciruela);display:grid;place-items:center;font:700 22px var(--serif);transition:.3s}
+.it.open .hd .n{background:var(--ciruela);color:#fff;box-shadow:0 0 0 6px rgba(140,113,120,.18)}
+.hd .tt{flex:1}
+.hd .tt b{display:block;font:700 21px/1.15 var(--serif);color:var(--ciruela)}
+.hd .tt small{color:#7a6d70;font-size:14px}
+.hd .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--suave);display:grid;place-items:center;color:var(--mauve);font-size:20px;transition:transform .35s}
+.it.open .hd .pl{transform:rotate(45deg);border-color:var(--mauve)}
+.bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+.it.open .bd{grid-template-rows:1fr}
+.bd>div{overflow:hidden}
+.bd .in{padding:0 22px 24px 84px}
+@media(max-width:620px){.bd .in{padding:0 18px 22px}}
+.chk{list-style:none;display:grid;gap:8px;margin-top:10px}
+.chk label{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font:15px/1.45 Inter;color:var(--tinta);margin:0;cursor:pointer}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--ciruela)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:10px}
+td,th{padding:9px 10px;border-bottom:1px solid var(--suave);text-align:left;vertical-align:top}
+th{font:600 11px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve)}
+.next{display:grid;gap:18px}
+@media(min-width:860px){.next{grid-template-columns:1fr 1fr}}
+.box{border-radius:22px;padding:28px;background:#fff}
+.box.d{background:var(--ciruela);color:var(--crema)}.box.d h3{color:#fff}.box.d .lbl{color:var(--suave)}
 .box h3{font:700 26px/1.1 var(--serif);color:var(--ciruela);margin:8px 0 6px}
-.box.dark h3{color:#fff}.box.dark .lbl{color:var(--suave)}
-.box .btn{width:auto;margin-top:16px}
-.box.dark .btn{background:#fff;color:var(--ciruela)}
-.who{display:flex;gap:16px;align-items:center}
-.who .ph{flex:none;width:86px;height:86px;border-radius:50%;background:url(../img/hero.jpg) center 8%/cover}
-.stats{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;font:600 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--mauve)}
-.stats b{font:700 22px var(--serif);color:var(--ciruela);letter-spacing:0;margin-right:4px}
+.box .btn{margin-top:16px}.box.d .btn{background:#fff;color:var(--ciruela)}
 footer{background:var(--tinta);color:#bfb1b4;padding:34px 22px;font-size:13px;text-align:center}
-</style></head><body>
-<div class="demo">MUESTRA</div>
-<div class="top"><img src="../img/fm_white.png" alt="Fabiola Murillo"><span>EN VOZ ALTA®</span></div>
-<section class="hero"><div class="in">
- <div class="copy head"><div class="lbl">Test gratis · solo para mujeres</div><h1>¿Cuánto permiso<br><em>pedís?</em></h1><p class="sub">Diez preguntas para ver dónde se te va la voz: cuando te disculpás, cuando esperás estar lista, cuando cobrás menos. Y tres prácticas para recuperarla.</p></div>
- <div class="list"><div class="lbl">Qué incluye</div><ul><li><b>El test de 10 preguntas</b> (te toma 3 minutos).</li><li><b>Tu resultado:</b> voz en crecimiento, permiso en automático o permiso para existir.</li><li><b>Qué significa</b> cada resultado, sin juzgarte.</li><li><b>3 prácticas para 7 días:</b> la frase sin disculpa, el logro sin «pero», pedir una cosa.</li></ul><img class="mock" src="../img/pdf-permiso.jpg" alt="Portada: Test: ¿cuánto permiso pedís?"></div>
- <div class="card" id="registro">
-  <div id="fb"><div class="lbl">Gratis · te llega al instante</div><h2>¿A dónde te lo mandamos?</h2><p class="m">Dejá tus datos y lo recibís ya mismo.</p>
-   <form id="f" novalidate>
-    <div><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Tu nombre" autocomplete="given-name"></div>
-    <div><label for="w">WhatsApp</label><input id="w" name="whatsapp" inputmode="tel" placeholder="8888 8888" autocomplete="tel"></div>
-    <div><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="nombre@correo.com" autocomplete="email"></div>
-    <button class="btn" type="submit">Quiero hacer el test →</button>
-    <p class="note">Versión de muestra: este formulario todavía no guarda datos.</p>
-   </form></div>
-  <div class="ok" id="ok"><div class="lbl">¡Listo!</div><h2>Gracias, <span id="nom"></span></h2><p class="m">Aquí está tu guía. También te la mandamos por WhatsApp y correo.</p><div class="row"><a class="btn" href="../test-PERMISO.pdf" download>Descargar el PDF</a><a class="btn ghost" href="../test-PERMISO.pdf" target="_blank" rel="noopener">Abrirlo aquí</a></div></div>
+.disc{font-size:13px;color:#7a6d70;margin-top:12px}
+
+.hero{padding:38px 0 60px}
+.quiz{max-width:760px;margin:26px auto 0}
+.bar{height:8px;border-radius:8px;background:rgba(255,255,255,.18);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#fff;border-radius:8px;transition:width .4s}
+.qmeta{display:flex;justify-content:space-between;margin:10px 0 16px;font:600 13px var(--cond);letter-spacing:.18em;text-transform:uppercase;color:var(--suave)}
+.q{background:#fff;color:var(--tinta);border-radius:26px;padding:clamp(22px,4vw,36px);box-shadow:0 30px 70px -30px rgba(0,0,0,.6);animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}
+.q h3{font:700 clamp(26px,3.4vw,34px)/1.12 var(--serif);color:var(--ciruela)}
+.q .ex{color:#7a6d70;font-style:italic;margin:6px 0 18px}
+.opts{display:grid;gap:10px}
+@media(min-width:620px){.opts{grid-template-columns:repeat(3,1fr)}}
+.opt{border:1.5px solid var(--suave);background:var(--blush);border-radius:16px;padding:16px 12px;cursor:pointer;text-align:center;transition:.2s;color:var(--tinta)}
+.opt b{display:block;font:700 26px var(--serif);color:var(--ciruela)}
+.opt:hover,.opt.sel{border-color:var(--ciruela);background:#fff;transform:translateY(-2px)}
+.opt.sel{background:var(--ciruela);color:#fff}.opt.sel b{color:#fff}
+.back{background:none;border:0;color:var(--suave);cursor:pointer;margin-top:14px;font:600 13px var(--cond);letter-spacing:.16em;text-transform:uppercase}
+.start{text-align:center;margin-top:10px}
+.res{display:none}.res.on{display:block;animation:in .5s ease}
+.score{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.score .big{width:110px;height:110px;border-radius:50%;background:var(--ciruela);color:#fff;display:grid;place-items:center;font:700 44px var(--serif);flex:none;box-shadow:0 0 0 8px rgba(140,113,120,.2)}
+.meter{position:relative;height:12px;border-radius:12px;background:linear-gradient(90deg,#E6D7D9,#9F7F77,#5C464E);margin:18px 0 6px}
+.meter i{position:absolute;top:-5px;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--ciruela);transform:translateX(-50%);transition:left 1s cubic-bezier(.2,.8,.2,1)}
+.mlbl{display:flex;justify-content:space-between;font:600 11px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:#7a6d70}
+ol.pr{list-style:none;counter-reset:p;display:grid;gap:8px;margin-top:10px}
+ol.pr li{counter-increment:p;background:var(--blush);border-radius:14px;padding:12px 14px 12px 50px;position:relative}
+ol.pr li:before{content:counter(p);position:absolute;left:14px;top:10px;width:26px;height:26px;border-radius:50%;background:var(--ciruela);color:#fff;display:grid;place-items:center;font:700 14px Inter}
+</style></head><body><div class="demo">MUESTRA</div>
+<div class="top"><img src="../img/fm_white.png" alt="Fabiola Murillo"><span>EN VOZ ALTA®</span></div><section class="dark hero"><div class="wrap">
+ <div style="max-width:720px"><div class="lbl">Test gratis · 3 minutos · solo para mujeres</div><h1>¿Cuánto permiso<br><em>pedís?</em></h1>
+ <p class="sub">Diez situaciones. Marcá con qué frecuencia te pasan. Al final ves tu resultado y tres prácticas para esta semana.</p></div>
+ <div class="quiz" id="quiz">
+  <div id="intro" class="start"><button class="btn light" id="go" style="font-size:17px;padding:19px 34px">Empezar el test →</button><p style="margin-top:12px;color:var(--suave);font-size:14px">Nadie más ve tus respuestas.</p></div>
+  <div id="qa" style="display:none"><div class="bar"><i id="barf"></i></div><div class="qmeta"><span id="qn">Pregunta 1 de 10</span><span>Con honestidad</span></div><div id="qbox"></div><button class="back" id="back">← Anterior</button></div>
  </div>
+ <div class="quiz res card" id="res" style="color:var(--tinta)"></div>
 </div></section>
-<section class="after">
- <div class="box dark"><div class="lbl">Siguiente paso · masterclass para mujeres</div><h3>Ya no pido permiso</h3><p>Jueves 19 de noviembre · 7:00 p.m. · Zoom</p><a class="btn" href="../masterclass/">Ver las fechas</a></div>
- <div class="box"><div class="who"><div class="ph"></div><div><div class="lbl">Quién te lo manda</div><h3 style="margin:4px 0 2px">Fabiola Murillo</h3><p>Speaker y asesora de liderazgo, creadora del método CLIP® y de EN VOZ ALTA®.</p></div></div>
-  <div class="stats"><span><b>+10</b>años</span><span><b>+3.000</b>personas</span><span><b>+100</b>speakers</span><span>🇨🇷 🇵🇦 🇲🇽 🇬🇹</span></div></div>
-</section>
-<footer><b style="color:#fff">Fabiola Murillo · EN VOZ ALTA®</b><br>La escuela donde las mujeres dejan de pedir permiso para liderar.<br><span style="opacity:.6">@fabiolamurillocr · Página de muestra preparada por UNONUEVE</span></footer>
-<script>
+<section class="s"><div class="wrap"><div class="card formcard" id="registro">
+ <div id="fb"><div class="lbl">Gratis · en PDF</div><h2>Recibí tu resultado y las prácticas</h2><p style="color:#6d6164">Te mandamos el test completo en PDF con tu resultado y las prácticas de 7 días.</p>
+  <form id="f" class="row" novalidate>
+   <div><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Tu nombre" autocomplete="given-name"></div>
+   <div><label for="w">WhatsApp</label><input id="w" name="whatsapp" inputmode="tel" placeholder="8888 8888" autocomplete="tel"></div>
+   <div><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="nombre@correo.com" autocomplete="email"></div>
+   <div><button class="btn" type="submit" style="width:100%">Enviámelo →</button></div>
+  </form><p class="note">Versión de muestra: este formulario todavía no guarda datos.</p></div>
+ <div class="ok" id="ok"><div class="lbl">¡Listo!</div><h2>Gracias, <span id="nom"></span></h2><p style="color:#6d6164">Aquí está el PDF. También te lo mandamos por WhatsApp y correo.</p><div class="row"><a class="btn" href="../test-PERMISO.pdf" download>Descargar el PDF</a><a class="btn ghost" href="../test-PERMISO.pdf" target="_blank" rel="noopener">Abrirlo aquí</a></div></div>
+</div></div></section>
+<section class="s" style="padding-top:0"><div class="wrap next">
+ <div class="box d"><div class="lbl">Siguiente paso · masterclass para mujeres</div><h3>Ya no pido permiso</h3><p>Hacemos el test en vivo y trabajamos tu presentación sin disculpas. Jueves 19 de noviembre · 7:00 p.m. · Zoom.</p><a class="btn" href="../masterclass/">Ver el programa</a></div>
+ <div class="box"><div class="lbl">Importante</div><h3>Es para reflexionar</h3><p>Este test es una herramienta para mirarte con honestidad, no un diagnóstico psicológico. Si algo de lo que marcaste te pesa mucho, hablarlo con una profesional ayuda.</p></div>
+</div></section>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="lbl">Fuentes</div><h2>En qué se basa el test</h2><div class="bases"><div class="src"><b>Clance & Imes (1978) · Psychotherapy: Theory, Research & Practice</b><span>Describieron el «fenómeno del impostor» en mujeres de alto desempeño que no se sentían merecedoras de sus logros. Preguntas 3 y 10.</span></div><div class="src"><b>Katty Kay & Claire Shipman · The Confidence Code (2014)</b><span>La brecha de confianza. Citan un informe interno de HP: los hombres se postulan a un puesto cumpliendo cerca del 60 % de los requisitos; las mujeres esperan cumplir el 100 %. Preguntas 2 y 7.</span></div><div class="src"><b>Linda Babcock & Sara Laschever · Women Don't Ask (2003)</b><span>Las mujeres negocian su salario y sus condiciones con mucha menos frecuencia que los hombres. Preguntas 4 y 9.</span></div><div class="src"><b>Schumann & Ross (2010) · Psychological Science</b><span>Las mujeres se disculpan más porque consideran que más situaciones lo ameritan. Pregunta 1.</span></div></div></div></section><footer><b style="color:#fff">Fabiola Murillo · EN VOZ ALTA®</b><br>La escuela donde las mujeres dejan de pedir permiso para liderar.<br><span style="opacity:.6">@fabiolamurillocr · Página de muestra preparada por UNONUEVE</span></footer><script>
+const P=[["Me disculpo antes de dar mi opinión.", "«Perdón, pero…», «tal vez me equivoco…»"], ["Espero estar 100 % lista antes de proponer algo.", "Si no tengo todas las respuestas, no hablo."], ["Minimizo mis logros.", "«No fue nada», «tuve suerte», «lo hicimos entre todos»."], ["Cobro o pido menos de lo que vale mi trabajo.", "Bajo el precio antes de que me lo pidan."], ["Pregunto «¿está bien así?» antes de decidir.", "Necesito que alguien valide antes de moverme."], ["Me guardo una idea y después alguien más la dice.", "Y se lleva el crédito."], ["Hablo al final, cuando ya se decidió casi todo.", "Espero el momento perfecto."], ["Bajo la mirada o la voz cuando me cuestionan.", "Retrocedo aunque tenga razón."], ["Explico de más para justificar lo que pido.", "Cinco razones para una solicitud de una línea."], ["Siento que tengo que ganarme el lugar en cada sala.", "Aunque ya me invitaron por lo que sé."]], R=[{"r": "0 – 6", "n": "Voz en crecimiento", "c": "Ya ocupás tu lugar la mayoría de las veces. Tu trabajo ahora es de presencia: que lo que decís pese todavía más.", "clip": "Impáctate", "p": ["Grabate 30 segundos y ajustá mirada y cierre de frase.", "Proponé algo en la primera parte de cada reunión.", "Ayudá a otra mujer a tomar su turno: amplificá su idea."]}, {"r": "7 – 13", "n": "Permiso en automático", "c": "Tenés la capacidad, pero hay hábitos que te restan sin que te des cuenta: la disculpa, el «¿está bien así?», el esperar. Se cambian con práctica diaria.", "clip": "Levántate", "p": ["La frase sin disculpa: «Soy ___, ayudo a ___ a ___», tres veces al día.", "El logro sin «pero»: respondé «Gracias, trabajé mucho en eso».", "Pedí una cosa esta semana, en una frase, sin justificar."]}, {"r": "14 – 20", "n": "Pedís permiso para existir", "c": "No es falta de talento: es una historia sobre quién sos. Acá el trabajo empieza por la identidad, no por la técnica. Y se puede.", "clip": "Créetela", "p": ["Escribí 3 logros concretos con cifras. Leelos antes de cada reunión.", "Cambiá «no sé si puedo» por «voy a intentarlo».", "Elegí UNA sala esta semana donde vas a hablar primero."]}]; let i=0; const A=Array(P.length).fill(null);
+const qbox=document.getElementById('qbox'), qn=document.getElementById('qn'), barf=document.getElementById('barf'), res=document.getElementById('res');
+document.getElementById('go').onclick=()=>{document.getElementById('intro').style.display='none';document.getElementById('qa').style.display='block';show()};
+function show(){const [t,ex]=P[i];qn.textContent='Pregunta '+(i+1)+' de '+P.length;barf.style.width=(i/P.length*100)+'%';
+ qbox.innerHTML=`<div class="q"><h3>${t}</h3><p class="ex">${ex}</p><div class="opts">${[['0','Casi nunca'],['1','A veces'],['2','Casi siempre']].map(([v,l])=>`<button class="opt${A[i]==v?' sel':''}" data-v="${v}"><b>${v}</b>${l}</button>`).join('')}</div></div>`;
+ qbox.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{A[i]=+b.dataset.v;b.classList.add('sel');setTimeout(()=>{if(i<P.length-1){i++;show()}else fin()},260)});
+ document.getElementById('back').style.visibility=i?'visible':'hidden';}
+document.getElementById('back').onclick=()=>{if(i>0){i--;show()}};
+function fin(){barf.style.width='100%';const s=A.reduce((a,b)=>a+b,0);const r=s<=6?R[0]:(s<=13?R[1]:R[2]);
+ document.getElementById('quiz').style.display='none';
+ res.innerHTML=`<div class="lbl">Tu resultado</div><div class="score"><div class="big">${s}</div><div><h2 style="margin:0">${r.n}</h2><div style="color:#7a6d70">${r.r} puntos de 20 · trabajo del método CLIP: <b>${r.clip}</b></div></div></div>
+ <div class="meter"><i id="mk" style="left:0"></i></div><div class="mlbl"><span>Voz en crecimiento</span><span>Permiso en automático</span><span>Permiso para existir</span></div>
+ <p style="margin-top:16px;font-size:17px">${r.c}</p><h3 style="font:700 22px var(--serif);color:var(--ciruela);margin-top:18px">Tus 3 prácticas para 7 días</h3><ol class="pr">${r.p.map(x=>`<li>${x}</li>`).join('')}</ol>
+ <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px"><a class="btn" href="#registro">Recibir mi resultado en PDF</a><button class="btn ghost" id="rep">Repetir el test</button></div>`;
+ res.classList.add('on');setTimeout(()=>{document.getElementById('mk').style.left=(s/20*100)+'%'},80);res.scrollIntoView({behavior:'smooth',block:'start'});
+ document.getElementById('rep').onclick=()=>{A.fill(null);i=0;res.classList.remove('on');document.getElementById('quiz').style.display='block';show();document.getElementById('quiz').scrollIntoView({behavior:'smooth'})};}
+
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const f=e.target;[...f.querySelectorAll('input')].forEach(i=>i.classList.remove('bad'));
 const n=f.nombre.value.trim(),w=f.whatsapp.value.replace(/\D/g,''),c=f.correo.value.trim();let b=null;
 if(!n)b=f.nombre;else if(w.length<8)b=f.whatsapp;else if(!/^\S+@\S+\.\S+$/.test(c))b=f.correo;
 if(b){b.classList.add('bad');b.focus();return}
-document.getElementById('nom').textContent=n.split(' ')[0];document.getElementById('fb').style.display='none';document.getElementById('ok').classList.add('on');
-document.getElementById('registro').scrollIntoView({behavior:'smooth',block:'center'});});
+document.getElementById('nom').textContent=n.split(' ')[0];document.getElementById('fb').style.display='none';document.getElementById('ok').classList.add('on');});
 </script></body></html>

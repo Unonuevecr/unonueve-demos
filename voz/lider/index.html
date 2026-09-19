@@ -1,87 +1,154 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Checklist del líder que se escucha · Fabiola Murillo</title><meta name="description" content="Menos horas en reuniones, más decisiones tomadas. La herramienta para que tus instrucciones no vuelvan y tu equipo deje de reprocesar."><meta name="robots" content="noindex">
+<title>Checklist del líder que se escucha · Fabiola Murillo</title><meta name="description" content="Checklist interactivo gratis de Fabiola Murillo para jefaturas: reuniones, instrucciones, escucha y feedback."><meta name="robots" content="noindex">
 <meta property="og:title" content="Checklist del líder que se escucha"><meta property="og:description" content="Gratis · Fabiola Murillo · EN VOZ ALTA®"><meta property="og:image" content="../img/og.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--mauve:#8C7178;--ciruela:#5C464E;--blush:#F5EFEF;--crema:#F0E6E6;--suave:#E6D7D9;--tinta:#2E2A2B;--serif:'Cormorant Garamond',Georgia,serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--mauve:#8C7178;--ciruela:#5C464E;--hondo:#4A3840;--blush:#F5EFEF;--crema:#F0E6E6;--suave:#E6D7D9;--tinta:#2E2A2B;--serif:'Cormorant Garamond',Georgia,serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--blush);color:var(--tinta);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}a{color:inherit}
+img{max-width:100%;display:block}a{color:inherit}button{font:inherit}
 .lbl{font:600 12px/1.3 var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--mauve)}
-.demo{position:fixed;top:14px;right:-44px;transform:rotate(45deg);background:var(--tinta);color:#fff;font:600 11px var(--cond);letter-spacing:.2em;padding:6px 52px;z-index:50;opacity:.85}
+.demo{position:fixed;top:14px;right:-44px;transform:rotate(45deg);background:var(--tinta);color:#fff;font:600 11px var(--cond);letter-spacing:.2em;padding:6px 52px;z-index:60;opacity:.85}
 .top{background:var(--ciruela);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;color:#fff}
 .top img{height:36px}.top span{font:600 12px var(--cond);letter-spacing:.3em}
-.hero{background:var(--ciruela);padding:34px 22px 60px}
-.in{max-width:1080px;margin:0 auto;display:grid;gap:34px;align-items:start}
-.head{grid-area:head}.card{grid-area:card}.list{grid-area:list}.in{grid-template-areas:'head' 'card' 'list'}
-.list{color:var(--crema)}.list li{border-top:1px solid rgba(240,230,230,.18)}.list li b{color:#fff}.list .lbl{margin-bottom:4px;color:var(--suave)}
-@media(min-width:900px){.in{grid-template-columns:1.05fr .95fr;grid-template-areas:'head card' 'list card'}.list{color:var(--crema)}.list li{border-top-color:rgba(240,230,230,.18)}.list li b{color:#fff}.list .lbl{color:var(--suave)}.hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 78%,var(--blush) 78%);padding:60px 22px 70px}}
-.copy{color:var(--crema)}
-.copy .lbl{color:var(--suave)}
-h1{font:700 clamp(40px,6.4vw,70px)/1 var(--serif);color:#fff;margin:14px 0 16px;letter-spacing:-.01em}
-h1 em{font-style:italic;font-weight:600;color:var(--suave)}
-.sub{font-size:clamp(16px,1.8vw,19px);max-width:560px}
-.mock{margin:26px 0 0;max-width:300px;border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(-3deg)}
-ul{list-style:none;margin-top:8px}
-li{position:relative;padding:9px 0 9px 30px}
-li:before{content:"✓";position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;background:var(--suave);color:var(--ciruela);font:700 12px/20px Inter;text-align:center}
-.card{background:#fff;border-radius:26px;padding:clamp(24px,4vw,38px);box-shadow:0 30px 70px -30px rgba(92,70,78,.5)}
-.card h2{font:700 30px/1.05 var(--serif);color:var(--ciruela);margin:8px 0 6px}
-.card p.m{color:#6d6164;font-size:15px}
-form{display:grid;gap:13px;margin-top:18px}
-label{font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block;margin-bottom:5px}
-input{width:100%;border:1px solid var(--suave);background:var(--blush);border-radius:13px;padding:14px 15px;font:16px Inter,sans-serif;outline:none;color:var(--tinta)}
-input:focus{border-color:var(--mauve);background:#fff}
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--ciruela);color:#fff;border:0;border-radius:999px;padding:17px 26px;font:700 15px/1 var(--cond);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;width:100%}
-.btn:hover{background:#4a3840}
+.dark{background:var(--ciruela);color:var(--crema)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1{font:700 clamp(38px,6vw,66px)/1 var(--serif);color:#fff;letter-spacing:-.01em;margin:12px 0 14px}
+h1 em,h2 em{font-style:italic;font-weight:600}
+h1 em{color:var(--suave)}
+h2{font:700 clamp(30px,4vw,44px)/1.05 var(--serif);color:var(--ciruela);margin:10px 0 14px}
+h2 em{color:var(--mauve)}
+.dark .lbl{color:var(--suave)}
+.sub{font-size:clamp(16px,1.8vw,19px);max-width:620px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--ciruela);color:#fff;border:0;border-radius:999px;padding:16px 26px;font:700 15px/1 var(--cond);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--hondo)}
+.btn.light{background:#fff;color:var(--ciruela)}
 .btn.ghost{background:transparent;color:var(--ciruela);border:1.5px solid var(--ciruela)}
-.note{font-size:12.5px;color:#8a7d80;text-align:center}
-.ok{display:none}.ok.on{display:block}
-.ok .row{display:grid;gap:10px;margin-top:18px}
+.dark .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+section.s{padding:70px 0}
+.card{background:#fff;border-radius:24px;padding:clamp(22px,4vw,36px);box-shadow:0 26px 60px -34px rgba(92,70,78,.55)}
+/* formulario */
+.formcard h2{font-size:30px}
+form{display:grid;gap:13px;margin-top:16px}
+@media(min-width:760px){form.row{grid-template-columns:1fr 1fr 1fr auto;align-items:end}}
+label{font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block;margin-bottom:5px}
+input,select{width:100%;border:1px solid var(--suave);background:var(--blush);border-radius:13px;padding:14px 15px;font:16px Inter,sans-serif;outline:none;color:var(--tinta)}
+input:focus{border-color:var(--mauve);background:#fff}
 .bad{border-color:#c77 !important}
-.after{max-width:1080px;margin:0 auto;padding:0 22px 70px;display:grid;gap:18px}
-@media(min-width:900px){.after{grid-template-columns:1fr 1fr}}
-.box{background:#fff;border-radius:22px;padding:28px}
-.box.dark{background:var(--ciruela);color:var(--crema)}
+.note{font-size:12.5px;color:#8a7d80;margin-top:10px}
+.ok{display:none}.ok.on{display:block}
+.ok .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+/* bases */
+.bases{display:grid;gap:14px}
+@media(min-width:860px){.bases{grid-template-columns:1fr 1fr}}
+.src{background:#fff;border-radius:18px;padding:18px 20px;border-left:4px solid var(--mauve)}
+.src b{display:block;color:var(--ciruela);font:700 19px/1.2 var(--serif);margin-bottom:4px}
+.src span{font-size:14.5px;color:#5d5155}
+.base{background:var(--crema);border-radius:16px;padding:14px 16px;margin-top:14px;font-size:14.5px;color:#4d4245}
+.base .t{font:700 12px var(--cond);letter-spacing:.18em;text-transform:uppercase;color:var(--mauve);display:flex;gap:8px;align-items:center;margin-bottom:4px}
+.base i{font-style:italic}
+.ba{display:grid;gap:10px;margin-top:14px}
+@media(min-width:620px){.ba{grid-template-columns:1fr 1fr}}
+.ba div{border-radius:14px;padding:13px 15px;font-size:14.5px}
+.ba .a{background:var(--blush);color:#7a6d70}.ba .b{background:var(--ciruela);color:#fff}
+.ba .h{font:600 11px var(--cond);letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:3px}
+.try{border:1.5px dashed var(--mauve);border-radius:14px;padding:12px 15px;margin-top:14px;font-size:14.5px}
+.try b{font:700 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block}
+/* acordeón */
+.acc{display:grid;gap:12px}
+.it{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 34px -26px rgba(92,70,78,.6);transition:box-shadow .3s}
+.it.open{box-shadow:0 22px 50px -26px rgba(92,70,78,.7)}
+.hd{width:100%;display:flex;gap:16px;align-items:center;text-align:left;background:none;border:0;padding:20px 22px;cursor:pointer;color:var(--tinta)}
+.hd .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--suave);color:var(--ciruela);display:grid;place-items:center;font:700 22px var(--serif);transition:.3s}
+.it.open .hd .n{background:var(--ciruela);color:#fff;box-shadow:0 0 0 6px rgba(140,113,120,.18)}
+.hd .tt{flex:1}
+.hd .tt b{display:block;font:700 21px/1.15 var(--serif);color:var(--ciruela)}
+.hd .tt small{color:#7a6d70;font-size:14px}
+.hd .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--suave);display:grid;place-items:center;color:var(--mauve);font-size:20px;transition:transform .35s}
+.it.open .hd .pl{transform:rotate(45deg);border-color:var(--mauve)}
+.bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+.it.open .bd{grid-template-rows:1fr}
+.bd>div{overflow:hidden}
+.bd .in{padding:0 22px 24px 84px}
+@media(max-width:620px){.bd .in{padding:0 18px 22px}}
+.chk{list-style:none;display:grid;gap:8px;margin-top:10px}
+.chk label{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font:15px/1.45 Inter;color:var(--tinta);margin:0;cursor:pointer}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--ciruela)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:10px}
+td,th{padding:9px 10px;border-bottom:1px solid var(--suave);text-align:left;vertical-align:top}
+th{font:600 11px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve)}
+.next{display:grid;gap:18px}
+@media(min-width:860px){.next{grid-template-columns:1fr 1fr}}
+.box{border-radius:22px;padding:28px;background:#fff}
+.box.d{background:var(--ciruela);color:var(--crema)}.box.d h3{color:#fff}.box.d .lbl{color:var(--suave)}
 .box h3{font:700 26px/1.1 var(--serif);color:var(--ciruela);margin:8px 0 6px}
-.box.dark h3{color:#fff}.box.dark .lbl{color:var(--suave)}
-.box .btn{width:auto;margin-top:16px}
-.box.dark .btn{background:#fff;color:var(--ciruela)}
-.who{display:flex;gap:16px;align-items:center}
-.who .ph{flex:none;width:86px;height:86px;border-radius:50%;background:url(../img/hero.jpg) center 8%/cover}
-.stats{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;font:600 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--mauve)}
-.stats b{font:700 22px var(--serif);color:var(--ciruela);letter-spacing:0;margin-right:4px}
+.box .btn{margin-top:16px}.box.d .btn{background:#fff;color:var(--ciruela)}
 footer{background:var(--tinta);color:#bfb1b4;padding:34px 22px;font-size:13px;text-align:center}
-</style></head><body>
-<div class="demo">MUESTRA</div>
-<div class="top"><img src="../img/fm_white.png" alt="Fabiola Murillo"><span>EN VOZ ALTA®</span></div>
-<section class="hero"><div class="in">
- <div class="copy head"><div class="lbl">Checklist gratis · para jefaturas y equipos</div><h1>Checklist del líder<br><em>que se escucha</em></h1><p class="sub">Menos horas en reuniones, más decisiones tomadas. La herramienta para que tus instrucciones no vuelvan y tu equipo deje de reprocesar.</p></div>
- <div class="list"><div class="lbl">Qué incluye</div><ul><li><b>La reunión de 15 minutos:</b> antes, durante y después.</li><li><b>Cuánto le cuesta</b> a tu empresa una reunión que no decide nada.</li><li><b>Dos líderes, dos ajustes:</b> el que se calla y el que domina.</li><li><b>5 frases</b> que evitan reprocesos.</li></ul><img class="mock" src="../img/pdf-lider.jpg" alt="Portada: Checklist del líder que se escucha"></div>
- <div class="card" id="registro">
-  <div id="fb"><div class="lbl">Gratis · te llega al instante</div><h2>¿A dónde te lo mandamos?</h2><p class="m">Dejá tus datos y lo recibís ya mismo.</p>
-   <form id="f" novalidate>
-    <div><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Tu nombre" autocomplete="given-name"></div>
-    <div><label for="w">WhatsApp</label><input id="w" name="whatsapp" inputmode="tel" placeholder="8888 8888" autocomplete="tel"></div>
-    <div><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="nombre@correo.com" autocomplete="email"></div>
-    <button class="btn" type="submit">Enviame el checklist →</button>
-    <p class="note">Versión de muestra: este formulario todavía no guarda datos.</p>
-   </form></div>
-  <div class="ok" id="ok"><div class="lbl">¡Listo!</div><h2>Gracias, <span id="nom"></span></h2><p class="m">Aquí está tu guía. También te la mandamos por WhatsApp y correo.</p><div class="row"><a class="btn" href="../checklist-LIDER.pdf" download>Descargar el PDF</a><a class="btn ghost" href="../checklist-LIDER.pdf" target="_blank" rel="noopener">Abrirlo aquí</a></div></div>
- </div>
+.disc{font-size:13px;color:#7a6d70;margin-top:12px}
+
+.hero{padding:38px 0 60px}
+.calc{display:grid;gap:10px;margin-top:12px}
+@media(min-width:620px){.calc{grid-template-columns:repeat(4,1fr)}}
+.calc label{margin-bottom:4px}
+.tot{margin-top:14px;background:var(--ciruela);color:#fff;border-radius:16px;padding:16px 18px;display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline}
+.tot b{font:700 34px var(--serif)}
+.tot small{color:var(--suave);font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase}
+.acc .it{background:#fff}
+</style></head><body><div class="demo">MUESTRA</div>
+<div class="top"><img src="../img/fm_white.png" alt="Fabiola Murillo"><span>EN VOZ ALTA®</span></div><section class="dark hero"><div class="wrap"><div style="max-width:760px"><div class="lbl">Checklist gratis · para jefaturas y equipos</div><h1>Checklist del líder<br><em>que se escucha</em></h1>
+<p class="sub">Menos horas en reuniones, más decisiones tomadas. Abrí cada punto: qué hacer, un ejemplo y la investigación que lo respalda.</p></div></div></section>
+<section class="s" style="padding-top:34px"><div class="wrap"><div class="acc"><div class="it open"><button class="hd" aria-expanded="true"><span class="n">1</span><span class="tt"><b>La reunión de 15 minutos</b><small>Antes, durante y después</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><p>Una reunión corta obliga a llegar con el objetivo claro y a salir con una decisión. Marcá lo que ya hacés:</p>
+<ul class="chk"><li><label><input type="checkbox">Antes: un solo objetivo, escrito en la invitación</label></li><li><label><input type="checkbox">Antes: solo están las personas que deciden o ejecutan</label></li>
+<li><label><input type="checkbox">Durante: abro diciendo el objetivo y la hora de salida</label></li><li><label><input type="checkbox">Durante: resumo antes de responder</label></li>
+<li><label><input type="checkbox">Después: decisión · responsable · fecha, por escrito en menos de una hora</label></li></ul>
+<div class="ba"><div class="a"><div class="h">Así no</div>«Reunión para ver lo del proyecto» · 60 minutos · 9 personas.</div><div class="b"><div class="h">Así sí</div>«Decidir si lanzamos el 15 o el 30» · 15 minutos · 4 personas.</div></div><div class="base"><div class="t">📚 La base</div>Steven Rogelberg, <i>The Surprising Science of Meetings</i> (2019): las reuniones tienden a estirarse hasta ocupar todo el tiempo agendado (la ley de Parkinson), y agendarlas más cortas mejora el foco. Patrick Lencioni, <i>Death by Meeting</i> (2004): cada tipo de reunión necesita un propósito distinto.</div></div></div></div></div><div class="it"><button class="hd" aria-expanded="false"><span class="n">2</span><span class="tt"><b>Cuánto cuesta una reunión que no decide nada</b><small>Calculalo con los números de tu equipo</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><p>Poné tus números. El resultado es solo el costo del tiempo, sin contar los reprocesos que vienen después.</p>
+<div class="calc"><div><label>Personas</label><input id="c1" type="number" min="1" value="6"></div><div><label>Horas</label><input id="c2" type="number" min="0" step=".25" value="1"></div>
+<div><label>Costo por hora (₡)</label><input id="c3" type="number" min="0" step="500" value="6000"></div><div><label>Veces al mes</label><input id="c4" type="number" min="0" value="8"></div></div>
+<div class="tot"><div><small>Al mes</small><br><b id="cm">₡288.000</b></div><div><small>Al año</small><br><b id="ca">₡3.456.000</b></div></div>
+<div class="base"><div class="t">📚 La base</div>La cuenta es simple: personas × horas × costo por hora × veces. Rogelberg (2019) propone hacer este ejercicio en voz alta con el equipo: cuando el costo se vuelve visible, las reuniones se acortan solas.</div></div></div></div></div><div class="it"><button class="hd" aria-expanded="false"><span class="n">3</span><span class="tt"><b>Instrucciones que no vuelven</b><small>La frase + cómo se ve «terminado»</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><p>La mayoría de los reprocesos nacen de una instrucción incompleta. Una buena instrucción tiene tres partes: <b>qué</b> y <b>para qué</b>, <b>cómo se ve terminado</b> y <b>para cuándo</b>.</p>
+<div class="ba"><div class="a"><div class="h">Así no</div>«Hacé el informe.»</div><div class="b"><div class="h">Así sí</div>«Necesito el informe del trimestre para decidir el presupuesto. Terminado es: 3 cifras y una recomendación, en una página. Para el jueves a las 3.»</div></div><div class="base"><div class="t">📚 La base</div>L. David Marquet, <i>Turn the Ship Around!</i> (2012): el liderazgo por intención — explicar el propósito para que el equipo decida bien sin pedir permiso para todo. Chip y Dan Heath, <i>Made to Stick</i> (2007): la «intención del comandante», que dice qué tiene que lograrse aunque el plan cambie.</div><div class="try"><b>Probalo hoy</b>En la próxima instrucción que des, agregá «terminado es…».</div></div></div></div></div><div class="it"><button class="hd" aria-expanded="false"><span class="n">4</span><span class="tt"><b>Escuchar da autoridad</b><small>Resumir antes de responder · regla 2×1</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><p>El líder que mejor escucha es el que el equipo más sigue. Dos hábitos: <b>resumir</b> lo que te dijeron antes de responder («lo que entiendo es…») y la <b>regla 2×1</b>: dos preguntas por cada opinión tuya.</p>
+<div class="ba"><div class="a"><div class="h">Así no</div>«Ya lo hablamos, hagámoslo así.»</div><div class="b"><div class="h">Así sí</div>«Lo que entiendo es que te preocupa el plazo. ¿Qué harías primero?»</div></div><div class="base"><div class="t">📚 La base</div>Stephen Covey, <i>Los 7 hábitos de la gente altamente efectiva</i> (1989): el hábito 5, «busca primero entender, luego ser entendido». La mayoría escucha con la intención de responder, no de comprender.</div></div></div></div></div><div class="it"><button class="hd" aria-expanded="false"><span class="n">5</span><span class="tt"><b>Feedback sin herir y sin suavizar de más</b><small>Lo que funciona · lo que cambiaría · por qué</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><p>El feedback falla por los dos lados: cuando hiere y cuando se suaviza tanto que no dice nada. La fórmula: <b>qué funciona</b>, <b>qué cambiarías</b> y <b>por qué</b>, en privado y pronto.</p>
+<div class="ba"><div class="a"><div class="h">Así no</div>«Está bien, pero…» (y nunca se dice qué).</div><div class="b"><div class="h">Así sí</div>«La estructura funciona. Cambiaría el cierre: hoy no pide nada concreto y el cliente no sabe qué hacer.»</div></div><div class="base"><div class="t">📚 La base</div>Kim Scott, <i>Radical Candor</i> (2017): el buen feedback combina dos cosas — importarte personalmente por la persona y desafiarla directamente. Sin lo primero es agresión; sin lo segundo es «empatía ruinosa».</div></div></div></div></div><div class="it"><button class="hd" aria-expanded="false"><span class="n">6</span><span class="tt"><b>Dos líderes, dos ajustes</b><small>El que se calla y el que domina</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><table><tr><th>Si te callás…</th><th>Si dominás la conversación…</th></tr>
+<tr><td>Decí la decisión primero, sin «perdón».</td><td>Preguntá antes de afirmar.</td></tr><tr><td>Sostené la mirada y terminá la frase arriba.</td><td>Dejá 3 segundos de silencio después de preguntar.</td></tr>
+<tr><td>Hablá en los primeros 10 minutos.</td><td>Hablá de último en las lluvias de ideas.</td></tr></table>
+<div class="base"><div class="t">📚 La base</div>Amy Edmondson, <i>The Fearless Organization</i> (2018): la seguridad psicológica — que las personas se atrevan a hablar sin miedo — es la base del aprendizaje en equipo. El Proyecto Aristóteles de Google (2015) la señaló como el factor más importante de sus equipos efectivos.</div></div></div></div></div><div class="it"><button class="hd" aria-expanded="false"><span class="n">7</span><span class="tt"><b>5 frases que evitan reprocesos</b><small>Para usar desde el lunes</small></span><span class="pl">+</span></button>
+<div class="bd"><div><div class="in"><table><tr><th>En vez de…</th><th>Decí…</th></tr>
+<tr><td>«¿Alguna duda?»</td><td><b>«¿Qué harías primero con esto?»</b></td></tr><tr><td>«Hacé lo que puedas.»</td><td><b>«La prioridad es ___. Lo demás puede esperar.»</b></td></tr>
+<tr><td>«Ya lo hablamos.»</td><td><b>«Lo que entiendo es ___. ¿Es así?»</b></td></tr><tr><td>«Eso está mal.»</td><td><b>«Esto funciona; esto otro lo cambiaría así.»</b></td></tr>
+<tr><td>«Avisame cualquier cosa.»</td><td><b>«Revisamos el jueves a las 10.»</b></td></tr></table></div></div></div></div></div></div></section>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="card formcard" id="registro">
+ <div id="fb"><div class="lbl">Gratis · en PDF</div><h2>Llevate el checklist impreso</h2><p style="color:#6d6164">El checklist en PDF para pegarlo al lado de la computadora.</p>
+  <form id="f" class="row" novalidate>
+   <div><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Tu nombre" autocomplete="given-name"></div>
+   <div><label for="w">WhatsApp</label><input id="w" name="whatsapp" inputmode="tel" placeholder="8888 8888" autocomplete="tel"></div>
+   <div><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="nombre@correo.com" autocomplete="email"></div>
+   <div><button class="btn" type="submit" style="width:100%">Enviámelo →</button></div>
+  </form><p class="note">Versión de muestra: este formulario todavía no guarda datos.</p></div>
+ <div class="ok" id="ok"><div class="lbl">¡Listo!</div><h2>Gracias, <span id="nom"></span></h2><p style="color:#6d6164">Aquí está el checklist. También te lo mandamos por WhatsApp y correo.</p><div class="row"><a class="btn" href="../checklist-LIDER.pdf" download>Descargar el PDF</a><a class="btn ghost" href="../checklist-LIDER.pdf" target="_blank" rel="noopener">Abrirlo aquí</a></div></div>
+</div></div></section>
+<section class="s" style="padding-top:0"><div class="wrap next">
+ <div class="box d"><div class="lbl">¿Lo querés para todo tu equipo?</div><h3>EN VOZ ALTA Corporativo</h3><p>Programa a la medida para equipos y jefaturas.</p><a class="btn" href="https://wa.me/50684959512?text=EQUIPO" target="_blank" rel="noopener">Escribir EQUIPO</a></div>
+ <div class="box"><div class="lbl">Masterclass gratis · enero 2027</div><h3>Liderar sin gritar y sin callar</h3><p>Hacemos el cálculo en vivo y practicamos las frases.</p><a class="btn ghost" href="../masterclass/">Ver el programa</a></div>
 </div></section>
-<section class="after">
- <div class="box dark"><div class="lbl">¿Lo querés para todo tu equipo?</div><h3>EN VOZ ALTA Corporativo</h3><p>Programa a la medida para equipos y jefaturas</p><a class="btn" href="https://wa.me/50684959512?text=EQUIPO" target="_blank" rel="noopener">Escribir EQUIPO</a></div>
- <div class="box"><div class="who"><div class="ph"></div><div><div class="lbl">Quién te lo manda</div><h3 style="margin:4px 0 2px">Fabiola Murillo</h3><p>Speaker y asesora de liderazgo, creadora del método CLIP® y de EN VOZ ALTA®.</p></div></div>
-  <div class="stats"><span><b>+10</b>años</span><span><b>+3.000</b>personas</span><span><b>+100</b>speakers</span><span>🇨🇷 🇵🇦 🇲🇽 🇬🇹</span></div></div>
-</section>
-<footer><b style="color:#fff">Fabiola Murillo · EN VOZ ALTA®</b><br>La escuela donde las mujeres dejan de pedir permiso para liderar.<br><span style="opacity:.6">@fabiolamurillocr · Página de muestra preparada por UNONUEVE</span></footer>
-<script>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="lbl">Fuentes</div><h2>De dónde sale esto</h2><div class="bases"><div class="src"><b>Steven Rogelberg · The Surprising Science of Meetings (2019)</b><span>Investigación sobre reuniones: duración, tamaño y costo. Puntos 1 y 2.</span></div><div class="src"><b>Patrick Lencioni · Death by Meeting (2004)</b><span>Tipos de reunión y su propósito. Punto 1.</span></div><div class="src"><b>L. David Marquet · Turn the Ship Around! (2012)</b><span>Liderazgo por intención. Punto 3.</span></div><div class="src"><b>Chip y Dan Heath · Made to Stick (2007)</b><span>La intención del comandante. Punto 3.</span></div><div class="src"><b>Stephen Covey · Los 7 hábitos (1989)</b><span>Buscar primero entender. Punto 4.</span></div><div class="src"><b>Kim Scott · Radical Candor (2017)</b><span>Feedback directo y humano. Punto 5.</span></div><div class="src"><b>Amy Edmondson · The Fearless Organization (2018)</b><span>Seguridad psicológica en equipos. Punto 6.</span></div><div class="src"><b>Google · Proyecto Aristóteles (2015)</b><span>Qué hace efectivo a un equipo. Punto 6.</span></div></div></div></section><footer><b style="color:#fff">Fabiola Murillo · EN VOZ ALTA®</b><br>La escuela donde las mujeres dejan de pedir permiso para liderar.<br><span style="opacity:.6">@fabiolamurillocr · Página de muestra preparada por UNONUEVE</span></footer><script>
+document.querySelectorAll('.acc').forEach(acc=>{acc.querySelectorAll('.hd').forEach(h=>h.addEventListener('click',()=>{
+ const it=h.closest('.it'), was=it.classList.contains('open');
+ acc.querySelectorAll('.it').forEach(x=>{x.classList.remove('open');x.querySelector('.hd').setAttribute('aria-expanded','false')});
+ if(!was){it.classList.add('open');h.setAttribute('aria-expanded','true');setTimeout(()=>{const r=it.getBoundingClientRect();if(r.top<70||r.top>innerHeight*.6)it.scrollIntoView({behavior:'smooth',block:'start'})},420)}
+}))});
+
+const fmt=v=>'₡'+Math.round(v).toLocaleString('es-CR');
+function calc(){const g=id=>+document.getElementById(id).value||0;const m=g('c1')*g('c2')*g('c3')*g('c4');document.getElementById('cm').textContent=fmt(m);document.getElementById('ca').textContent=fmt(m*12)}
+['c1','c2','c3','c4'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
+
 document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const f=e.target;[...f.querySelectorAll('input')].forEach(i=>i.classList.remove('bad'));
 const n=f.nombre.value.trim(),w=f.whatsapp.value.replace(/\D/g,''),c=f.correo.value.trim();let b=null;
 if(!n)b=f.nombre;else if(w.length<8)b=f.whatsapp;else if(!/^\S+@\S+\.\S+$/.test(c))b=f.correo;
 if(b){b.classList.add('bad');b.focus();return}
-document.getElementById('nom').textContent=n.split(' ')[0];document.getElementById('fb').style.display='none';document.getElementById('ok').classList.add('on');
-document.getElementById('registro').scrollIntoView({behavior:'smooth',block:'center'});});
+document.getElementById('nom').textContent=n.split(' ')[0];document.getElementById('fb').style.display='none';document.getElementById('ok').classList.add('on');});
 </script></body></html>
