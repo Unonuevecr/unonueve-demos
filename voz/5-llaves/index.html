@@ -14,17 +14,18 @@ img{max-width:100%;display:block}a{color:inherit}
 .top img{height:36px}.top span{font:600 12px var(--cond);letter-spacing:.3em}
 .hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 55%,var(--blush) 55%);padding:34px 22px 60px}
 .in{max-width:1080px;margin:0 auto;display:grid;gap:34px;align-items:start}
-@media(min-width:900px){.in{grid-template-columns:1.05fr .95fr}.hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 78%,var(--blush) 78%);padding:60px 22px 70px}}
+.head{grid-area:head}.card{grid-area:card}.list{grid-area:list}.in{grid-template-areas:'head' 'card' 'list'}
+.list{color:var(--tinta)}.list li{border-top:1px solid var(--suave)}.list li b{color:var(--ciruela)}.list .lbl{margin-bottom:4px}
+@media(min-width:900px){.in{grid-template-columns:1.05fr .95fr;grid-template-areas:'head card' 'list card'}.list{color:var(--crema)}.list li{border-top-color:rgba(240,230,230,.18)}.list li b{color:#fff}.list .lbl{color:var(--suave)}.hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 78%,var(--blush) 78%);padding:60px 22px 70px}}
 .copy{color:var(--crema)}
 .copy .lbl{color:var(--suave)}
 h1{font:700 clamp(40px,6.4vw,70px)/1 var(--serif);color:#fff;margin:14px 0 16px;letter-spacing:-.01em}
 h1 em{font-style:italic;font-weight:600;color:var(--suave)}
 .sub{font-size:clamp(16px,1.8vw,19px);max-width:560px}
 .mock{margin:26px 0 0;max-width:300px;border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(-3deg)}
-ul{list-style:none;margin-top:22px}
-li{position:relative;padding:9px 0 9px 30px;border-top:1px solid rgba(240,230,230,.18)}
+ul{list-style:none;margin-top:8px}
+li{position:relative;padding:9px 0 9px 30px}
 li:before{content:"✓";position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;background:var(--suave);color:var(--ciruela);font:700 12px/20px Inter;text-align:center}
-li b{color:#fff}
 .card{background:#fff;border-radius:26px;padding:clamp(24px,4vw,38px);box-shadow:0 30px 70px -30px rgba(92,70,78,.5)}
 .card h2{font:700 30px/1.05 var(--serif);color:var(--ciruela);margin:8px 0 6px}
 .card p.m{color:#6d6164;font-size:15px}
@@ -56,7 +57,8 @@ footer{background:var(--tinta);color:#bfb1b4;padding:34px 22px;font-size:13px;te
 <div class="demo">MUESTRA</div>
 <div class="top"><img src="../img/fm_white.png" alt="Fabiola Murillo"><span>EN VOZ ALTA®</span></div>
 <section class="hero"><div class="in">
- <div class="copy"><div class="lbl">Guía gratis · PDF de 8 páginas</div><h1>5 llaves para que<br><em>tu voz se escuche</em></h1><p class="sub">No es falta de capacidad: es que aprendiste a pedir permiso para hablar. Cinco cambios pequeños para tu próxima reunión, una llave por día.</p><ul><li><b>La idea primero:</b> tu propuesta en una sola frase.</li><li><b>La pausa que manda:</b> cómo sonar segura sin hablar más fuerte.</li><li><b>Borrá la disculpa:</b> 5 frases para reemplazar el «perdón».</li><li><b>Presencia:</b> mirada, postura y volumen (subir o modular).</li><li><b>Tomá tu turno:</b> y qué decir si te roban la idea.</li></ul><img class="mock" src="../img/pdf-voz.jpg" alt="Portada: 5 llaves para que tu voz se escuche"></div>
+ <div class="copy head"><div class="lbl">Guía gratis · PDF de 8 páginas</div><h1>5 llaves para que<br><em>tu voz se escuche</em></h1><p class="sub">No es falta de capacidad: es que aprendiste a pedir permiso para hablar. Cinco cambios pequeños para tu próxima reunión, una llave por día.</p></div>
+ <div class="list"><div class="lbl">Qué incluye</div><ul><li><b>La idea primero:</b> tu propuesta en una sola frase.</li><li><b>La pausa que manda:</b> cómo sonar segura sin hablar más fuerte.</li><li><b>Borrá la disculpa:</b> 5 frases para reemplazar el «perdón».</li><li><b>Presencia:</b> mirada, postura y volumen (subir o modular).</li><li><b>Tomá tu turno:</b> y qué decir si te roban la idea.</li></ul><img class="mock" src="../img/pdf-voz.jpg" alt="Portada: 5 llaves para que tu voz se escuche"></div>
  <div class="card" id="registro">
   <div id="fb"><div class="lbl">Gratis · te llega al instante</div><h2>¿A dónde te lo mandamos?</h2><p class="m">Dejá tus datos y lo recibís ya mismo.</p>
    <form id="f" novalidate>
