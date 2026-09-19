@@ -1,0 +1,85 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checklist del líder que se escucha · Fabiola Murillo</title><meta name="description" content="Menos horas en reuniones, más decisiones tomadas. La herramienta para que tus instrucciones no vuelvan y tu equipo deje de reprocesar."><meta name="robots" content="noindex">
+<meta property="og:title" content="Checklist del líder que se escucha"><meta property="og:description" content="Gratis · Fabiola Murillo · EN VOZ ALTA®"><meta property="og:image" content="../img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--mauve:#8C7178;--ciruela:#5C464E;--blush:#F5EFEF;--crema:#F0E6E6;--suave:#E6D7D9;--tinta:#2E2A2B;--serif:'Cormorant Garamond',Georgia,serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--blush);color:var(--tinta);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+.lbl{font:600 12px/1.3 var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--mauve)}
+.demo{position:fixed;top:14px;right:-44px;transform:rotate(45deg);background:var(--tinta);color:#fff;font:600 11px var(--cond);letter-spacing:.2em;padding:6px 52px;z-index:50;opacity:.85}
+.top{background:var(--ciruela);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.top img{height:36px}.top span{font:600 12px var(--cond);letter-spacing:.3em}
+.hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 55%,var(--blush) 55%);padding:34px 22px 60px}
+.in{max-width:1080px;margin:0 auto;display:grid;gap:34px;align-items:start}
+@media(min-width:900px){.in{grid-template-columns:1.05fr .95fr}.hero{background:linear-gradient(180deg,var(--ciruela) 0,var(--ciruela) 78%,var(--blush) 78%);padding:60px 22px 70px}}
+.copy{color:var(--crema)}
+.copy .lbl{color:var(--suave)}
+h1{font:700 clamp(40px,6.4vw,70px)/1 var(--serif);color:#fff;margin:14px 0 16px;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:600;color:var(--suave)}
+.sub{font-size:clamp(16px,1.8vw,19px);max-width:560px}
+.mock{margin:26px 0 0;max-width:300px;border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(-3deg)}
+ul{list-style:none;margin-top:22px}
+li{position:relative;padding:9px 0 9px 30px;border-top:1px solid rgba(240,230,230,.18)}
+li:before{content:"✓";position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;background:var(--suave);color:var(--ciruela);font:700 12px/20px Inter;text-align:center}
+li b{color:#fff}
+.card{background:#fff;border-radius:26px;padding:clamp(24px,4vw,38px);box-shadow:0 30px 70px -30px rgba(92,70,78,.5)}
+.card h2{font:700 30px/1.05 var(--serif);color:var(--ciruela);margin:8px 0 6px}
+.card p.m{color:#6d6164;font-size:15px}
+form{display:grid;gap:13px;margin-top:18px}
+label{font:600 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);display:block;margin-bottom:5px}
+input{width:100%;border:1px solid var(--suave);background:var(--blush);border-radius:13px;padding:14px 15px;font:16px Inter,sans-serif;outline:none;color:var(--tinta)}
+input:focus{border-color:var(--mauve);background:#fff}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;background:var(--ciruela);color:#fff;border:0;border-radius:999px;padding:17px 26px;font:700 15px/1 var(--cond);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;width:100%}
+.btn:hover{background:#4a3840}
+.btn.ghost{background:transparent;color:var(--ciruela);border:1.5px solid var(--ciruela)}
+.note{font-size:12.5px;color:#8a7d80;text-align:center}
+.ok{display:none}.ok.on{display:block}
+.ok .row{display:grid;gap:10px;margin-top:18px}
+.bad{border-color:#c77 !important}
+.after{max-width:1080px;margin:0 auto;padding:0 22px 70px;display:grid;gap:18px}
+@media(min-width:900px){.after{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border-radius:22px;padding:28px}
+.box.dark{background:var(--ciruela);color:var(--crema)}
+.box h3{font:700 26px/1.1 var(--serif);color:var(--ciruela);margin:8px 0 6px}
+.box.dark h3{color:#fff}.box.dark .lbl{color:var(--suave)}
+.box .btn{width:auto;margin-top:16px}
+.box.dark .btn{background:#fff;color:var(--ciruela)}
+.who{display:flex;gap:16px;align-items:center}
+.who .ph{flex:none;width:86px;height:86px;border-radius:50%;background:url(../img/hero.jpg) center 8%/cover}
+.stats{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;font:600 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--mauve)}
+.stats b{font:700 22px var(--serif);color:var(--ciruela);letter-spacing:0;margin-right:4px}
+footer{background:var(--tinta);color:#bfb1b4;padding:34px 22px;font-size:13px;text-align:center}
+</style></head><body>
+<div class="demo">MUESTRA</div>
+<div class="top"><img src="../img/fm_white.png" alt="Fabiola Murillo"><span>EN VOZ ALTA®</span></div>
+<section class="hero"><div class="in">
+ <div class="copy"><div class="lbl">Checklist gratis · para jefaturas y equipos</div><h1>Checklist del líder<br><em>que se escucha</em></h1><p class="sub">Menos horas en reuniones, más decisiones tomadas. La herramienta para que tus instrucciones no vuelvan y tu equipo deje de reprocesar.</p><ul><li><b>La reunión de 15 minutos:</b> antes, durante y después.</li><li><b>Cuánto le cuesta</b> a tu empresa una reunión que no decide nada.</li><li><b>Dos líderes, dos ajustes:</b> el que se calla y el que domina.</li><li><b>5 frases</b> que evitan reprocesos.</li></ul><img class="mock" src="../img/pdf-lider.jpg" alt="Portada: Checklist del líder que se escucha"></div>
+ <div class="card" id="registro">
+  <div id="fb"><div class="lbl">Gratis · te llega al instante</div><h2>¿A dónde te lo mandamos?</h2><p class="m">Dejá tus datos y lo recibís ya mismo.</p>
+   <form id="f" novalidate>
+    <div><label for="n">Nombre</label><input id="n" name="nombre" placeholder="Tu nombre" autocomplete="given-name"></div>
+    <div><label for="w">WhatsApp</label><input id="w" name="whatsapp" inputmode="tel" placeholder="8888 8888" autocomplete="tel"></div>
+    <div><label for="e">Correo</label><input id="e" name="correo" type="email" placeholder="nombre@correo.com" autocomplete="email"></div>
+    <button class="btn" type="submit">Enviame el checklist →</button>
+    <p class="note">Versión de muestra: este formulario todavía no guarda datos.</p>
+   </form></div>
+  <div class="ok" id="ok"><div class="lbl">¡Listo!</div><h2>Gracias, <span id="nom"></span></h2><p class="m">Aquí está tu guía. También te la mandamos por WhatsApp y correo.</p><div class="row"><a class="btn" href="../checklist-LIDER.pdf" download>Descargar el PDF</a><a class="btn ghost" href="../checklist-LIDER.pdf" target="_blank" rel="noopener">Abrirlo aquí</a></div></div>
+ </div>
+</div></section>
+<section class="after">
+ <div class="box dark"><div class="lbl">¿Lo querés para todo tu equipo?</div><h3>EN VOZ ALTA Corporativo</h3><p>Programa a la medida para equipos y jefaturas</p><a class="btn" href="https://wa.me/50684959512?text=EQUIPO" target="_blank" rel="noopener">Escribir EQUIPO</a></div>
+ <div class="box"><div class="who"><div class="ph"></div><div><div class="lbl">Quién te lo manda</div><h3 style="margin:4px 0 2px">Fabiola Murillo</h3><p>Speaker y asesora de liderazgo, creadora del método CLIP® y de EN VOZ ALTA®.</p></div></div>
+  <div class="stats"><span><b>+10</b>años</span><span><b>+3.000</b>personas</span><span><b>+100</b>speakers</span><span>🇨🇷 🇵🇦 🇲🇽 🇬🇹</span></div></div>
+</section>
+<footer><b style="color:#fff">Fabiola Murillo · EN VOZ ALTA®</b><br>La escuela donde las mujeres dejan de pedir permiso para liderar.<br><span style="opacity:.6">@fabiolamurillocr · Página de muestra preparada por UNONUEVE</span></footer>
+<script>
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const f=e.target;[...f.querySelectorAll('input')].forEach(i=>i.classList.remove('bad'));
+const n=f.nombre.value.trim(),w=f.whatsapp.value.replace(/\D/g,''),c=f.correo.value.trim();let b=null;
+if(!n)b=f.nombre;else if(w.length<8)b=f.whatsapp;else if(!/^\S+@\S+\.\S+$/.test(c))b=f.correo;
+if(b){b.classList.add('bad');b.focus();return}
+document.getElementById('nom').textContent=n.split(' ')[0];document.getElementById('fb').style.display='none';document.getElementById('ok').classList.add('on');
+document.getElementById('registro').scrollIntoView({behavior:'smooth',block:'center'});});
+</script></body></html>
