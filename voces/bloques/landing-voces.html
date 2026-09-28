@@ -46,9 +46,9 @@
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 #voces .hero .strip{position:relative;z-index:3;background:var(--ink);color:#fff;text-align:center;padding:12px;font-family:'Roboto Condensed',sans-serif;letter-spacing:.24em;text-transform:uppercase;font-size:12.5px}
 
-/* reveal on scroll */
-#voces .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-#voces .reveal.in{opacity:1;transform:none}
+/* fmrv on scroll */
+#voces .fmrv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+#voces .fmrv.in{opacity:1;transform:none}
 
 /* secciones */
 #voces section{padding:80px 0}
@@ -125,7 +125,7 @@
 #voces .card{background:#fff;border:1px solid var(--suave);border-radius:8px;padding:46px 42px;max-width:720px;margin:36px auto 0;box-shadow:0 18px 50px rgba(92,70,78,.08)}
 #voces .field{margin-bottom:18px}
 #voces label{display:block;font-family:'Roboto Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--mauve);margin-bottom:6px}
-#voces input,#voces select,#voces textarea{width:100%;border:1px solid var(--suave);border-radius:3px;padding:13px 15px;font-family:Montserrat,sans-serif;font-size:15px;color:var(--ink);background:#fff;outline:none}
+#voces input,#voces select,#voces textarea{height:auto;margin:0;width:100%;border:1px solid var(--suave);border-radius:3px;padding:13px 15px;font-family:Montserrat,sans-serif;font-size:15px;color:var(--ink);background:#fff;outline:none}
 #voces input:focus,#voces select:focus,#voces textarea:focus{border-color:var(--terra)}
 #voces select.flash{animation:fmFlash 1.6s ease 2}
 @keyframes fmFlash{0%,100%{box-shadow:0 0 0 0 rgba(194,74,34,0);border-color:var(--suave)}40%{box-shadow:0 0 0 5px rgba(194,74,34,.28);border-color:var(--terra)}}
@@ -193,7 +193,7 @@
 </div>
 
 <!-- PROBLEMA + DATOS -->
-<section class="prob"><div class="wrap center reveal">
+<section class="prob"><div class="wrap center fmrv">
   <div class="lbl kick">La comunicación que no se ve… se paga</div>
   <h2>¿Sabías que la forma en que tu equipo se comunica te está costando dinero?</h2>
   <p class="lead">No es un tema "blando". La mala comunicación se traduce en errores, reprocesos, plazos que se caen y clientes que se van. Y eso, en tu empresa, tiene un número.</p>
@@ -207,10 +207,10 @@
 
 <!-- SOLUCIÓN -->
 <section class="sol"><div class="wrap">
-  <div class="center reveal"><div class="lbl kick">La solución</div>
+  <div class="center fmrv"><div class="lbl kick">La solución</div>
   <h2>Comunicación con <span class="em">propósito</span>: menos problemas, más resultados.</h2>
   <p class="lead">Soy Fabiola Murillo, arquitecta de liderazgo y comunicación. Ayudo a las empresas a que su gente se comunique con claridad, valentía y propósito — para que la comunicación deje de costar y empiece a rendir.</p></div>
-  <div class="cols reveal">
+  <div class="cols fmrv">
     <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ruta" d="M10 44 L32 18 L54 44" stroke-dasharray="4 4"/><circle class="nodo na" cx="10" cy="44" r="5"/><circle class="nodo nb" cx="32" cy="18" r="5"/><circle class="nodo nc" cx="54" cy="44" r="5"/><text class="letra" x="10" y="59">A</text><text class="letra" x="32" y="9">B</text><text class="letra" x="54" y="59">C</text><circle r="3.4" fill="currentColor" stroke="none"><animateMotion dur="2.6s" repeatCount="indefinite" path="M10 44 L32 18 L54 44" keyPoints="0;0.5;1;1" keyTimes="0;0.4;0.8;1" calcMode="linear"/></circle></svg></div><h3>Procesos</h3><p>Diseñamos cómo se comunica tu equipo hacia adentro y hacia el cliente, para cerrar las fugas que hoy cuestan dinero.</p></div>
     <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="57" x2="58" y2="57" stroke-width="2" opacity=".35"/><g class="mover"><circle cx="32" cy="13" r="5.5"/><path d="M32 18.5 L32 37"/><path class="brazos" d="M21 30 L32 24 L43 30"/><path class="pi" d="M32 37 L25 55"/><path class="pd" d="M32 37 L39 55"/></g></svg></div><h3>Ejercicios</h3><p>Entrenamos a tu gente con dinámicas reales —no teoría— para que hablen con seguridad y sean escuchados.</p></div>
     <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="cora" d="M40 12 L36.4 8.6 A2.3 2.3 0 0 1 40 5.7 A2.3 2.3 0 0 1 43.6 8.6 Z" fill="currentColor" stroke="none"/><line x1="30" y1="31" x2="60" y2="31" stroke-width="2" opacity=".45"/><circle cx="47" cy="12" r="4.5"/><path d="M47 16.5 L47 25 M47 25 L43 31 M47 25 L51 31"/><path class="jala" d="M47 19 L36 27"/><g class="sube"><circle cx="29" cy="24" r="4.5"/><path d="M29 28.5 L29 39 M29 39 L25 48 M29 39 L33 48 M29 31 L35 26"/></g><line x1="6" y1="58" x2="34" y2="58" stroke-width="2" opacity=".35"/></svg></div><h3>Valores y propósito</h3><p>Un programa para comunicar desde los valores de tu empresa: cultura fuerte y mensajes que conectan y venden.</p></div>
@@ -219,9 +219,9 @@
 
 <!-- GALERÍA REAL -->
 <section class="gal"><div class="wrap">
-  <div class="center reveal"><div class="lbl kick">Así se vive</div><h2>Una comunidad que ya está pasando.</h2>
+  <div class="center fmrv"><div class="lbl kick">Así se vive</div><h2>Una comunidad que ya está pasando.</h2>
   <p class="lead">Talleres, charlas y encuentros donde las personas conectan, aprenden y hacen negocios.</p></div>
-  <div class="gcols reveal">
+  <div class="gcols fmrv">
     <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-c9f1e201a1.jpg" alt="Fabiola en charla"><figcaption>Charlas que inspiran</figcaption></figure>
     <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-e27e0cf02c.jpg" alt="Networking"><figcaption>Networking real</figcaption></figure>
     <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-6ee0b267ce.jpg" alt="Comunidad"><figcaption>Comunidad que crece</figcaption></figure>
@@ -230,10 +230,10 @@
 
 <!-- EVENTO / ACCESOS -->
 <section class="evt" id="accesos"><div class="wrap">
-  <div class="center reveal"><div class="lbl kick">El próximo paso · 7 de noviembre</div>
+  <div class="center fmrv"><div class="lbl kick">El próximo paso · 7 de noviembre</div>
   <h2>Viví VOCES: una noche para hacer negocios y que te escuchen.</h2>
   <p class="lead">Networking y speakers reconocidos, cena y más de 100 personas que toman decisiones y compran. Según tu acceso, mostrás —y hasta vendés— lo que hacés frente a compradores directos.</p></div>
-  <div class="tiers reveal">
+  <div class="tiers fmrv">
     <div class="tier"><div class="tn">General</div><div class="pr"><small>$</small>50</div><div class="desc">Para conectar y que te conozcan.</div>
       <ul><li>Noche completa + cena</li><li>Todas las charlas</li><li>Networking con +100 personas</li></ul>
       <button class="btn" onclick="elegir('General ($50)')">Reservar General</button></div>
@@ -249,9 +249,9 @@
 
 <!-- REGISTRO -->
 <section class="reg" id="reservar"><div class="wrap">
-  <div class="center reveal"><div class="lbl kick">Asegurá tu lugar</div><h2>Reservá tu acceso a VOCES.</h2>
+  <div class="center fmrv"><div class="lbl kick">Asegurá tu lugar</div><h2>Reservá tu acceso a VOCES.</h2>
   <p class="lead">Dejá tus datos y el equipo de EN VOZ ALTA te contacta por WhatsApp para confirmar tu cupo y el pago.</p></div>
-  <div class="card reveal">
+  <div class="card fmrv">
     <form id="regForm" onsubmit="return enviar(event)">
       <div class="two">
         <div class="field"><label>Nombre completo *</label><input name="nombre" required placeholder="Tu nombre"></div>
@@ -274,8 +274,8 @@
 
 <!-- FAQ -->
 <section><div class="wrap">
-  <div class="center reveal"><div class="lbl kick">Preguntas</div><h2>Lo que necesitás saber.</h2></div>
-  <div class="faq reveal">
+  <div class="center fmrv"><div class="lbl kick">Preguntas</div><h2>Lo que necesitás saber.</h2></div>
+  <div class="faq fmrv">
     <details><summary>¿Cuándo y a qué hora es?</summary><p>Sábado 7 de noviembre. Recepción 5:30 p.m., programa 6:00 p.m.</p></details>
     <details><summary>¿Cómo hago el pago?</summary><p>Reservás aquí y el equipo te contacta por WhatsApp para confirmar el cupo y coordinar el pago. Los cupos se aseguran por orden de reserva.</p></details>
     <details><summary>¿Qué diferencia hay entre los accesos?</summary><p>General: noche completa, cena y networking. Marca: suma stand y tu marca en pantallas. Speaker: suma 10–15 min en tarima para exponer y vender.</p></details>
@@ -327,7 +327,7 @@
   }
   var wl=document.getElementById('waLink'); if(wl) wl.addEventListener('click',function(){medir('contact',{});});
   window.elegir=function(t){
-    document.querySelectorAll('#reservar .reveal').forEach(function(el){el.classList.add('in');});
+    document.querySelectorAll('#reservar .fmrv').forEach(function(el){el.classList.add('in');});
     var s=document.getElementById('acceso'); if(s){s.value=t; s.classList.remove('flash'); void s.offsetWidth; s.classList.add('flash');}
     document.getElementById('reservar').scrollIntoView({behavior:'smooth'});
     setTimeout(function(){var n=document.querySelector('#regForm input[name=nombre]'); if(n) try{n.focus({preventScroll:true});}catch(e){}},700);
@@ -353,13 +353,13 @@
     document.getElementById('waLink').href=url; window.open(url,'_blank');
     ok.scrollIntoView({behavior:'smooth',block:'center'}); return false;
   };
-  // reveal on scroll
+  // fmrv on scroll
   try{
     var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
-    document.querySelectorAll('#voces .reveal').forEach(function(el){io.observe(el);});
-  }catch(e){document.querySelectorAll('#voces .reveal').forEach(function(el){el.classList.add('in');});}
+    document.querySelectorAll('#voces .fmrv').forEach(function(el){io.observe(el);});
+  }catch(e){document.querySelectorAll('#voces .fmrv').forEach(function(el){el.classList.add('in');});}
   // respaldo: si el navegador no avisa del scroll, que nada quede invisible
-  setTimeout(function(){document.querySelectorAll('#voces .reveal').forEach(function(el){el.classList.add('in');});},3500);
+  setTimeout(function(){document.querySelectorAll('#voces .fmrv').forEach(function(el){el.classList.add('in');});},3500);
   // contadores tipo cronómetro
   var quieto=false; try{quieto=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
   function fmt(v,dec){ if(dec>0) return v.toFixed(dec).replace('.',','); return Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
