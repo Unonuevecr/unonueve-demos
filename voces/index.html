@@ -4,8 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FFEDDF">
 <title>VOCES · Networking & Speakers — Fabiola Murillo · 7 de noviembre</title>
-<meta name="description" content="Una noche de networking y speakers para hacer negocios y que te escuchen. Sábado 7 de noviembre. EN VOZ ALTA® · Fabiola Murillo.">
+<meta name="description" content="Una noche de networking y speakers para hacer negocios y que te escuchen. Sábado 7 de noviembre, 5:30 p.m. Cupos limitados. EN VOZ ALTA® · Fabiola Murillo.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VOCES · Networking & Speakers — Fabiola Murillo · 7 de noviembre">
+<meta property="og:description" content="Una noche de networking y speakers para hacer negocios y que te escuchen. Sábado 7 de noviembre, 5:30 p.m. Cupos limitados. EN VOZ ALTA® · Fabiola Murillo.">
+<meta property="og:url" content="https://demos.unonuevecr.com/voces/">
+<meta property="og:image" content="https://demos.unonuevecr.com/voces/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://demos.unonuevecr.com/voces/og.jpg">
 <style>html,body{margin:0;padding:0;background:#fff}</style>
 </head>
 <body>
@@ -301,9 +312,44 @@
   <p>Reservas y consultas: <b>+506 8495-9512</b> · info@fabiolamurillocr.com · @fabiolamurillocr</p>
 </footer>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "VOCES — Noche de Networking & Speakers", "description": "Una noche de networking y speakers para hacer negocios y que te escuchen. Organiza EN VOZ ALTA® · Fabiola Murillo.", "startDate": "2026-11-07T17:30:00-06:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Por confirmar", "address": {"@type": "PostalAddress", "addressCountry": "CR"}}, "image": ["https://demos.unonuevecr.com/voces/og.jpg"], "organizer": {"@type": "Person", "name": "Fabiola Murillo", "url": "https://fabiolamurillocr.com/"}, "performer": {"@type": "Person", "name": "Fabiola Murillo"}, "offers": [{"@type": "Offer", "name": "General", "price": "50", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://fabiolamurillocr.com/voces/"}, {"@type": "Offer", "name": "Marca", "price": "75", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": "https://fabiolamurillocr.com/voces/"}, {"@type": "Offer", "name": "Speaker", "price": "100", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": "https://fabiolamurillocr.com/voces/"}]}</script>
 <script>
 (function(){
   var WA="50684959512"; var WEBHOOK="https://n8n-unonueve-n8n.i5i6e4.easypanel.host/webhook/voces-reserva";
+  // ===== Medición: Píxel de Meta (+ API de conversiones vía el Gateway del plugin) · GA4 · Google Ads =====
+  var PIXEL="1785614979253885";
+  var GA4_ID="";
+  var ADS_ID="", ADS_LABEL="";
+  var enVivo=/(^|\.)fabiolamurillocr\.com$/.test(location.hostname) || /[?&]track=1/.test(location.search);
+  if(enVivo){
+    try{
+      if(!window.fbq){
+        (function(f,b,e,v){var n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];var t=b.createElement(e);t.async=true;t.src=v;var s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init',PIXEL); fbq('track','PageView');
+      }
+      fbq('track','ViewContent',{content_name:'VOCES 7-nov',content_category:'Evento'});
+      if(GA4_ID||ADS_ID){
+        window.dataLayer=window.dataLayer||[];
+        if(!window.gtag){ window.gtag=function(){dataLayer.push(arguments);}; var g=document.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+(GA4_ID||ADS_ID); document.head.appendChild(g); gtag('js',new Date()); }
+        if(GA4_ID) gtag('config',GA4_ID);
+        if(ADS_ID) gtag('config',ADS_ID);
+      }
+    }catch(err){}
+  }
+  function medir(tipo,d){
+    if(!enVivo){ try{console.log('[VOCES · modo prueba, no se mide]',tipo,d);}catch(e){} return; }
+    try{
+      if(tipo==='lead'){
+        if(window.fbq) fbq('track','Lead',{content_name:'VOCES 7-nov · '+d.acceso,value:d.monto,currency:'USD'},{eventID:d.eid});
+        if(window.gtag&&GA4_ID) gtag('event','generate_lead',{value:d.monto,currency:'USD',event_label:d.acceso});
+        if(window.gtag&&ADS_ID&&ADS_LABEL) gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL,value:d.monto,currency:'USD',transaction_id:d.eid});
+      } else if(tipo==='contact'){
+        if(window.fbq) fbq('track','Contact');
+        if(window.gtag&&GA4_ID) gtag('event','contact',{method:'WhatsApp'});
+      }
+    }catch(e){}
+  }
+  var wl=document.getElementById('waLink'); if(wl) wl.addEventListener('click',function(){medir('contact',{});});
   window.elegir=function(t){var s=document.getElementById('acceso'); if(s){s.value=t;} document.getElementById('reservar').scrollIntoView({behavior:'smooth'});};
   window.enviar=function(e){
     e.preventDefault(); var f=e.target,d={};
@@ -317,7 +363,10 @@
       +(d.negocio?"%0A"+L("Mi empresa: "+d.negocio):"")
       +(d.observaciones?"%0A"+L("Observaciones: "+d.observaciones):"");
     var url="https://wa.me/"+WA+"?text="+msg;
-    if(WEBHOOK){try{var p=new URLSearchParams(d); p.append('origen', location.hostname||'Landing VOCES'); fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}}
+    var monto=/speaker/i.test(d.acceso)?100:(/marca/i.test(d.acceso)?75:50);
+    var eid='voces-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
+    medir('lead',{acceso:d.acceso,monto:monto,eid:eid});
+    if(WEBHOOK){try{var p=new URLSearchParams(d); p.append('origen', location.hostname||'Landing VOCES'); p.append('event_id',eid); fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}}
     document.getElementById('regForm').style.display='none';
     var ok=document.getElementById('okMsg'); ok.style.display='block';
     document.getElementById('waLink').href=url; window.open(url,'_blank');
