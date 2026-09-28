@@ -1,0 +1,87 @@
+<!-- ============================================================
+   PORTADA · 4 tarjetas (Talleres · Conferencias · Certificación CEE · Contenido gratuito)
+   Elementor: reemplazar la sección de 3 tarjetas → widget HTML → pegar todo. CSS bajo #fm-tarjetas.
+============================================================ -->
+<meta charset="utf-8">
+<div id="fm-tarjetas">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@300;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+#fm-tarjetas{--terra:#C24A22;--slate:#5E6A78;padding:40px 20px 56px;background:#fff;overflow:hidden}
+#fm-tarjetas *{box-sizing:border-box;margin:0;padding:0}
+#fm-tarjetas .grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+#fm-tarjetas .it{opacity:0;transform:translateY(40px);transition:opacity .8s ease calc(var(--i)*.14s),transform .8s cubic-bezier(.2,.7,.2,1) calc(var(--i)*.14s)}
+#fm-tarjetas.in .it{opacity:1;transform:none}
+#fm-tarjetas .t{position:relative;display:block;aspect-ratio:900/1240;overflow:hidden;text-decoration:none;color:#fff}
+#fm-tarjetas .cd{margin-top:10px;min-height:54px;background:#272727;color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:center;gap:9px;padding:8px 10px}
+#fm-tarjetas .cd .et{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:11px;color:#FFD9BF;line-height:1.2;text-align:center}
+#fm-tarjetas .cd .u{display:flex;flex-direction:column;align-items:center;min-width:30px}
+#fm-tarjetas .cd b{font-family:'Anton',sans-serif;font-weight:400;font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
+#fm-tarjetas .cd i{font-style:normal;font-family:'Roboto Condensed',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#cfc3be}
+#fm-tarjetas .cd .s{color:#FFB88F}
+#fm-tarjetas .cd.fijo{background:#f3ece8;color:#272727}
+#fm-tarjetas .cd.fijo .et{color:#272727;font-size:12px}
+#fm-tarjetas .cd .dot{width:9px;height:9px;border-radius:50%;background:var(--terra);flex:0 0 9px;animation:fmB 2s ease-in-out infinite}
+#fm-tarjetas .ph{position:absolute;inset:0;background-size:cover;background-position:center 25%;animation:fmKB 14s ease-in-out infinite alternate;animation-delay:calc(var(--i)*-3s);transition:filter .5s}
+@keyframes fmKB{from{transform:scale(1)}to{transform:scale(1.09) translateY(-1.5%)}}
+#fm-tarjetas .panel{position:absolute;left:10%;right:10%;top:7%;bottom:8%;background:rgba(40,40,46,.20);transition:background .45s,inset .45s}
+#fm-tarjetas .t:hover .panel{background:rgba(40,40,46,.42);left:7%;right:7%}
+#fm-tarjetas .t:hover .ph{filter:brightness(.9)}
+#fm-tarjetas .badge{position:absolute;top:3.2%;left:50%;transform:translateX(-50%);z-index:3;white-space:nowrap;background:var(--terra);color:#fff;
+ font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:11.5px;padding:6px 14px;border-radius:30px;animation:fmB 2s ease-in-out infinite}
+@keyframes fmB{0%,100%{box-shadow:0 0 0 0 rgba(194,74,34,.55)}50%{box-shadow:0 0 0 10px rgba(194,74,34,0)}}
+#fm-tarjetas .txt{position:absolute;left:0;right:0;bottom:22%;text-align:center;z-index:2;display:block;padding:0 12px}
+#fm-tarjetas .tt{display:block;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(22px,2.3vw,34px);line-height:1;letter-spacing:.01em;text-shadow:0 2px 14px rgba(0,0,0,.35);
+ opacity:0;transform:translateY(18px);transition:all .7s ease calc(var(--i)*.14s + .35s)}
+#fm-tarjetas .st{display:block;font-style:normal;font-family:'Roboto Condensed',sans-serif;font-weight:300;font-size:clamp(16px,1.6vw,24px);margin-top:6px;text-shadow:0 2px 12px rgba(0,0,0,.35);
+ opacity:0;transform:translateY(14px);transition:all .7s ease calc(var(--i)*.14s + .5s)}
+#fm-tarjetas.in .tt,#fm-tarjetas.in .st{opacity:1;transform:none}
+#fm-tarjetas .t:hover .tt{letter-spacing:.05em}
+#fm-tarjetas .bt{position:absolute;left:14%;right:14%;bottom:6%;z-index:3;background:var(--slate);text-align:center;font-family:Montserrat,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(11px,1vw,15px);padding:14px 8px;border-radius:3px;
+ transition:background .3s,transform .3s}
+#fm-tarjetas .t:hover .bt{background:var(--terra);transform:translateY(-3px)}
+#fm-tarjetas .bt:after{content:" →";display:inline-block;transition:transform .3s}
+#fm-tarjetas .t:hover .bt:after{transform:translateX(4px)}
+#fm-tarjetas .pts{display:none}
+@media(max-width:1000px){#fm-tarjetas .grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+ #fm-tarjetas{padding:30px 0 40px}
+ #fm-tarjetas .grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:0 9%;scrollbar-width:none}
+ #fm-tarjetas .grid::-webkit-scrollbar{display:none}
+ #fm-tarjetas .it{flex:0 0 82%;scroll-snap-align:center}
+ #fm-tarjetas .tt{font-size:30px} #fm-tarjetas .st{font-size:20px} #fm-tarjetas .bt{font-size:13px}
+ #fm-tarjetas .pts{display:flex;justify-content:center;gap:8px;margin-top:16px}
+ #fm-tarjetas .pts i{width:8px;height:8px;border-radius:50%;background:#d8cdc8;transition:all .3s}
+ #fm-tarjetas .pts i.on{background:var(--terra);width:22px;border-radius:5px}
+}
+@media (prefers-reduced-motion:reduce){#fm-tarjetas *{animation:none!important;transition:none!important}#fm-tarjetas .it,#fm-tarjetas .tt,#fm-tarjetas .st{opacity:1;transform:none}}
+</style>
+<div class="grid" id="fmGrid">
+<div class="it" style="--i:0"><a class="t" href="https://fabiolamurillocr.com/masterclass/" data-nombre="Talleres">
+  <span class="ph" style="background-image:url('%%IMG:fm-web-f2eba8eb08.jpg%%')"></span>
+  <span class="badge">Masterclass gratis · 15 oct</span>
+  <span class="panel"></span>
+  <span class="txt"><b class="tt">Talleres</b><em class="st">Prácticos y vivenciales</em></span>
+  <span class="bt">Ver talleres</span>
+</a><div class="cd" data-fin="2026-10-15T19:00:00-06:00"><span class="et">Masterclass en</span><span class="u"><b class="d">--</b><i>días</i></span><span class="u"><b class="h">--</b><i>h</i></span><span class="u"><b class="m">--</b><i>min</i></span><span class="u"><b class="s">--</b><i>seg</i></span></div></div><div class="it" style="--i:1"><a class="t" href="https://fabiolamurillocr.com/voces/" data-nombre="Conferencias">
+  <span class="ph" style="background-image:url('%%IMG:fm-web-05344afb35.jpg%%')"></span>
+  <span class="badge">VOCES · 7 nov</span>
+  <span class="panel"></span>
+  <span class="txt"><b class="tt">Conferencias</b><em class="st">Inspiran y movilizan</em></span>
+  <span class="bt">Ver conferencias</span>
+</a><div class="cd" data-fin="2026-11-07T17:30:00-06:00"><span class="et">VOCES en</span><span class="u"><b class="d">--</b><i>días</i></span><span class="u"><b class="h">--</b><i>h</i></span><span class="u"><b class="m">--</b><i>min</i></span><span class="u"><b class="s">--</b><i>seg</i></span></div></div><div class="it" style="--i:2"><a class="t" href="https://fabiolamurillocr.com/certificacion-cee/" data-nombre="Certificación CEE">
+  <span class="ph" style="background-image:url('%%IMG:fm-web-ad08e5fb8f.jpg%%')"></span>
+  <span class="badge">Pre-registro abierto</span>
+  <span class="panel"></span>
+  <span class="txt"><b class="tt">Certificación CEE</b><em class="st">Estratégica y Efectiva</em></span>
+  <span class="bt">Ver programa</span>
+</a><div class="cd fijo"><span class="dot"></span><span class="et">Pre-registro abierto · cupos limitados</span></div></div><div class="it" style="--i:3"><a class="t" href="https://fabiolamurillocr.com/contenido-gratuito/" data-nombre="Contenido gratuito">
+  <span class="ph" style="background-image:url('%%IMG:fm-web-7918abd983.jpg%%')"></span>
+  <span class="badge">Descarga gratis</span>
+  <span class="panel"></span>
+  <span class="txt"><b class="tt">Contenido gratuito</b><em class="st">Descargá y aplicá hoy</em></span>
+  <span class="bt">Descargar gratis</span>
+</a><div class="cd fijo"><span class="dot"></span><span class="et">Acceso inmediato · 100 % gratis</span></div></div>
+</div>
+<div class="pts" id="fmPts"><i class="on"></i><i></i><i></i><i></i></div>
+<script>(new Function(decodeURIComponent(escape(atob("CihmdW5jdGlvbigpewogIHZhciByb290PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdmbS10YXJqZXRhcycpOwogIHRyeXsgdmFyIGlvPW5ldyBJbnRlcnNlY3Rpb25PYnNlcnZlcihmdW5jdGlvbihlcyl7IGlmKGVzWzBdLmlzSW50ZXJzZWN0aW5nKXsgcm9vdC5jbGFzc0xpc3QuYWRkKCdpbicpOyBpby5kaXNjb25uZWN0KCk7IH0gfSx7dGhyZXNob2xkOi4xNX0pOyBpby5vYnNlcnZlKHJvb3QpOyB9CiAgY2F0Y2goZSl7IHJvb3QuY2xhc3NMaXN0LmFkZCgnaW4nKTsgfQogIGZ1bmN0aW9uIGRvcyhuKXtyZXR1cm4gKG48MTA/JzAnOicnKStuO30KICB2YXIgY2RzPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJyNmbS10YXJqZXRhcyAuY2RbZGF0YS1maW5dJyk7CiAgZnVuY3Rpb24gdGljKCl7IGNkcy5mb3JFYWNoKGZ1bmN0aW9uKGMpeyB2YXIgcj1NYXRoLm1heCgwLG5ldyBEYXRlKGMuZ2V0QXR0cmlidXRlKCdkYXRhLWZpbicpKS5nZXRUaW1lKCktRGF0ZS5ub3coKSksIHM9TWF0aC5mbG9vcihyLzEwMDApOwogICAgYy5xdWVyeVNlbGVjdG9yKCcuZCcpLnRleHRDb250ZW50PU1hdGguZmxvb3Iocy84NjQwMCk7IGMucXVlcnlTZWxlY3RvcignLmgnKS50ZXh0Q29udGVudD1kb3MoTWF0aC5mbG9vcihzJTg2NDAwLzM2MDApKTsKICAgIGMucXVlcnlTZWxlY3RvcignLm0nKS50ZXh0Q29udGVudD1kb3MoTWF0aC5mbG9vcihzJTM2MDAvNjApKTsgYy5xdWVyeVNlbGVjdG9yKCcucycpLnRleHRDb250ZW50PWRvcyhzJTYwKTsgfSk7IH0KICB0aWMoKTsgc2V0SW50ZXJ2YWwodGljLDEwMDApOwogIHZhciBnPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdmbUdyaWQnKSwgcHRzPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJyNmbVB0cyBpJyk7CiAgZy5hZGRFdmVudExpc3RlbmVyKCdzY3JvbGwnLGZ1bmN0aW9uKCl7IHZhciB3PWcuZmlyc3RFbGVtZW50Q2hpbGQuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCkud2lkdGgrMTQsIGs9TWF0aC5yb3VuZChnLnNjcm9sbExlZnQvdyk7CiAgICBwdHMuZm9yRWFjaChmdW5jdGlvbihwLGope3AuY2xhc3NMaXN0LnRvZ2dsZSgnb24nLGo9PT1rKTt9KTsgfSx7cGFzc2l2ZTp0cnVlfSk7CiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnI2ZtLXRhcmpldGFzIC50JykuZm9yRWFjaChmdW5jdGlvbihhKXsgYS5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsZnVuY3Rpb24oKXsKICAgIHRyeXsgaWYod2luZG93LmZicSkgZmJxKCd0cmFja0N1c3RvbScsJ0NsaWNUYXJqZXRhUG9ydGFkYScse3RhcmpldGE6YS5nZXRBdHRyaWJ1dGUoJ2RhdGEtbm9tYnJlJyl9KTsKICAgICAgICAgaWYod2luZG93Lmd0YWcpIGd0YWcoJ2V2ZW50Jywnc2VsZWN0X2NvbnRlbnQnLHtjb250ZW50X3R5cGU6J3RhcmpldGFfcG9ydGFkYScsaXRlbV9pZDphLmdldEF0dHJpYnV0ZSgnZGF0YS1ub21icmUnKX0pOyB9Y2F0Y2goZSl7fQogIH0pOyB9KTsKfSkoKTsK")))))();</script>
+</div>
