@@ -1,0 +1,96 @@
+<div id="fm-proximos">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@300;400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+#fm-proximos{--cream:#FFEDDF;--paper:#FBF6F1;--ink:#272727;--mauve:#8C7178;--terra:#C24A22;--suave:#EADFD8;
+ background:var(--paper);padding:72px 20px;font-family:Montserrat,Helvetica,Arial,sans-serif;color:var(--ink);overflow:hidden}
+#fm-proximos *{box-sizing:border-box;margin:0;padding:0}
+#fm-proximos .tit{display:flex;align-items:center;gap:22px;max-width:1120px;margin:0 auto 10px}
+#fm-proximos .tit:before,#fm-proximos .tit:after{content:"";flex:1;height:1px;background:#b9aca6}
+#fm-proximos .tit h2{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:clamp(30px,4vw,42px);letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+#fm-proximos .sub{text-align:center;font-family:'Roboto Condensed',sans-serif;letter-spacing:.34em;text-transform:uppercase;font-size:12px;color:var(--terra);margin-bottom:40px}
+#fm-proximos .card{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:44% 56%;background:#fff;border:1px solid var(--suave);border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(92,70,78,.10)}
+/* ——— afiche en capas ——— */
+#fm-proximos .vis{position:relative;min-height:440px;overflow:hidden;background:#1d1a1a}
+#fm-proximos .capas{position:absolute;inset:0;animation:fmZoom 16s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes fmZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+#fm-proximos .capas img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+#fm-proximos .bg{filter:brightness(.52) saturate(.85) contrast(1.05)}
+#fm-proximos .velo{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 35%,rgba(0,0,0,0) 40%,rgba(20,14,12,.55) 100%),linear-gradient(to top,rgba(39,20,12,.55),rgba(39,20,12,0) 45%)}
+#fm-proximos .mq{position:absolute;left:0;white-space:nowrap;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;line-height:.85;pointer-events:none;animation:fmR 28s linear infinite}
+#fm-proximos .mq.a{top:17%;font-size:98px;color:#fff;opacity:.92;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+#fm-proximos .mq.b{bottom:9%;font-size:64px;color:#FFD9BF;opacity:.45;animation-duration:40s}
+@keyframes fmR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+#fm-proximos .luz{position:absolute;inset:0;background:radial-gradient(38% 30% at 50% 36%,rgba(255,214,170,.55),rgba(255,214,170,0) 70%);mix-blend-mode:screen;animation:fmLuz 4.5s ease-in-out infinite}
+@keyframes fmLuz{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+#fm-proximos .fg{filter:drop-shadow(0 0 10px rgba(255,214,170,.65)) drop-shadow(0 0 26px rgba(255,190,140,.35)) drop-shadow(0 22px 30px rgba(0,0,0,.35))}
+#fm-proximos .brillo{position:absolute;top:-30%;left:-60%;width:36%;height:160%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,236,214,.22),rgba(255,255,255,0));transform:rotate(12deg);animation:fmBr 7s ease-in-out infinite;pointer-events:none}
+@keyframes fmBr{0%,65%{left:-60%}100%{left:130%}}
+#fm-proximos .firma{position:absolute;left:18px;bottom:16px;z-index:5;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.3em;font-size:11px;color:rgba(255,255,255,.85);text-transform:uppercase}
+/* ——— info ——— */
+#fm-proximos .info{padding:40px 44px}
+#fm-proximos .pre{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.26em;text-transform:uppercase;font-size:12.5px;color:var(--terra);margin-bottom:8px}
+#fm-proximos h3{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(64px,8vw,104px);line-height:.92;letter-spacing:.03em;color:var(--ink)}
+#fm-proximos .tag{font-family:'Roboto Condensed',sans-serif;font-weight:300;font-size:22px;color:var(--mauve);margin:8px 0 18px;line-height:1.3}
+#fm-proximos .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+#fm-proximos .chip{font-family:'Roboto Condensed',sans-serif;font-size:14px;letter-spacing:.06em;border:1px solid var(--suave);border-radius:30px;padding:7px 14px;background:var(--paper)}
+#fm-proximos .chip b{color:var(--terra)}
+#fm-proximos .cd{display:flex;gap:10px;margin-bottom:26px}
+#fm-proximos .cd div{background:var(--ink);color:#fff;border-radius:4px;min-width:70px;padding:10px 6px;text-align:center}
+#fm-proximos .cd b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+#fm-proximos .cd span{font-family:'Roboto Condensed',sans-serif;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--suave)}
+#fm-proximos .acc{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+#fm-proximos .btn{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:15px;padding:16px 34px;border-radius:2px;animation:fmP 1.8s ease-in-out infinite}
+@keyframes fmP{0%,100%{box-shadow:0 0 0 0 rgba(194,74,34,.5)}50%{box-shadow:0 0 0 14px rgba(194,74,34,0)}}
+#fm-proximos .lnk{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+@media(max-width:860px){
+ #fm-proximos{padding:54px 14px}
+ #fm-proximos .card{grid-template-columns:1fr}
+ #fm-proximos .vis{min-height:420px}
+ #fm-proximos .mq.a{font-size:74px} #fm-proximos .mq.b{font-size:50px}
+ #fm-proximos .info{padding:28px 22px 32px}
+ #fm-proximos .cd div{min-width:0;flex:1}
+ #fm-proximos .acc{flex-direction:column;align-items:stretch;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){#fm-proximos *{animation:none!important}}
+</style>
+<div class="tit"><h2>Próximos eventos</h2></div>
+<div class="sub">Viví a Fabiola en vivo</div>
+<div class="card">
+  <div class="vis">
+    <div class="capas">
+      <img class="bg" src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-6a5ac813dd.jpg" alt="" aria-hidden="true">
+      <div class="velo"></div>
+      <div class="mq a">VOCES&nbsp;·&nbsp;NETWORKING&nbsp;·&nbsp;SPEAKERS&nbsp;·&nbsp;VOCES&nbsp;·&nbsp;NETWORKING&nbsp;·&nbsp;SPEAKERS&nbsp;·&nbsp;</div>
+      <div class="mq b">EN VOZ ALTA&nbsp;·&nbsp;FABIOLA MURILLO&nbsp;·&nbsp;EN VOZ ALTA&nbsp;·&nbsp;FABIOLA MURILLO&nbsp;·&nbsp;</div>
+      <div class="luz"></div>
+      <img class="fg" src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-81294016cd.png" alt="Fabiola Murillo en conferencia">
+    </div>
+    <div class="brillo"></div>
+    <div class="firma">Fabiola Murillo · Speaker</div>
+  </div>
+  <div class="info">
+    <div class="pre">Evento presencial · Sábado 7 de noviembre · 5:30 p.m.</div>
+    <h3>VOCES</h3>
+    <div class="tag">Una noche de networking &amp; speakers para hacer negocios y que te escuchen.</div>
+    <div class="chips"><span class="chip">General <b>$50</b></span><span class="chip">Marca <b>$75</b> · 10 cupos</span><span class="chip">Speaker <b>$100</b> · 10 cupos</span></div>
+    <div class="cd" id="fmCuenta"><div><b id="fmD">--</b><span>Días</span></div><div><b id="fmH">--</b><span>Horas</span></div><div><b id="fmM">--</b><span>Min</span></div><div><b id="fmS">--</b><span>Seg</span></div></div>
+    <div class="acc"><a class="btn" id="fmBtn" href="https://fabiolamurillocr.com/voces/">Reservá tu lugar →</a><a class="lnk" id="fmLnk" href="https://fabiolamurillocr.com/voces/">Ver el evento</a></div>
+  </div>
+</div>
+<script>
+(function(){
+  var fin=new Date('2026-11-07T17:30:00-06:00').getTime();
+  function dos(n){return (n>9?'':'0')+n;}
+  function tic(){
+    var r=Math.max(0,fin-Date.now()), s=Math.floor(r/1000);
+    document.getElementById('fmD').textContent=Math.floor(s/86400);
+    document.getElementById('fmH').textContent=dos(Math.floor(s%86400/3600));
+    document.getElementById('fmM').textContent=dos(Math.floor(s%3600/60));
+    document.getElementById('fmS').textContent=dos(s%60);
+  }
+  tic(); setInterval(tic,1000);
+  function medir(){ try{ if(window.fbq) fbq('trackCustom','ClicVOCESPortada'); if(window.gtag) gtag('event','select_promotion',{promotion_name:'VOCES 7-nov',creative_slot:'portada'}); }catch(e){} }
+  ['fmBtn','fmLnk'].forEach(function(id){var el=document.getElementById(id); if(el) el.addEventListener('click',medir);});
+})();
+</script>
+</div>
