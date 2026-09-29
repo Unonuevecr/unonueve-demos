@@ -5,108 +5,123 @@
  font-family:Montserrat,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 #voces *{box-sizing:border-box;margin:0;padding:0}
 #voces .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-#voces .cond{font-family:'Roboto Condensed',sans-serif}
 #voces h1,#voces h2,#voces h3{font-family:'Roboto Condensed',sans-serif;color:var(--ink);font-weight:700;line-height:1.02}
 #voces .lbl{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.42em;text-transform:uppercase;font-size:13px;color:var(--terra)}
 #voces a{color:inherit;text-decoration:none}
-#voces .btn{display:inline-block;background:var(--terra);color:#fff;border:0;cursor:pointer;border-radius:2px;padding:16px 42px;
- font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:15px;transition:transform .18s,box-shadow .18s,background .18s}
+#voces .btn{display:inline-block;background:var(--terra);color:#fff;border:0;cursor:pointer;border-radius:2px;padding:16px 42px;margin:0;
+ font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:15px;line-height:1.3;transition:transform .18s,box-shadow .18s,background .18s}
 #voces .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(194,74,34,.28)}
-#voces .btn.dark{background:var(--ciruela)} #voces .btn.dark:hover{box-shadow:0 14px 30px rgba(92,70,78,.3)}
-#voces .btn.out{background:transparent;color:var(--ink);border:1.5px solid var(--ink)} #voces .btn.out:hover{background:var(--ink);color:#fff}
 
 /* header */
-#voces .nav{background:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:16px 26px}
-#voces .nav .wm{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.34em;text-transform:uppercase;font-size:19px;color:var(--ink)}
-#voces .nav .wm small{display:block;letter-spacing:.28em;font-size:8.5px;color:var(--mauve);font-weight:400;margin-top:2px;text-align:center}
+#voces .nav{background:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:14px 26px}
+#voces .nav .wm{font-family:'Anton',sans-serif;letter-spacing:.08em;font-size:22px;color:var(--ink);line-height:1}
+#voces .nav .wm span{color:var(--terra)}
+#voces .nav .wm small{display:block;font-family:'Roboto Condensed',sans-serif;font-weight:400;letter-spacing:.3em;font-size:9px;color:var(--mauve);margin-top:4px}
 #voces .nav .cta{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--terra)}
 
 /* HERO */
 #voces .hero{position:relative;background:var(--cream);overflow:hidden}
-#voces .hero .herobg{position:absolute;inset:0;background:url('https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-8322ef3424.jpg') center/cover no-repeat;opacity:.16;filter:saturate(.6) blur(6px);transform:scale(1.06);z-index:0}
-#voces .hero .heroveil{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(255,237,223,.94) 0%,rgba(255,237,223,.84) 42%,rgba(255,237,223,.66) 72%,rgba(255,237,223,.58) 100%)}
+#voces .hero .herobg{position:absolute;inset:0;background:url('https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-8322ef3424.jpg') center/cover no-repeat;opacity:.18;filter:saturate(.6) blur(5px);transform:scale(1.06);z-index:0}
+#voces .hero .heroveil{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(255,237,223,.95) 0%,rgba(255,237,223,.86) 48%,rgba(255,237,223,.66) 76%,rgba(255,237,223,.58) 100%)}
 #voces .marquee{position:absolute;left:0;right:0;white-space:nowrap;font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;pointer-events:none;line-height:.85;z-index:2}
-#voces .m1{top:64px;font-size:150px;color:#fff;opacity:.6;animation:mvR 36s linear infinite}
-#voces .m2{bottom:38px;font-size:110px;color:var(--terra);opacity:.10;animation:mvR 52s linear infinite}
+#voces .m1{top:40px;font-size:128px;color:#fff;opacity:.62;animation:mvR 38s linear infinite}
+#voces .m2{bottom:34px;font-size:96px;color:var(--terra);opacity:.09;animation:mvR 54s linear infinite}
 @keyframes mvR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-#voces .hero .inner{position:relative;z-index:3;max-width:1120px;margin:0 auto;padding:44px 24px 0;display:grid;grid-template-columns:1fr 480px;gap:20px;align-items:end;min-height:560px}
-#voces .hero .copy{padding-bottom:66px}
-#voces .hero .pre{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.4em;text-transform:uppercase;font-size:13px;color:var(--terra);margin-bottom:14px;animation:fadeInUp .8s ease both}
-#voces .hero h1{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(90px,14vw,180px);letter-spacing:.03em;color:var(--ink);margin-bottom:10px;animation:fadeInUp .9s .1s ease both}
+#voces .hero .inner{position:relative;z-index:3;max-width:1120px;margin:0 auto;padding:46px 24px 0;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:end;min-height:590px}
+#voces .hero .copy{padding-bottom:60px}
+#voces .hero .pre{display:flex;align-items:center;gap:12px;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.34em;text-transform:uppercase;font-size:13px;color:var(--ciruela);margin-bottom:16px;animation:fadeInUp .8s ease both}
+#voces .hero .pre .sello{font-family:'Anton',sans-serif;letter-spacing:.06em;font-size:15px;color:#fff;background:var(--ciruela);padding:5px 10px;border-radius:2px}
+#voces .hero .pre .logo{height:40px;width:auto;display:block}
+#voces .hero h1{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(84px,11.5vw,158px);letter-spacing:.02em;line-height:.9;color:var(--ink);animation:fadeInUp .9s .1s ease both}
+#voces .hero h1 .cr{color:var(--terra)}
+#voces .hero h1 .y{display:block;font-size:.5em;letter-spacing:.14em;color:transparent;-webkit-text-stroke:2px var(--ink);margin-top:4px}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes pulseBtn{0%,100%{box-shadow:0 0 0 0 rgba(194,74,34,.55);transform:translateY(0)}50%{box-shadow:0 0 0 14px rgba(194,74,34,0);transform:translateY(-1px)}}
-#voces .hero .tag{font-family:'Roboto Condensed',sans-serif;font-weight:300;font-size:clamp(20px,3vw,30px);color:var(--mauve);letter-spacing:.02em;margin-bottom:20px}
-#voces .hero .meta{display:flex;gap:10px 26px;flex-wrap:wrap;font-family:'Roboto Condensed',sans-serif;font-weight:400;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--ink);margin-bottom:26px}
+#voces .hero .tag{font-family:'Roboto Condensed',sans-serif;font-weight:300;font-size:clamp(22px,3vw,34px);color:var(--mauve);letter-spacing:.01em;line-height:1.2;margin:14px 0 18px;animation:fadeInUp .9s .2s ease both}
+#voces .hero .tag b{font-weight:700;color:var(--terra)}
+#voces .ejes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+#voces .ejes span{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;padding:7px 14px;border-radius:30px;border:1px solid var(--mauve);color:var(--ciruela);background:rgba(255,255,255,.55);animation:ejeOn 7.5s ease-in-out infinite;animation-delay:calc(var(--i)*1.5s)}
+@keyframes ejeOn{0%,16%{background:var(--terra);color:#fff;border-color:var(--terra)}24%,100%{background:rgba(255,255,255,.55);color:var(--ciruela);border-color:var(--mauve)}}
+#voces .hero .meta{display:flex;gap:8px 24px;flex-wrap:wrap;font-family:'Roboto Condensed',sans-serif;font-weight:400;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--ink);margin-bottom:24px}
 #voces .hero .meta b{font-weight:700}
 #voces .hero .copy .btn{animation:pulseBtn 1.8s ease-in-out infinite}
-#voces .hero .photo{position:relative;align-self:end;text-align:center;animation:floaty 6s ease-in-out infinite;z-index:3}
-#voces .hero .photo img{width:100%;max-width:480px;height:auto;display:block;filter:drop-shadow(0 24px 44px rgba(92,70,78,.28));-webkit-mask-image:linear-gradient(to bottom,#000 76%,transparent 100%);mask-image:linear-gradient(to bottom,#000 76%,transparent 100%)}
-#voces .hero .photo:before{content:"";position:absolute;left:50%;top:48%;width:118%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,186,.95) 0%,rgba(255,226,206,.55) 42%,rgba(255,237,223,0) 70%);z-index:-1;pointer-events:none}
-#voces .hero .cta-foto{display:none}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+/* anfitriona (segundo plano) */
+#voces .hero .photo{position:relative;align-self:end;text-align:center;z-index:3}
+#voces .hero .photo img{width:100%;max-width:380px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 20px 40px rgba(92,70,78,.24));-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);mask-image:linear-gradient(to bottom,#000 70%,transparent 100%)}
+#voces .hero .photo:before{content:"";position:absolute;left:50%;top:45%;width:112%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,186,.9) 0%,rgba(255,226,206,.5) 42%,rgba(255,237,223,0) 70%);z-index:-1;pointer-events:none}
+#voces .anf{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);background:rgba(255,255,255,.94);border:1px solid var(--suave);border-radius:4px;padding:10px 18px;text-align:center;white-space:nowrap;box-shadow:0 12px 30px rgba(92,70,78,.14)}
+#voces .anf small{display:block;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:10px;color:var(--terra)}
+#voces .anf b{display:block;font-family:'Roboto Condensed',sans-serif;font-size:18px;letter-spacing:.04em}
+#voces .anf i{display:block;font-style:normal;font-size:11.5px;color:var(--mauve)}
+#voces .anf-mini{display:none}
 #voces .hero .strip{position:relative;z-index:3;background:var(--ink);color:#fff;text-align:center;padding:12px;font-family:'Roboto Condensed',sans-serif;letter-spacing:.24em;text-transform:uppercase;font-size:12.5px}
 
-/* fmrv on scroll */
+/* aparecer al hacer scroll */
 #voces .fmrv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 #voces .fmrv.in{opacity:1;transform:none}
 
 /* secciones */
 #voces section{padding:80px 0}
-#voces .center{text-align:center;max-width:840px;margin:0 auto}
+#voces .center{text-align:center;max-width:860px;margin:0 auto}
 #voces h2{font-size:clamp(32px,5vw,52px);letter-spacing:.01em;margin-bottom:12px}
 #voces .kick{margin-bottom:16px}
 #voces .lead{font-size:18px;color:#5c534f;font-weight:400}
 #voces .em{color:var(--terra)}
 
-#voces .prob{background:var(--paper)}
-#voces .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
-#voces .stat{background:#fff;border:1px solid var(--suave);border-radius:4px;padding:34px 26px;text-align:center}
-#voces .stat .n{font-family:'Roboto Condensed',sans-serif;font-weight:700;color:var(--terra);font-size:58px;line-height:1;font-variant-numeric:tabular-nums}
-#voces .stat .t{font-size:14.5px;color:#5c534f;margin-top:10px}
-#voces .fuente{text-align:center;font-size:12px;color:#a99e98;margin-top:20px;letter-spacing:.02em}
+/* qué es */
+#voces .que{background:var(--paper)}
+#voces .quien{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+#voces .quien span{font-family:'Roboto Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:14px;background:#fff;border:1px solid var(--suave);border-radius:30px;padding:8px 18px}
+#voces .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+#voces .stat{background:#fff;border:1px solid var(--suave);border-radius:4px;padding:30px 18px;text-align:center}
+#voces .stat .n{font-family:'Anton',sans-serif;color:var(--terra);font-size:58px;line-height:1;font-variant-numeric:tabular-nums}
+#voces .stat .t{font-family:'Roboto Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:13.5px;color:#5c534f;margin-top:10px}
 
-#voces .sol .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
-#voces .feat{text-align:center;padding:10px}
-#voces .feat .ic{width:124px;height:124px;border-radius:50%;background:var(--cream);color:var(--terra);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
-#voces .feat .ic svg{width:96px;height:96px;overflow:visible}
+/* ejes */
+#voces .ejs .cols{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:46px}
+#voces .feat{text-align:center;padding:26px 14px;border-radius:6px;transition:transform .3s,box-shadow .3s,background .3s}
+#voces .feat:hover{transform:translateY(-6px);background:var(--paper);box-shadow:0 16px 36px rgba(92,70,78,.10)}
+#voces .feat .ic{width:112px;height:112px;border-radius:50%;background:var(--cream);color:var(--terra);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+#voces .feat .ic svg{width:84px;height:84px;overflow:visible}
+#voces .feat h3{font-size:21px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+#voces .feat p{font-size:14.5px;color:#5c534f;line-height:1.6}
+#voces .ic .onda{transform-origin:32px 24px;opacity:0;animation:onda 1.8s ease-out infinite}
+#voces .ic .o2{animation-delay:.6s}
+@keyframes onda{0%{opacity:.85;transform:scale(.7)}100%{opacity:0;transform:scale(1.35)}}
 #voces .ic .ruta{animation:marcha 1s linear infinite}
 @keyframes marcha{to{stroke-dashoffset:-16}}
 #voces .ic .nodo{fill:#fff;animation:nodo 2.6s linear infinite}
 #voces .ic .nb{animation-delay:1.04s} #voces .ic .nc{animation-delay:2.08s}
 @keyframes nodo{0%{fill:#C24A22}22%,100%{fill:#fff}}
-#voces .ic .letra{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:9px;fill:currentColor;stroke:none;text-anchor:middle}
-#voces .ic .mover{animation:lado 1.6s ease-in-out infinite alternate}
-@keyframes lado{from{transform:translateX(-10px)}to{transform:translateX(10px)}}
-#voces .ic .brazos{transform-origin:32px 24px;animation:brazos .8s ease-in-out infinite alternate}
-@keyframes brazos{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
-#voces .ic .pi{transform-origin:32px 37px;animation:pi .8s ease-in-out infinite alternate}
-#voces .ic .pd{transform-origin:32px 37px;animation:pd .8s ease-in-out infinite alternate}
-@keyframes pi{from{transform:rotate(14deg)}to{transform:rotate(-4deg)}}
-@keyframes pd{from{transform:rotate(4deg)}to{transform:rotate(-14deg)}}
+#voces .ic .rayos{transform-origin:32px 32px;animation:gira 9s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+#voces .ic .estrella{transform-origin:32px 31px;animation:late 1.6s ease-in-out infinite}
+@keyframes late{0%,100%{transform:scale(.9)}50%{transform:scale(1.08)}}
 #voces .ic .sube{animation:sube 2.6s ease-in-out infinite}
 @keyframes sube{0%,14%{transform:translateY(10px)}52%,80%{transform:translateY(0)}100%{transform:translateY(10px)}}
 #voces .ic .jala{transform-origin:47px 19px;animation:jala 2.6s ease-in-out infinite}
 @keyframes jala{0%,14%{transform:rotate(-20deg)}52%,80%{transform:rotate(0)}100%{transform:rotate(-20deg)}}
 #voces .ic .cora{transform-origin:40px 8px;animation:cora 2.6s ease-in-out infinite}
 @keyframes cora{0%,48%{opacity:0;transform:scale(.3)}62%,84%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+#voces .ic .barra{transform-box:fill-box;transform-origin:bottom;animation:barra 2.4s ease-in-out infinite}
+#voces .ic .b2{animation-delay:.25s} #voces .ic .b3{animation-delay:.5s}
+@keyframes barra{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
 @media (prefers-reduced-motion:reduce){#voces *{animation:none!important;transition:none!important}}
-#voces .feat h3{font-size:23px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
-#voces .feat p{font-size:15px;color:#5c534f}
 
-/* galería real */
+/* galería */
 #voces .gal{background:var(--cream)}
 #voces .gcols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-#voces .gcols figure{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:3/4}
-#voces .gcols img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;display:block}
+#voces .gcols figure{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:3/4;margin:0}
+#voces .gcols img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;display:block;max-width:none}
 #voces .gcols figure:hover img{transform:scale(1.06)}
 #voces .gcols figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px;color:#fff;font-family:'Roboto Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:13px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(39,39,39,.72))}
 
-/* evento / accesos */
+/* accesos */
 #voces .evt{background:#fff}
 #voces .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;align-items:stretch}
 #voces .tier{background:var(--paper);border:1px solid var(--suave);border-radius:6px;padding:36px 28px;display:flex;flex-direction:column;position:relative}
 #voces .tier.hot{background:var(--ciruela);color:#fff;border-color:var(--ciruela)}
-#voces .tier .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--terra);color:#fff;font-family:'Roboto Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:11px;padding:5px 16px;border-radius:30px;white-space:nowrap}
+#voces .tier .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--terra);color:#fff;font-family:'Roboto Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:11px;padding:5px 16px;border-radius:30px;white-space:nowrap;min-width:0}
 #voces .tier .tn{font-family:'Roboto Condensed',sans-serif;letter-spacing:.28em;text-transform:uppercase;font-size:15px;color:var(--mauve)}
 #voces .tier.hot .tn{color:var(--suave)}
 #voces .tier .pr{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:62px;line-height:1;margin:4px 0 2px;color:var(--ink)}
@@ -120,12 +135,21 @@
 #voces .tier .btn{width:100%;text-align:center}
 #voces .tier:not(.hot) .btn{background:var(--ciruela)}
 
+/* anfitriona (sección) */
+#voces .host{background:var(--paper);padding:64px 0}
+#voces .hcard{display:grid;grid-template-columns:200px minmax(0,1fr);gap:34px;align-items:center;max-width:860px;margin:0 auto}
+#voces .hcard .hf{width:200px;height:200px;border-radius:50%;overflow:hidden;background:var(--cream);border:4px solid #fff;box-shadow:0 14px 34px rgba(92,70,78,.14)}
+#voces .hcard .hf img{width:175%;height:auto;display:block;margin:4px 0 0 -38%;max-width:none}
+#voces .hcard h3{font-size:32px;margin:4px 0 2px}
+#voces .hcard .rol{font-family:'Roboto Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:13.5px;color:var(--mauve);margin-bottom:12px}
+#voces .hcard p{color:#5c534f}
+
 /* registro */
-#voces .reg{background:var(--paper)}
+#voces .reg{background:#fff}
 #voces .card{background:#fff;border:1px solid var(--suave);border-radius:8px;padding:46px 42px;max-width:720px;margin:36px auto 0;box-shadow:0 18px 50px rgba(92,70,78,.08)}
 #voces .field{margin-bottom:18px}
-#voces label{display:block;font-family:'Roboto Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--mauve);margin-bottom:6px}
-#voces input,#voces select,#voces textarea{height:auto;margin:0;line-height:1.4;width:100%;border:1px solid var(--suave);border-radius:3px;padding:13px 15px;font-family:Montserrat,sans-serif;font-size:15px;color:var(--ink);background:#fff;outline:none}
+#voces label{display:block;font-family:'Roboto Condensed',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--mauve);margin:0 0 6px}
+#voces input,#voces select,#voces textarea{height:auto;margin:0;line-height:1.4;width:100%;border:1px solid var(--suave);border-radius:3px;padding:13px 15px;font-family:Montserrat,sans-serif;font-size:15px;color:var(--ink);background:#fff;outline:none;box-shadow:none}
 #voces input:focus,#voces select:focus,#voces textarea:focus{border-color:var(--terra)}
 #voces select.flash{animation:fmFlash 1.6s ease 2}
 @keyframes fmFlash{0%,100%{box-shadow:0 0 0 0 rgba(194,74,34,0);border-color:var(--suave)}40%{box-shadow:0 0 0 5px rgba(194,74,34,.28);border-color:var(--terra)}}
@@ -136,121 +160,146 @@
 
 /* faq / footer */
 #voces .faq{max-width:760px;margin:36px auto 0}
-#voces .faq details{border-bottom:1px solid var(--suave);padding:6px 4px}
-#voces .faq summary{cursor:pointer;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.04em;color:var(--ink);font-size:20px;padding:16px 0;list-style:none;position:relative}
+#voces .faq details{border-bottom:1px solid var(--suave);padding:6px 4px;display:block}
+#voces .faq summary{cursor:pointer;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.04em;color:var(--ink);font-size:20px;padding:16px 28px 16px 0;list-style:none;position:relative;display:block}
 #voces .faq summary::-webkit-details-marker{display:none}
 #voces .faq summary:after{content:"+";position:absolute;right:4px;color:var(--terra)}
 #voces .faq details[open] summary:after{content:"–"}
 #voces .faq p{padding:0 0 16px;color:#5c534f;font-size:15.5px}
 #voces footer{background:var(--ink);color:#fff;text-align:center;padding:46px 22px}
-#voces footer .wm{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.34em;text-transform:uppercase;font-size:20px}
-#voces footer .tl{letter-spacing:.28em;font-size:9px;color:var(--suave);margin:4px 0 14px}
+#voces footer .wm{font-family:'Anton',sans-serif;letter-spacing:.08em;font-size:26px}
+#voces footer .wm span{color:#FFB88F}
+#voces footer .tl{font-family:'Roboto Condensed',sans-serif;letter-spacing:.28em;font-size:10px;color:var(--suave);margin:6px 0 14px;text-transform:uppercase}
 #voces footer p{color:#c9bdb8;font-size:13.5px}
 
 @media(max-width:900px){
-  #voces .hero .inner{grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:0 10px;text-align:left;min-height:auto;padding:28px 14px 22px;align-items:center}
-  #voces .hero .photo,#voces .hero .copy{min-width:0}
-  #voces .hero .photo{order:1;align-self:center}
-  #voces .hero .photo img{max-width:100%;margin:0 auto;-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);mask-image:linear-gradient(to bottom,#000 70%,transparent 100%)}
-  #voces .hero .cta-foto{display:block;width:100%;margin:-14px auto 0;padding:12px 4px;font-size:11px;letter-spacing:.06em;white-space:nowrap;text-align:center;position:relative;z-index:4;animation:pulseBtn 1.8s ease-in-out infinite}
-  #voces .hero .copy{order:2;padding-bottom:0}
-  #voces .hero .copy .btn{display:none}
-  #voces .hero .pre{font-size:10px;letter-spacing:.16em;margin-bottom:8px;line-height:1.5}
-  #voces .hero h1{font-size:clamp(44px,14vw,66px);margin-bottom:6px}
-  #voces .hero .tag{font-size:15px;line-height:1.3;margin-bottom:12px}
-  #voces .hero .meta{flex-direction:column;gap:4px;font-size:11px;letter-spacing:.1em;margin-bottom:0}
-  #voces .hero .heroveil{background:linear-gradient(90deg,rgba(255,237,223,.40) 0%,rgba(255,237,223,.86) 46%,rgba(255,237,223,.95) 100%)}
-  #voces .m1{font-size:88px;top:26px} #voces .m2{font-size:64px;bottom:40px}
-  #voces .feat .ic{width:116px;height:116px} #voces .feat .ic svg{width:88px;height:88px}
-  #voces .stats,#voces .sol .cols,#voces .gcols,#voces .tiers{grid-template-columns:1fr}
+  #voces .hero .inner{grid-template-columns:1fr;min-height:auto;padding:30px 18px 30px}
+  #voces .hero .photo{display:none}
+  #voces .hero .copy{padding-bottom:0}
+  #voces .hero .pre{font-size:10.5px;letter-spacing:.22em;gap:9px;margin-bottom:10px}
+  #voces .hero .pre .sello{font-size:12px;padding:4px 8px}
+  #voces .hero .pre .logo{height:30px}
+  #voces .hero h1{font-size:clamp(60px,19vw,92px)}
+  #voces .hero .tag{font-size:22px;margin:10px 0 14px}
+  #voces .ejes span{font-size:11px;padding:6px 11px;letter-spacing:.1em}
+  #voces .hero .meta{flex-direction:column;gap:2px;font-size:12px;letter-spacing:.12em;margin-bottom:18px}
+  #voces .hero .copy .btn{display:block;text-align:center;padding:15px 10px}
+  #voces .anf-mini{display:flex;align-items:center;gap:12px;margin-top:18px}
+  #voces .anf-mini span.f{width:52px;height:52px;border-radius:50%;overflow:hidden;background:#fff;border:2px solid #fff;box-shadow:0 6px 16px rgba(92,70,78,.18);flex:0 0 52px}
+  #voces .anf-mini span.f img{width:175%;height:auto;display:block;margin:2px 0 0 -38%;max-width:none}
+  #voces .anf-mini small{display:block;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.26em;text-transform:uppercase;font-size:9.5px;color:var(--terra)}
+  #voces .anf-mini b{display:block;font-family:'Roboto Condensed',sans-serif;font-size:15px;line-height:1.2}
+  #voces .anf-mini i{font-style:normal;font-size:11px;color:var(--mauve)}
+  #voces .hero .heroveil{background:linear-gradient(180deg,rgba(255,237,223,.88) 0%,rgba(255,237,223,.94) 100%)}
+  #voces .m1{font-size:78px;top:18px} #voces .m2{font-size:58px;bottom:30px}
+  #voces .stats{grid-template-columns:repeat(2,1fr);gap:12px} #voces .stat .n{font-size:46px}
+  #voces .ejs .cols{grid-template-columns:repeat(2,1fr);gap:10px} #voces .ejs .cols .feat:last-child{grid-column:1/-1}
+  #voces .feat{padding:18px 8px} #voces .feat .ic{width:96px;height:96px} #voces .feat .ic svg{width:72px;height:72px}
+  #voces .gcols,#voces .tiers{grid-template-columns:1fr}
+  #voces .hcard{grid-template-columns:1fr;text-align:center;gap:18px} #voces .hcard .hf{margin:0 auto;width:160px;height:160px}
   #voces .two{grid-template-columns:1fr} #voces section{padding:56px 0} #voces .card{padding:32px 22px}
-  #voces .nav .cta{display:none}
+  #voces .nav .cta{display:none} #voces .nav{justify-content:center}
 }
 </style>
 
 <!-- NAV -->
 <div class="nav">
-  <div class="wm">FABIOLA MURILLO<small>CRECE · LIDERA · IMPACTA</small></div>
-  <a class="cta" href="#reservar">Reservar mi lugar →</a>
+  <div class="wm">VOCES <span>CR</span> 2026<small>IC&amp;SF COSTA RICA</small></div>
+  <a class="cta" href="#accesos">Quiero ser parte →</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="herobg"></div><div class="heroveil"></div>
-  <div class="marquee m1">EN VOZ ALTA&nbsp;·&nbsp;SPEAKER&nbsp;·&nbsp;ASESORA&nbsp;·&nbsp;NETWORKING&nbsp;·&nbsp;MENTORA&nbsp;·&nbsp;EN VOZ ALTA&nbsp;·&nbsp;SPEAKER&nbsp;·&nbsp;ASESORA&nbsp;·&nbsp;NETWORKING&nbsp;·&nbsp;MENTORA&nbsp;·&nbsp;</div>
-  <div class="marquee m2">CONFERENCISTA&nbsp;·&nbsp;LIDERAZGO&nbsp;·&nbsp;COMUNICACIÓN&nbsp;·&nbsp;EN VOZ ALTA&nbsp;·&nbsp;CONFERENCISTA&nbsp;·&nbsp;LIDERAZGO&nbsp;·&nbsp;COMUNICACIÓN&nbsp;·&nbsp;EN VOZ ALTA&nbsp;·&nbsp;</div>
+  <div class="marquee m1">SPEAKERS&nbsp;·&nbsp;NETWORKING&nbsp;·&nbsp;MARCA&nbsp;·&nbsp;PROPÓSITO&nbsp;·&nbsp;NEGOCIOS&nbsp;·&nbsp;SPEAKERS&nbsp;·&nbsp;NETWORKING&nbsp;·&nbsp;MARCA&nbsp;·&nbsp;PROPÓSITO&nbsp;·&nbsp;NEGOCIOS&nbsp;·&nbsp;</div>
+  <div class="marquee m2">UNIMOS VOCES&nbsp;·&nbsp;MULTIPLICAMOS IMPACTO&nbsp;·&nbsp;UNIMOS VOCES&nbsp;·&nbsp;MULTIPLICAMOS IMPACTO&nbsp;·&nbsp;</div>
   <div class="inner">
     <div class="copy">
-      <div class="pre">Evento presencial · 7 de noviembre</div>
-      <h1>VOCES</h1>
-      <div class="tag">Donde tu voz se convierte en negocio.</div>
+      <div class="pre"><span class="sello">IC&amp;SF</span><span>Costa Rica presenta</span></div>
+      <h1>VOCES <span class="cr">CR</span><span class="y">2026</span></h1>
+      <div class="tag">Unimos voces. <b>Multiplicamos impacto.</b></div>
+      <div class="ejes"><span style="--i:0">Speakers</span><span style="--i:1">Networking</span><span style="--i:2">Marca</span><span style="--i:3">Propósito</span><span style="--i:4">Negocios</span></div>
       <div class="meta"><span><b>Sábado 7 de noviembre</b></span><span>Recepción <b>5:30 p.m.</b></span><span>Programa <b>6:00 p.m.</b></span></div>
-      <a class="btn" href="#reservar">Reservar mi lugar</a>
+      <a class="btn" href="#accesos">Quiero ser parte</a>
+      <div class="anf-mini"><span class="f"><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-f1102e219d.png" alt="Fabiola Murillo"></span><span><small>Anfitriona</small><b>Fabiola Murillo</b><i>Presidenta de IC&amp;SF Costa Rica</i></span></div>
     </div>
-    <div class="photo"><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-f1102e219d.png" alt="Fabiola Murillo"><a class="btn cta-foto" href="#reservar">Reservar mi lugar</a></div>
+    <div class="photo"><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-f1102e219d.png" alt="Fabiola Murillo, anfitriona de VOCES CR 2026">
+      <div class="anf"><small>Anfitriona</small><b>Fabiola Murillo</b><i>Presidenta de IC&amp;SF Costa Rica</i></div></div>
   </div>
-  <div class="strip">Networking &amp; Speakers · Aforo 100 personas · Preventa abierta · Cupos limitados</div>
+  <div class="strip">Evento anual de IC&amp;SF Costa Rica · Aforo 100 personas · Preventa abierta · Cupos limitados</div>
 </div>
 
-<!-- PROBLEMA + DATOS -->
-<section class="prob"><div class="wrap center fmrv">
-  <div class="lbl kick">La comunicación que no se ve… se paga</div>
-  <h2>¿Sabías que la forma en que tu equipo se comunica te está costando dinero?</h2>
-  <p class="lead">No es un tema "blando". La mala comunicación se traduce en errores, reprocesos, plazos que se caen y clientes que se van. Y eso, en tu empresa, tiene un número.</p>
+<!-- QUÉ ES -->
+<section class="que"><div class="wrap center fmrv">
+  <div class="lbl kick">El encuentro anual de la familia IC&amp;SF</div>
+  <h2>Un espacio para que tu voz <span class="em">tenga impacto</span>.</h2>
+  <p class="lead">VOCES CR es el evento anual de IC&amp;SF Costa Rica: una noche donde conferencistas, profesionales, empresarios y emprendedores se unen para conectar, compartir su mensaje y darle voz a su marca, su propósito o su negocio.</p>
+  <div class="quien"><span>Conferencistas</span><span>Profesionales</span><span>Empresarios</span><span>Emprendedores</span></div>
   <div class="stats">
-    <div class="stat"><div class="n" data-count="12500" data-pre="$" data-dec="0">$12.500</div><div class="t">por empleado al año se pierde por mala comunicación</div></div>
-    <div class="stat"><div class="n" data-count="7.4" data-suf=" h" data-dec="1">7,4 h</div><div class="t">a la semana pierden los líderes por comunicarse mal (casi un día entero)</div></div>
-    <div class="stat"><div class="n" data-count="42" data-suf="%" data-dec="0">42%</div><div class="t">de los líderes dice que impacta directamente en los plazos de entrega</div></div>
+    <div class="stat"><div class="n" data-count="100">100</div><div class="t">personas en el encuentro</div></div>
+    <div class="stat"><div class="n" data-count="10">10</div><div class="t">speakers en tarima</div></div>
+    <div class="stat"><div class="n" data-count="10">10</div><div class="t">marcas en exhibición</div></div>
+    <div class="stat"><div class="n" data-count="5">5</div><div class="t">ejes: voz, conexión, marca, propósito y negocio</div></div>
   </div>
-  <p class="fuente">Fuente: State of Business Communication — Grammarly &amp; Harris Poll (2023) · SHRM.</p>
 </div></section>
 
-<!-- SOLUCIÓN -->
-<section class="sol"><div class="wrap">
-  <div class="center fmrv"><div class="lbl kick">La solución</div>
-  <h2>Comunicación con <span class="em">propósito</span>: menos problemas, más resultados.</h2>
-  <p class="lead">Soy Fabiola Murillo, arquitecta de liderazgo y comunicación. Ayudo a las empresas a que su gente se comunique con claridad, valentía y propósito — para que la comunicación deje de costar y empiece a rendir.</p></div>
+<!-- EJES -->
+<section class="ejs"><div class="wrap">
+  <div class="center fmrv"><div class="lbl kick">Lo que vas a vivir</div>
+  <h2>Cinco razones para ser parte.</h2>
+  <p class="lead">Una sola noche para inspirarte, conectar, mostrar lo que hacés y abrir oportunidades con una comunidad que suma.</p></div>
   <div class="cols fmrv">
-    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ruta" d="M10 44 L32 18 L54 44" stroke-dasharray="4 4"/><circle class="nodo na" cx="10" cy="44" r="5"/><circle class="nodo nb" cx="32" cy="18" r="5"/><circle class="nodo nc" cx="54" cy="44" r="5"/><text class="letra" x="10" y="59">A</text><text class="letra" x="32" y="9">B</text><text class="letra" x="54" y="59">C</text><circle r="3.4" fill="currentColor" stroke="none"><animateMotion dur="2.6s" repeatCount="indefinite" path="M10 44 L32 18 L54 44" keyPoints="0;0.5;1;1" keyTimes="0;0.4;0.8;1" calcMode="linear"/></circle></svg></div><h3>Procesos</h3><p>Diseñamos cómo se comunica tu equipo hacia adentro y hacia el cliente, para cerrar las fugas que hoy cuestan dinero.</p></div>
-    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="57" x2="58" y2="57" stroke-width="2" opacity=".35"/><g class="mover"><circle cx="32" cy="13" r="5.5"/><path d="M32 18.5 L32 37"/><path class="brazos" d="M21 30 L32 24 L43 30"/><path class="pi" d="M32 37 L25 55"/><path class="pd" d="M32 37 L39 55"/></g></svg></div><h3>Ejercicios</h3><p>Entrenamos a tu gente con dinámicas reales —no teoría— para que hablen con seguridad y sean escuchados.</p></div>
-    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="cora" d="M40 12 L36.4 8.6 A2.3 2.3 0 0 1 40 5.7 A2.3 2.3 0 0 1 43.6 8.6 Z" fill="currentColor" stroke="none"/><line x1="30" y1="31" x2="60" y2="31" stroke-width="2" opacity=".45"/><circle cx="47" cy="12" r="4.5"/><path d="M47 16.5 L47 25 M47 25 L43 31 M47 25 L51 31"/><path class="jala" d="M47 19 L36 27"/><g class="sube"><circle cx="29" cy="24" r="4.5"/><path d="M29 28.5 L29 39 M29 39 L25 48 M29 39 L33 48 M29 31 L35 26"/></g><line x1="6" y1="58" x2="34" y2="58" stroke-width="2" opacity=".35"/></svg></div><h3>Valores y propósito</h3><p>Un programa para comunicar desde los valores de tu empresa: cultura fuerte y mensajes que conectan y venden.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="onda" cx="32" cy="24" r="17"/><circle class="onda o2" cx="32" cy="24" r="17"/><rect x="25" y="8" width="14" height="26" rx="7" fill="currentColor" fill-opacity=".15"/><path d="M19 28 C19 41 45 41 45 28 M32 41 V52 M24 55 H40"/></svg></div><h3>Speakers</h3><p>Voces que inspiran desde la tarima: historias reales e ideas que se quedan.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="ruta" d="M10 44 L32 18 L54 44 Z" stroke-dasharray="4 4"/><circle class="nodo na" cx="10" cy="44" r="6"/><circle class="nodo nb" cx="32" cy="18" r="6"/><circle class="nodo nc" cx="54" cy="44" r="6"/><circle r="3.4" fill="currentColor" stroke="none"><animateMotion dur="2.6s" repeatCount="indefinite" path="M10 44 L32 18 L54 44 Z"/></circle></svg></div><h3>Networking</h3><p>Conexiones con personas que suman: aliados, clientes y amigos.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="rayos"><path d="M32 3 V10 M32 54 V61 M3 32 H10 M54 32 H61 M11.5 11.5 L16.5 16.5 M47.5 47.5 L52.5 52.5 M52.5 11.5 L47.5 16.5 M16.5 47.5 L11.5 52.5"/></g><path class="estrella" d="M32 15 L36.6 26 L48 26.9 L39.2 34.4 L42 45.6 L32 39.4 L22 45.6 L24.8 34.4 L16 26.9 L27.4 26 Z" fill="currentColor" fill-opacity=".18"/></svg></div><h3>Marca</h3><p>Tu marca frente a una comunidad que la ve, la recuerda y la recomienda.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="cora" d="M40 12 L36.4 8.6 A2.3 2.3 0 0 1 40 5.7 A2.3 2.3 0 0 1 43.6 8.6 Z" fill="currentColor" stroke="none"/><line x1="30" y1="31" x2="60" y2="31" stroke-width="2" opacity=".45"/><circle cx="47" cy="12" r="4.5"/><path d="M47 16.5 L47 25 M47 25 L43 31 M47 25 L51 31"/><path class="jala" d="M47 19 L36 27"/><g class="sube"><circle cx="29" cy="24" r="4.5"/><path d="M29 28.5 L29 39 M29 39 L25 48 M29 39 L33 48 M29 31 L35 26"/></g><line x1="6" y1="58" x2="34" y2="58" stroke-width="2" opacity=".35"/></svg></div><h3>Propósito</h3><p>Lo que hacés tiene un porqué. Aquí se comparte y se multiplica.</p></div>
+    <div class="feat"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 55 H56" opacity=".45"/><rect class="barra" x="12" y="36" width="9" height="18" rx="1.5" fill="currentColor" fill-opacity=".18"/><rect class="barra b2" x="27.5" y="25" width="9" height="29" rx="1.5" fill="currentColor" fill-opacity=".18"/><rect class="barra b3" x="43" y="13" width="9" height="41" rx="1.5" fill="currentColor" fill-opacity=".18"/></svg></div><h3>Negocios</h3><p>Alianzas, clientes y proyectos que nacen de una conversación.</p></div>
   </div>
 </div></section>
 
-<!-- GALERÍA REAL -->
+<!-- GALERÍA -->
 <section class="gal"><div class="wrap">
-  <div class="center fmrv"><div class="lbl kick">Así se vive</div><h2>Una comunidad que ya está pasando.</h2>
-  <p class="lead">Talleres, charlas y encuentros donde las personas conectan, aprenden y hacen negocios.</p></div>
+  <div class="center fmrv"><div class="lbl kick">Así se vive</div><h2>Somos comunidad. Somos familia IC&amp;SF.</h2>
+  <p class="lead">Charlas, talleres y encuentros donde conferencistas y profesionales se acompañan, aprenden y crecen juntos.</p></div>
   <div class="gcols fmrv">
-    <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-c9f1e201a1.jpg" alt="Fabiola en charla"><figcaption>Charlas que inspiran</figcaption></figure>
-    <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-e27e0cf02c.jpg" alt="Networking"><figcaption>Networking real</figcaption></figure>
-    <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-6ee0b267ce.jpg" alt="Comunidad"><figcaption>Comunidad que crece</figcaption></figure>
+    <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-c9f1e201a1.jpg" alt="Charla en un encuentro IC&amp;SF"><figcaption>Charlas que inspiran</figcaption></figure>
+    <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-e27e0cf02c.jpg" alt="Conexiones en un encuentro"><figcaption>Conexiones reales</figcaption></figure>
+    <figure><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-6ee0b267ce.jpg" alt="Comunidad IC&amp;SF"><figcaption>Una familia que crece</figcaption></figure>
   </div>
 </div></section>
 
-<!-- EVENTO / ACCESOS -->
+<!-- ACCESOS -->
 <section class="evt" id="accesos"><div class="wrap">
-  <div class="center fmrv"><div class="lbl kick">El próximo paso · 7 de noviembre</div>
-  <h2>Viví VOCES: una noche para hacer negocios y que te escuchen.</h2>
-  <p class="lead">Networking y speakers reconocidos, cena y más de 100 personas que toman decisiones y compran. Según tu acceso, mostrás —y hasta vendés— lo que hacés frente a compradores directos.</p></div>
+  <div class="center fmrv"><div class="lbl kick">Sábado 7 de noviembre</div>
+  <h2>Elegí cómo querés vivir VOCES CR.</h2>
+  <p class="lead">Speakers, cena, networking y más de 100 personas con ganas de conectar. Según tu acceso, también mostrás tu marca o compartís tu mensaje en la tarima.</p></div>
   <div class="tiers fmrv">
-    <div class="tier"><div class="tn">General</div><div class="pr"><small>$</small>50</div><div class="desc">Para conectar y que te conozcan.</div>
+    <div class="tier"><div class="tn">General</div><div class="pr"><small>$</small>50</div><div class="desc">Para conectar y ser parte.</div>
       <ul><li>Noche completa + cena</li><li>Todas las charlas</li><li>Networking con +100 personas</li></ul>
-      <button class="btn" onclick="elegir('General ($50)')">Reservar General</button></div>
+      <button class="btn" type="button" onclick="elegir('General ($50)')">Reservar General</button></div>
     <div class="tier hot"><div class="badge">Solo 10 cupos</div><div class="tn">Marca</div><div class="pr"><small>$</small>75</div><div class="desc">Para que tu marca se vea.</div>
-      <ul><li>Todo lo del General</li><li>Stand para tu negocio</li><li>Tu marca en las pantallas</li></ul>
-      <button class="btn" onclick="elegir('Marca ($75)')">Reservar Marca</button></div>
-    <div class="tier"><div class="badge">Solo 10 cupos</div><div class="tn">Speaker</div><div class="pr"><small>$</small>100</div><div class="desc">Para exponer y vender.</div>
-      <ul><li>Todo lo del Marca</li><li>10–15 min en tarima</li><li>Ante compradores directos</li></ul>
-      <button class="btn" onclick="elegir('Speaker ($100)')">Reservar Speaker</button></div>
+      <ul><li>Todo lo del General</li><li>Stand para tu marca o negocio</li><li>Tu marca en las pantallas</li></ul>
+      <button class="btn" type="button" onclick="elegir('Marca ($75)')">Reservar Marca</button></div>
+    <div class="tier"><div class="badge">Solo 10 cupos</div><div class="tn">Speaker</div><div class="pr"><small>$</small>100</div><div class="desc">Para que tu voz se escuche.</div>
+      <ul><li>Todo lo del Marca</li><li>10–15 min en la tarima</li><li>Tu mensaje ante toda la comunidad</li></ul>
+      <button class="btn" type="button" onclick="elegir('Speaker ($100)')">Reservar Speaker</button></div>
   </div>
   <p class="center" style="margin-top:24px;color:#a99e98;font-size:13.5px">Precios en dólares. Reservás aquí y el equipo te confirma el cupo y el pago por WhatsApp.</p>
 </div></section>
 
+<!-- ANFITRIONA -->
+<section class="host"><div class="wrap fmrv">
+  <div class="hcard">
+    <div class="hf"><img src="https://fabiolamurillocr.com/wp-content/uploads/2026/09/fm-web-f1102e219d.png" alt="Fabiola Murillo"></div>
+    <div><div class="lbl">Tu anfitriona</div><h3>Fabiola Murillo</h3><div class="rol">Presidenta de IC&amp;SF Costa Rica · Conferencista y mentora</div>
+    <p>En nombre de la familia IC&amp;SF, Fabiola te recibe en una noche pensada para que cada voz cuente: la tuya, la de tu marca y la de tu propósito.</p></div>
+  </div>
+</div></section>
+
 <!-- REGISTRO -->
 <section class="reg" id="reservar"><div class="wrap">
-  <div class="center fmrv"><div class="lbl kick">Asegurá tu lugar</div><h2>Reservá tu acceso a VOCES.</h2>
-  <p class="lead">Dejá tus datos y el equipo de EN VOZ ALTA te contacta por WhatsApp para confirmar tu cupo y el pago.</p></div>
+  <div class="center fmrv"><div class="lbl kick">Asegurá tu lugar</div><h2>Reservá tu lugar en VOCES CR 2026.</h2>
+  <p class="lead">Dejá tus datos y el equipo de IC&amp;SF Costa Rica te contacta por WhatsApp para confirmar tu cupo y el pago.</p></div>
   <div class="card fmrv">
     <form id="regForm" onsubmit="return enviar(event)">
       <div class="two">
@@ -261,8 +310,8 @@
         <div class="field"><label>Correo *</label><input name="correo" type="email" required placeholder="tucorreo@ejemplo.com"></div>
         <div class="field"><label>Acceso *</label><select name="acceso" id="acceso" required><option value="">Elegí un acceso</option><option>General ($50)</option><option>Marca ($75)</option><option>Speaker ($100)</option></select></div>
       </div>
-      <div class="field"><label>Empresa o negocio (opcional)</label><input name="negocio" placeholder="Nombre de tu negocio"></div>
-      <div class="field"><label>Observaciones (opcional)</label><textarea name="observaciones" rows="2" placeholder="Qué ofrece tu negocio, dudas o comentarios"></textarea></div>
+      <div class="field"><label>Empresa, marca o proyecto (opcional)</label><input name="negocio" placeholder="Nombre de tu marca o negocio"></div>
+      <div class="field"><label>Observaciones (opcional)</label><textarea name="observaciones" rows="2" placeholder="Tu mensaje, lo que hacés, dudas o comentarios"></textarea></div>
       <button class="btn" type="submit">Reservar mi lugar</button>
       <p class="note">Al tocar el botón se abre WhatsApp con tu mensaje ya escrito: solo dale <b>Enviar</b> para confirmar tu registro.</p>
     </form>
@@ -273,26 +322,27 @@
 </div></section>
 
 <!-- FAQ -->
-<section><div class="wrap">
+<section style="background:var(--paper)"><div class="wrap">
   <div class="center fmrv"><div class="lbl kick">Preguntas</div><h2>Lo que necesitás saber.</h2></div>
   <div class="faq fmrv">
+    <details><summary>¿Quién organiza VOCES CR?</summary><p>IC&amp;SF Costa Rica (International Coaching &amp; Speaker Federation). Es nuestro evento anual y la anfitriona es Fabiola Murillo, presidenta de IC&amp;SF Costa Rica.</p></details>
+    <details><summary>¿Para quién es?</summary><p>Para conferencistas, profesionales, empresarios y emprendedores que quieren conectar, compartir su mensaje y darle voz a su marca, su propósito o su negocio.</p></details>
     <details><summary>¿Cuándo y a qué hora es?</summary><p>Sábado 7 de noviembre. Recepción 5:30 p.m., programa 6:00 p.m.</p></details>
+    <details><summary>¿Qué diferencia hay entre los accesos?</summary><p>General: noche completa, cena, charlas y networking. Marca: suma un stand y tu marca en las pantallas. Speaker: suma 10–15 minutos en la tarima para compartir tu mensaje.</p></details>
     <details><summary>¿Cómo hago el pago?</summary><p>Reservás aquí y el equipo te contacta por WhatsApp para confirmar el cupo y coordinar el pago. Los cupos se aseguran por orden de reserva.</p></details>
-    <details><summary>¿Qué diferencia hay entre los accesos?</summary><p>General: noche completa, cena y networking. Marca: suma stand y tu marca en pantallas. Speaker: suma 10–15 min en tarima para exponer y vender.</p></details>
     <details><summary>¿El cupo es limitado?</summary><p>Sí. Aforo de 100 personas; Marca y Speaker tienen solo 10 cupos cada uno.</p></details>
   </div>
 </div></section>
 
 <footer>
-  <div class="wm">FABIOLA MURILLO</div><div class="tl">EN VOZ ALTA® · VOCES · 7 DE NOVIEMBRE</div>
-  <p>Reservas y consultas: <b>+506 8495-9512</b> · info@fabiolamurillocr.com · @fabiolamurillocr</p>
+  <div class="wm">VOCES <span>CR</span> 2026</div><div class="tl">IC&amp;SF Costa Rica · Unimos voces. Multiplicamos impacto. · 7 de noviembre</div>
+  <p>Anfitriona: Fabiola Murillo · Reservas y consultas: <b>+506 8495-9512</b> · info@fabiolamurillocr.com</p>
 </footer>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "VOCES — Noche de Networking & Speakers", "description": "Una noche de networking y speakers para hacer negocios y que te escuchen. Organiza EN VOZ ALTA® · Fabiola Murillo.", "startDate": "2026-11-07T17:30:00-06:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Por confirmar", "address": {"@type": "PostalAddress", "addressCountry": "CR"}}, "image": ["https://fabiolamurillocr.com/wp-content/uploads/2026/09/voces-7-noviembre-fabiola-murillo.jpg"], "organizer": {"@type": "Person", "name": "Fabiola Murillo", "url": "https://fabiolamurillocr.com/"}, "performer": {"@type": "Person", "name": "Fabiola Murillo"}, "offers": [{"@type": "Offer", "name": "General", "price": "50", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://fabiolamurillocr.com/voces/"}, {"@type": "Offer", "name": "Marca", "price": "75", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": "https://fabiolamurillocr.com/voces/"}, {"@type": "Offer", "name": "Speaker", "price": "100", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": "https://fabiolamurillocr.com/voces/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "VOCES CR 2026", "description": "Unimos voces. Multiplicamos impacto. El evento anual de IC&SF Costa Rica: conferencistas, profesionales, empresarios y emprendedores se unen para conectar, compartir su mensaje y darle voz a su marca, propósito o negocio.", "startDate": "2026-11-07T17:30:00-06:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Por confirmar", "address": {"@type": "PostalAddress", "addressCountry": "CR"}}, "image": ["https://fabiolamurillocr.com/wp-content/uploads/2026/09/voces-7-noviembre-fabiola-murillo.jpg"], "organizer": {"@type": "Organization", "name": "IC&SF Costa Rica", "alternateName": "International Coaching & Speaker Federation Costa Rica"}, "performer": {"@type": "Person", "name": "Fabiola Murillo", "jobTitle": "Presidenta de IC&SF Costa Rica"}, "offers": [{"@type": "Offer", "name": "General", "price": "50", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://fabiolamurillocr.com/voces/"}, {"@type": "Offer", "name": "Marca", "price": "75", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": "https://fabiolamurillocr.com/voces/"}, {"@type": "Offer", "name": "Speaker", "price": "100", "priceCurrency": "USD", "availability": "https://schema.org/LimitedAvailability", "url": "https://fabiolamurillocr.com/voces/"}]}</script>
 <script>
 (function(){
   var WA="50684959512"; var WEBHOOK="https://n8n-unonueve-n8n.i5i6e4.easypanel.host/webhook/voces-reserva";
-  // ===== Medición: Píxel de Meta (+ API de conversiones vía el Gateway del plugin) · GA4 · Google Ads =====
   var PIXEL="1785614979253885";
   var GA4_ID="";
   var ADS_ID="", ADS_LABEL="";
@@ -303,7 +353,7 @@
         (function(f,b,e,v){var n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];var t=b.createElement(e);t.async=true;t.src=v;var s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init',PIXEL); fbq('track','PageView');
       }
-      fbq('track','ViewContent',{content_name:'VOCES 7-nov',content_category:'Evento'});
+      fbq('track','ViewContent',{content_name:'VOCES CR 2026',content_category:'Evento'});
       if(GA4_ID||ADS_ID){
         window.dataLayer=window.dataLayer||[];
         if(!window.gtag){ window.gtag=function(){dataLayer.push(arguments);}; var g=document.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+(GA4_ID||ADS_ID); document.head.appendChild(g); gtag('js',new Date()); }
@@ -313,10 +363,10 @@
     }catch(err){}
   }
   function medir(tipo,d){
-    if(!enVivo){ try{console.log('[VOCES · modo prueba, no se mide]',tipo,d);}catch(e){} return; }
+    if(!enVivo){ try{console.log('[VOCES CR · modo prueba, no se mide]',tipo,d);}catch(e){} return; }
     try{
       if(tipo==='lead'){
-        if(window.fbq) fbq('track','Lead',{content_name:'VOCES 7-nov · '+d.acceso,value:d.monto,currency:'USD'},{eventID:d.eid});
+        if(window.fbq) fbq('track','Lead',{content_name:'VOCES CR 2026 · '+d.acceso,value:d.monto,currency:'USD'},{eventID:d.eid});
         if(window.gtag&&GA4_ID) gtag('event','generate_lead',{value:d.monto,currency:'USD',event_label:d.acceso});
         if(window.gtag&&ADS_ID&&ADS_LABEL) gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL,value:d.monto,currency:'USD',transaction_id:d.eid});
       } else if(tipo==='contact'){
@@ -330,55 +380,49 @@
     document.querySelectorAll('#reservar .fmrv').forEach(function(el){el.classList.add('in');});
     var s=document.getElementById('acceso'); if(s){s.value=t; s.classList.remove('flash'); void s.offsetWidth; s.classList.add('flash');}
     document.getElementById('reservar').scrollIntoView({behavior:'smooth'});
-    setTimeout(function(){var c=document.querySelector('#reservar .card'); if(c){var t=c.getBoundingClientRect().top; if(t>innerHeight*0.8 || -200>t) c.scrollIntoView({block:'start'});}},900);
+    setTimeout(function(){var c=document.querySelector('#reservar .card'); if(c){var y=c.getBoundingClientRect().top; if(y>innerHeight*0.8 || -200>y) c.scrollIntoView({block:'start'});}},900);
     setTimeout(function(){var n=document.querySelector('#regForm input[name=nombre]'); if(n) try{n.focus({preventScroll:true});}catch(e){}},700);
   };
   window.enviar=function(e){
     e.preventDefault(); var f=e.target,d={};
     ['nombre','whatsapp','correo','acceso','negocio','observaciones'].forEach(function(k){d[k]=(f[k]&&f[k].value||'').trim();});
     var L=encodeURIComponent;
-    var msg=L("Hola Fabi 👋 Me registré para tu evento VOCES del 7 de noviembre.")
+    var msg=L("Hola 👋 Me registré para VOCES CR 2026, el evento de IC&SF Costa Rica del sábado 7 de noviembre.")
       +"%0A%0A"+L("Soy "+d.nombre+".")
       +"%0A"+L("Mi WhatsApp: "+d.whatsapp)
-      +"%0A"+L("Mi correo: "+d.correo+" (para que me contactes)")
+      +"%0A"+L("Mi correo: "+d.correo+" (para que me contacten)")
       +"%0A"+L("Quiero el acceso: "+d.acceso)
-      +(d.negocio?"%0A"+L("Mi empresa: "+d.negocio):"")
+      +(d.negocio?"%0A"+L("Mi marca o negocio: "+d.negocio):"")
       +(d.observaciones?"%0A"+L("Observaciones: "+d.observaciones):"");
     var url="https://wa.me/"+WA+"?text="+msg;
     var monto=/speaker/i.test(d.acceso)?100:(/marca/i.test(d.acceso)?75:50);
     var eid='voces-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
     medir('lead',{acceso:d.acceso,monto:monto,eid:eid});
-    if(WEBHOOK){try{var p=new URLSearchParams(d); p.append('origen', location.hostname||'Landing VOCES'); p.append('event_id',eid); fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}}
+    if(WEBHOOK){try{var p=new URLSearchParams(d); p.append('origen', location.hostname||'Landing VOCES CR'); p.append('event_id',eid); fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}}
     document.getElementById('regForm').style.display='none';
     var ok=document.getElementById('okMsg'); ok.style.display='block';
     document.getElementById('waLink').href=url; window.open(url,'_blank');
     ok.scrollIntoView({behavior:'smooth',block:'center'}); return false;
   };
-  // fmrv on scroll
   try{
     var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
     document.querySelectorAll('#voces .fmrv').forEach(function(el){io.observe(el);});
   }catch(e){document.querySelectorAll('#voces .fmrv').forEach(function(el){el.classList.add('in');});}
-  // respaldo: si el navegador no avisa del scroll, que nada quede invisible
   setTimeout(function(){document.querySelectorAll('#voces .fmrv').forEach(function(el){el.classList.add('in');});},3500);
-  // contadores tipo cronómetro
   var quieto=false; try{quieto=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
-  function fmt(v,dec){ if(dec>0) return v.toFixed(dec).replace('.',','); return Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
+  function fmt(v){ return Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
   function correr(el){
-    var fin=parseFloat(el.getAttribute('data-count')), dec=parseInt(el.getAttribute('data-dec')||'0',10);
-    var pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
-    if(quieto){ el.textContent=pre+fmt(fin,dec)+suf; return; }
-    var t0=null, dur=2000;
-    function paso(t){ if(!t0) t0=t; var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
-      el.textContent=pre+fmt(fin*e,dec)+suf; if(1>p) requestAnimationFrame(paso); }
+    var fin=parseFloat(el.getAttribute('data-count'));
+    if(quieto){ el.textContent=fmt(fin); return; }
+    var t0=null, dur=1800;
+    function paso(t){ if(!t0) t0=t; var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3); el.textContent=fmt(fin*e); if(1>p) requestAnimationFrame(paso); }
     requestAnimationFrame(paso);
   }
   var nums=document.querySelectorAll('#voces .stat .n[data-count]');
   try{
-    nums.forEach(function(el){ el.textContent=(el.getAttribute('data-pre')||'')+fmt(0,parseInt(el.getAttribute('data-dec')||'0',10))+(el.getAttribute('data-suf')||''); });
     var io2=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){correr(x.target);io2.unobserve(x.target);}});},{threshold:.5});
     nums.forEach(function(el){io2.observe(el);});
-  }catch(e){nums.forEach(function(el){el.textContent=(el.getAttribute('data-pre')||'')+fmt(parseFloat(el.getAttribute('data-count')),parseInt(el.getAttribute('data-dec')||'0',10))+(el.getAttribute('data-suf')||'');});}
+  }catch(e){}
 })();
 </script>
 </div>
