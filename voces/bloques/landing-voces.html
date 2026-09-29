@@ -148,6 +148,8 @@
 #voces select.flash{animation:fmFlash 1.6s ease 2}
 @keyframes fmFlash{0%,100%{box-shadow:0 0 0 0 rgba(194,74,34,0);border-color:var(--suave)}40%{box-shadow:0 0 0 5px rgba(194,74,34,.28);border-color:var(--terra)}}
 #voces .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#voces .tel{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:8px}
+#voces .tel select{padding:13px 8px;font-size:14px}
 #voces .card .btn{width:100%;text-align:center;margin-top:8px}
 #voces .note{text-align:center;font-size:13px;color:#a99e98;margin-top:14px}
 #voces .ok{display:none;text-align:center;padding:14px 0} #voces .ok h3{font-size:30px;margin-bottom:8px}
@@ -184,7 +186,7 @@
   #voces .feat{padding:18px 8px} #voces .feat .ic{width:96px;height:96px} #voces .feat .ic svg{width:72px;height:72px}
   #voces .gcols,#voces .tiers{grid-template-columns:1fr}
   #voces .hcard{grid-template-columns:1fr;text-align:center;gap:18px} #voces .hcard .hf{margin:0 auto;width:160px;height:160px}
-  #voces .two{grid-template-columns:1fr} #voces section{padding:56px 0} #voces .card{padding:32px 22px}
+  #voces .two{grid-template-columns:1fr} #voces .tel{grid-template-columns:minmax(0,132px) minmax(0,1fr)} #voces section{padding:56px 0} #voces .card{padding:32px 22px}
   #voces .nav .cta{display:none} #voces .nav{justify-content:center}
 }
 </style>
@@ -289,7 +291,7 @@
     <form id="regForm" onsubmit="return enviar(event)">
       <div class="two">
         <div class="field"><label>Nombre completo *</label><input name="nombre" required placeholder="Tu nombre"></div>
-        <div class="field"><label>WhatsApp *</label><input name="whatsapp" required placeholder="8888-8888" inputmode="tel"></div>
+        <div class="field"><label>WhatsApp *</label><div class="tel"><select name="pais" aria-label="Código de país"><option value="506" selected>🇨🇷 Costa Rica +506</option><option value="507">🇵🇦 Panamá +507</option><option value="505">🇳🇮 Nicaragua +505</option><option value="504">🇭🇳 Honduras +504</option><option value="503">🇸🇻 El Salvador +503</option><option value="502">🇬🇹 Guatemala +502</option><option value="52">🇲🇽 México +52</option><option value="57">🇨🇴 Colombia +57</option><option value="58">🇻🇪 Venezuela +58</option><option value="593">🇪🇨 Ecuador +593</option><option value="51">🇵🇪 Perú +51</option><option value="591">🇧🇴 Bolivia +591</option><option value="56">🇨🇱 Chile +56</option><option value="54">🇦🇷 Argentina +54</option><option value="598">🇺🇾 Uruguay +598</option><option value="595">🇵🇾 Paraguay +595</option><option value="1">🇩🇴 Rep. Dominicana +1</option><option value="1">🇵🇷 Puerto Rico +1</option><option value="1">🇺🇸 EE. UU. / Canadá +1</option><option value="53">🇨🇺 Cuba +53</option><option value="55">🇧🇷 Brasil +55</option><option value="34">🇪🇸 España +34</option><option value="">🌐 Otro (escribí el código)</option></select><input name="whatsapp" required placeholder="8888-8888" inputmode="tel"></div></div>
       </div>
       <div class="two">
         <div class="field"><label>Correo *</label><input name="correo" type="email" required placeholder="tucorreo@ejemplo.com"></div>
@@ -371,6 +373,10 @@
   window.enviar=function(e){
     e.preventDefault(); var f=e.target,d={};
     ['nombre','whatsapp','correo','acceso','negocio','observaciones'].forEach(function(k){d[k]=(f[k]&&f[k].value||'').trim();});
+    var pais=f.pais?String(f.pais.value||''):'506', dig=d.whatsapp.replace(/\D/g,'');
+    if(dig.indexOf('00')===0) dig=dig.slice(2);
+    if(pais && !(dig.indexOf(pais)===0 && dig.length>pais.length+6)) dig=pais+dig;
+    d.whatsapp='+'+(pais?pais+' '+dig.slice(pais.length):dig);
     var L=encodeURIComponent;
     var msg=L("Hola 👋 Me registré para VOCES CR 2026, el evento de IC&SF Costa Rica del sábado 7 de noviembre.")
       +"%0A%0A"+L("Soy "+d.nombre+".")
