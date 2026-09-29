@@ -1,0 +1,238 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Panel masterclass — prueba</title><link rel="stylesheet" href="https://fabiolamurillocr.com/wp-content/themes/bazien/assets/css/app.css"><style>body{margin:0}</style></head><body>
+<div id="fmp">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@300;400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+#fmp{--cream:#FFEDDF;--paper:#FBF6F1;--ink:#272727;--mauve:#8C7178;--ciruela:#5C464E;--terra:#C24A22;--suave:#EADFD8;--wa:#1FA855;
+ font-family:Montserrat,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);min-height:100vh;line-height:1.5;font-size:15px}
+#fmp *{box-sizing:border-box;margin:0;padding:0}
+#fmp button,#fmp input,#fmp textarea{font-family:inherit;font-size:15px;line-height:1.4;height:auto;margin:0;box-shadow:none}
+#fmp .fmp-top{background:var(--ciruela);color:#fff;padding:18px 22px}
+#fmp .fmp-top .fmp-in{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+#fmp .fmp-marca{font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.3em;font-size:15px;text-transform:uppercase}
+#fmp .fmp-marca small{display:block;font-weight:400;letter-spacing:.2em;font-size:10px;color:var(--suave);margin-top:2px}
+#fmp .fmp-salir{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:3px;padding:7px 12px;cursor:pointer;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+#fmp .fmp-wrap{max-width:1100px;margin:0 auto;padding:22px 18px 60px}
+#fmp h1{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1.1;margin-bottom:4px}
+#fmp .fmp-sub{color:var(--mauve);font-family:'Roboto Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin-bottom:18px}
+#fmp .fmp-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+#fmp .fmp-kpi{background:#fff;border:1px solid var(--suave);border-radius:8px;padding:14px 12px;text-align:center}
+#fmp .fmp-kpi b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:36px;line-height:1;color:var(--terra)}
+#fmp .fmp-kpi span{font-family:'Roboto Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:11.5px;color:#6b6063}
+#fmp .fmp-caja{background:#fff;border:1px solid var(--suave);border-radius:8px;padding:18px;margin-bottom:18px}
+#fmp .fmp-caja h2{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+#fmp label{display:block;font-family:'Roboto Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--mauve);margin:10px 0 5px}
+#fmp input[type=text],#fmp input[type=password],#fmp input[type=search],#fmp textarea{width:100%;border:1px solid var(--suave);border-radius:5px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}
+#fmp input:focus,#fmp textarea:focus{border-color:var(--terra)}
+#fmp textarea{min-height:150px;resize:vertical}
+#fmp .fmp-ayuda{font-size:12.5px;color:#8a7f7b;margin-top:5px}
+#fmp .fmp-fila{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+#fmp .fmp-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:5px;padding:11px 16px;cursor:pointer;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13.5px;text-decoration:none;color:#fff;background:var(--terra);transition:filter .15s,transform .15s}
+#fmp .fmp-btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+#fmp .fmp-btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+#fmp .fmp-btn.fmp-wa{background:var(--wa)}
+#fmp .fmp-btn.fmp-sec{background:#fff;color:var(--ciruela);border:1px solid var(--suave)}
+#fmp .fmp-btn.fmp-mini{padding:7px 10px;font-size:11.5px}
+#fmp .fmp-ok{color:var(--wa);font-weight:600;font-size:13px}
+#fmp .fmp-err{color:#b3261e;font-weight:600;font-size:13px}
+#fmp .fmp-filtros{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+#fmp .fmp-chip{border:1px solid var(--suave);background:#fff;border-radius:30px;padding:7px 14px;cursor:pointer;font-family:'Roboto Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;color:var(--ciruela)}
+#fmp .fmp-chip.fmp-on{background:var(--ciruela);border-color:var(--ciruela);color:#fff}
+#fmp .fmp-buscar{flex:1;min-width:180px}
+#fmp .fmp-lista{display:grid;gap:10px}
+#fmp .fmp-p{background:#fff;border:1px solid var(--suave);border-left:5px solid var(--terra);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 18px;align-items:center}
+#fmp .fmp-p.fmp-hecho{border-left-color:var(--wa);background:#FAFFFB}
+#fmp .fmp-nom{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:19px;line-height:1.2}
+#fmp .fmp-meta{font-size:13px;color:#6b6063;margin-top:3px;display:flex;flex-wrap:wrap;gap:4px 14px}
+#fmp .fmp-mot{margin-top:6px;font-size:13.5px;background:var(--paper);border-radius:5px;padding:6px 9px;display:inline-block}
+#fmp .fmp-mot b{font-family:'Roboto Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--mauve);margin-right:4px}
+#fmp .fmp-acc{display:flex;flex-direction:column;gap:6px;align-items:stretch;min-width:210px}
+#fmp .fmp-estado{font-size:12px;text-align:center;color:#6b6063}
+#fmp .fmp-estado.fmp-si{color:var(--wa);font-weight:600}
+#fmp .fmp-vacio{text-align:center;color:#8a7f7b;padding:30px}
+#fmp .fmp-login{max-width:380px;margin:60px auto;background:#fff;border:1px solid var(--suave);border-radius:10px;padding:28px}
+#fmp .fmp-login h1{font-size:26px;margin-bottom:6px}
+#fmp .fmp-oculto{display:none!important}
+#fmp .fmp-toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:30px;padding:10px 18px;font-size:13.5px;z-index:9999;opacity:0;transition:opacity .25s;pointer-events:none}
+#fmp .fmp-toast.fmp-ver{opacity:1}
+@media(max-width:760px){
+ #fmp .fmp-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #fmp .fmp-p{grid-template-columns:1fr}
+ #fmp .fmp-acc{min-width:0}
+ #fmp h1{font-size:25px}
+}
+</style>
+
+<div class="fmp-top"><div class="fmp-in">
+  <div class="fmp-marca">Fabiola Murillo<small>Panel de registros · EN VOZ ALTA®</small></div>
+  <button class="fmp-salir fmp-oculto" id="fmpSalir" type="button">Salir</button>
+</div></div>
+
+<!-- acceso -->
+<div class="fmp-login" id="fmpLogin">
+  <h1>Panel de la masterclass</h1>
+  <p class="fmp-ayuda" style="margin-bottom:10px">Ingresá la clave del panel. Queda guardada en este dispositivo.</p>
+  <label for="fmpClave">Clave</label>
+  <input type="password" id="fmpClave" autocomplete="current-password" placeholder="Tu clave">
+  <div class="fmp-fila"><button class="fmp-btn" id="fmpEntrar" type="button">Entrar</button><span id="fmpLoginMsg"></span></div>
+</div>
+
+<!-- panel -->
+<div class="fmp-wrap fmp-oculto" id="fmpPanel">
+  <h1>Masterclass «Comunicá con autoridad»</h1>
+  <div class="fmp-sub">Jueves 15 de octubre · 7:00 p. m. · Zoom · <span id="fmpActual">—</span></div>
+
+  <div class="fmp-kpis">
+    <div class="fmp-kpi"><b id="kTotal">0</b><span>Registradas</span></div>
+    <div class="fmp-kpi"><b id="kPend">0</b><span>Falta enviar enlace</span></div>
+    <div class="fmp-kpi"><b id="kEnv">0</b><span>Enlace enviado</span></div>
+    <div class="fmp-kpi"><b id="kHoy">0</b><span>Registradas hoy</span></div>
+  </div>
+
+  <div class="fmp-caja">
+    <h2>1 · Enlace de la reunión</h2>
+    <label for="fmpZoom">Enlace de Zoom</label>
+    <input type="text" id="fmpZoom" placeholder="Pegá aquí el enlace de Zoom (https://…zoom.us/j/…)">
+    <label for="fmpMsg">Mensaje que se envía por WhatsApp</label>
+    <textarea id="fmpMsg"></textarea>
+    <p class="fmp-ayuda">Usá <b>{nombre}</b> para el nombre de la persona y <b>{link}</b> para el enlace de Zoom. Se reemplazan solos al enviar.</p>
+    <div class="fmp-fila"><button class="fmp-btn" id="fmpGuardar" type="button">Guardar enlace y mensaje</button><span id="fmpGuardarMsg"></span></div>
+  </div>
+
+  <div class="fmp-caja">
+    <h2>2 · Personas registradas</h2>
+    <div class="fmp-filtros">
+      <button class="fmp-chip fmp-on" data-f="pend" type="button">Falta enviar</button>
+      <button class="fmp-chip" data-f="env" type="button">Enviadas</button>
+      <button class="fmp-chip" data-f="todas" type="button">Todas</button>
+      <input type="search" class="fmp-buscar" id="fmpBuscar" placeholder="Buscar por nombre, teléfono o correo">
+      <button class="fmp-btn fmp-sec fmp-mini" id="fmpRefrescar" type="button">↻ Actualizar</button>
+      <button class="fmp-btn fmp-sec fmp-mini" id="fmpCsv" type="button">⤓ Descargar lista</button>
+    </div>
+    <div class="fmp-lista" id="fmpLista"></div>
+  </div>
+</div>
+<div class="fmp-toast" id="fmpToast"></div>
+
+<script>
+(function(){
+  var API='https://n8n-unonueve-n8n.i5i6e4.easypanel.host/webhook/fabiola-panel';
+  var LS='fmpClaveMasterclass';
+  var estado={registros:[],zoom:'',mensaje:'',filtro:'pend',busca:''};
+  var clave='';
+  function $(id){return document.getElementById(id);}
+  function guardaLS(v){try{ if(v){localStorage.setItem(LS,v);}else{localStorage.removeItem(LS);} }catch(e){}}
+  function leeLS(){try{return localStorage.getItem(LS)||'';}catch(e){return '';}}
+  function toast(t){var el=$('fmpToast'); el.textContent=t; el.classList.add('fmp-ver'); clearTimeout(toast.t); toast.t=setTimeout(function(){el.classList.remove('fmp-ver');},2600);}
+  function pedir(accion,datos){
+    return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({clave:clave,accion:accion,datos:datos||{}})})
+      .then(function(r){ if(r.status===401){ throw new Error('clave'); } return r.json(); });
+  }
+  // Teléfono: 8 dígitos = Costa Rica (506); 10 dígitos = México (52); con código de país se deja igual
+  function numero(t){
+    var d=String(t||'').replace(/\D/g,'');
+    if(d.length===8) return {n:'506'+d, pais:'CR'};
+    if(d.length===11 && d.indexOf('506')===0) return {n:d, pais:'CR'};
+    if(d.length===10) return {n:'52'+d, pais:'MX?'};
+    return {n:d, pais:''};
+  }
+  function lindo(t){ var d=String(t||'').replace(/\D/g,''); if(d.length===8) return d.slice(0,4)+'-'+d.slice(4); return t; }
+  function primerNombre(n){ var s=String(n||'').trim().split(/\s+/)[0]||''; return s.charAt(0).toUpperCase()+s.slice(1); }
+  function armarMensaje(p){ return String(estado.mensaje||'').split('{nombre}').join(primerNombre(p.nombre)).split('{link}').join(estado.zoom||''); }
+  function hoyCR(){ var f=new Date(Date.now()-6*3600*1000); return f.toISOString().slice(0,10); }
+
+  function pintar(){
+    var regs=estado.registros, env=0, hoy=0, h=hoyCR();
+    regs.forEach(function(p){ if(p.enviado) env++; if(String(p.fecha).indexOf(h)===0) hoy++; });
+    $('kTotal').textContent=regs.length; $('kEnv').textContent=env; $('kPend').textContent=regs.length-env; $('kHoy').textContent=hoy;
+    var q=estado.busca.toLowerCase();
+    var vis=regs.filter(function(p){
+      if(estado.filtro==='pend' && p.enviado) return false;
+      if(estado.filtro==='env' && !p.enviado) return false;
+      if(q){ var s=(p.nombre+' '+p.whatsapp+' '+p.correo+' '+p.motivo).toLowerCase(); if(s.indexOf(q)===-1) return false; }
+      return true;
+    });
+    vis.sort(function(a,b){ return String(b.fecha).localeCompare(String(a.fecha)); });
+    var cont=$('fmpLista'); cont.textContent='';
+    if(!vis.length){ var v=document.createElement('div'); v.className='fmp-vacio'; v.textContent=estado.filtro==='pend'?'¡Listo! A todas las personas registradas ya se les envió el enlace.':'No hay registros para mostrar.'; cont.appendChild(v); return; }
+    var sinZoom=!String(estado.zoom||'').trim();
+    vis.forEach(function(p){
+      var tel=numero(p.whatsapp);
+      var card=document.createElement('div'); card.className='fmp-p'+(p.enviado?' fmp-hecho':'');
+      var izq=document.createElement('div');
+      var nom=document.createElement('div'); nom.className='fmp-nom'; nom.textContent=p.nombre||'(sin nombre)'; izq.appendChild(nom);
+      var meta=document.createElement('div'); meta.className='fmp-meta';
+      [['📱 ',lindo(p.whatsapp)+(tel.pais&&tel.pais!=='CR'?' ('+tel.pais+')':'')],['✉️ ',p.correo],['🕒 ',p.fecha]].forEach(function(x){ if(!x[1]) return; var s=document.createElement('span'); s.textContent=x[0]+x[1]; meta.appendChild(s); });
+      izq.appendChild(meta);
+      if(p.motivo){ var m=document.createElement('div'); m.className='fmp-mot'; var b=document.createElement('b'); b.textContent='Quiere mejorar'; m.appendChild(b); m.appendChild(document.createTextNode(p.motivo)); izq.appendChild(m); }
+      card.appendChild(izq);
+      var acc=document.createElement('div'); acc.className='fmp-acc';
+      var bt=document.createElement('button'); bt.type='button'; bt.className='fmp-btn fmp-wa'; bt.textContent=p.enviado?'Enviar de nuevo':'Enviar link de la reunión';
+      bt.disabled=sinZoom || !tel.n; if(sinZoom) bt.title='Primero pegá y guardá el enlace de Zoom arriba';
+      bt.addEventListener('click',function(){ enviar(p,tel.n,false); });
+      acc.appendChild(bt);
+      var web=document.createElement('button'); web.type='button'; web.className='fmp-btn fmp-sec fmp-mini'; web.textContent='Abrir en WhatsApp Web (computadora)'; web.disabled=sinZoom || !tel.n;
+      web.addEventListener('click',function(){ enviar(p,tel.n,true); });
+      acc.appendChild(web);
+      var est=document.createElement('div'); est.className='fmp-estado'+(p.enviado?' fmp-si':'');
+      est.textContent=p.enviado?('✓ Enlace enviado · '+p.enviado):(sinZoom?'Falta el enlace de Zoom':'Pendiente');
+      acc.appendChild(est);
+      if(p.enviado){ var des=document.createElement('button'); des.type='button'; des.className='fmp-btn fmp-sec fmp-mini'; des.textContent='Marcar como no enviado'; des.addEventListener('click',function(){ marcar(p,true); }); acc.appendChild(des); }
+      card.appendChild(acc);
+      cont.appendChild(card);
+    });
+  }
+  function enviar(p,num,web){
+    var txt=encodeURIComponent(armarMensaje(p));
+    var url=web?('https://web.whatsapp.com/send?phone='+num+'&text='+txt):('https://wa.me/'+num+'?text='+txt);
+    window.open(url,'_blank');
+    marcar(p,false);
+  }
+  function marcar(p,quitar){
+    pedir('marcar',{id:p.id,quitar:quitar}).then(function(d){ cargarDatos(d); toast(quitar?'Marcado como pendiente':'✓ '+primerNombre(p.nombre)+' marcado como enviado'); })
+      .catch(function(){ toast('No se pudo guardar el cambio. Revisá tu conexión.'); });
+  }
+  function cargarDatos(d){
+    estado.registros=d.registros||[]; estado.zoom=d.zoom||''; estado.mensaje=d.mensaje||'';
+    if(document.activeElement!==$('fmpZoom')) $('fmpZoom').value=estado.zoom;
+    if(document.activeElement!==$('fmpMsg')) $('fmpMsg').value=estado.mensaje;
+    $('fmpActual').textContent='Actualizado '+(d.actualizado||'');
+    pintar();
+  }
+  function listar(silencio){
+    return pedir('listar').then(function(d){ cargarDatos(d); return true; })
+      .catch(function(e){ if(e&&e.message==='clave'){ salir('Clave incorrecta'); } else if(!silencio){ toast('No se pudo cargar. Revisá tu conexión.'); } return false; });
+  }
+  function entrar(){
+    clave=String($('fmpClave').value||'').trim().toUpperCase(); if(!clave){ return; }
+    $('fmpLoginMsg').textContent='Entrando…';
+    listar().then(function(ok){ if(ok){ guardaLS(clave); $('fmpLogin').classList.add('fmp-oculto'); $('fmpPanel').classList.remove('fmp-oculto'); $('fmpSalir').classList.remove('fmp-oculto'); $('fmpLoginMsg').textContent=''; } });
+  }
+  function salir(msg){
+    guardaLS(''); clave=''; $('fmpPanel').classList.add('fmp-oculto'); $('fmpSalir').classList.add('fmp-oculto'); $('fmpLogin').classList.remove('fmp-oculto');
+    var m=$('fmpLoginMsg'); m.className=msg?'fmp-err':''; m.textContent=msg||'';
+  }
+  $('fmpEntrar').addEventListener('click',entrar);
+  $('fmpClave').addEventListener('keydown',function(e){ if(e.key==='Enter') entrar(); });
+  $('fmpSalir').addEventListener('click',function(){ salir(''); });
+  $('fmpGuardar').addEventListener('click',function(){
+    var z=String($('fmpZoom').value||'').trim(); var m=$('fmpGuardarMsg');
+    if(z && !/^https?:\/\//i.test(z)){ m.className='fmp-err'; m.textContent='El enlace debe empezar con https://'; return; }
+    m.className=''; m.textContent='Guardando…';
+    pedir('guardar',{zoom:z,mensaje:$('fmpMsg').value}).then(function(d){ cargarDatos(d); m.className='fmp-ok'; m.textContent='✓ Guardado'; setTimeout(function(){m.textContent='';},2500); })
+      .catch(function(){ m.className='fmp-err'; m.textContent='No se pudo guardar.'; });
+  });
+  document.querySelectorAll('#fmp .fmp-chip').forEach(function(c){ c.addEventListener('click',function(){ document.querySelectorAll('#fmp .fmp-chip').forEach(function(x){x.classList.remove('fmp-on');}); c.classList.add('fmp-on'); estado.filtro=c.getAttribute('data-f'); pintar(); }); });
+  $('fmpBuscar').addEventListener('input',function(){ estado.busca=this.value||''; pintar(); });
+  $('fmpRefrescar').addEventListener('click',function(){ listar().then(function(ok){ if(ok) toast('Lista actualizada'); }); });
+  $('fmpCsv').addEventListener('click',function(){
+    var filas=[['Fecha','Nombre','WhatsApp','Correo','Quiere mejorar','Enlace enviado']];
+    estado.registros.forEach(function(p){ filas.push([p.fecha,p.nombre,p.whatsapp,p.correo,p.motivo,p.enviado]); });
+    var csv=filas.map(function(f){ return f.map(function(c){ return '"'+String(c==null?'':c).replace(/"/g,'""')+'"'; }).join(','); }).join('\r\n');
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'})); a.download='registros-masterclass.csv'; document.body.appendChild(a); a.click(); a.remove();
+  });
+  setInterval(function(){ if(clave && !document.hidden) listar(true); },60000);
+  var guardada=leeLS(); if(guardada){ $('fmpClave').value=guardada; entrar(); }
+})();
+</script>
+</div>
+</body></html>
