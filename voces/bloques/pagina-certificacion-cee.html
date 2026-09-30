@@ -135,7 +135,7 @@
     if(dig.indexOf('00')===0) dig=dig.slice(2);
     if(pais && !(dig.indexOf(pais)===0 && dig.length>pais.length+6)) dig=pais+dig;
     d.whatsapp='+'+(pais?pais+' '+dig.slice(pais.length):dig);
-    try{var p=new URLSearchParams(d);p.append('formulario',formulario);p.append('origen',location.hostname||'web');fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}
+    try{var p=new URLSearchParams(d);p.set('whatsapp',"'"+d.whatsapp);p.append('formulario',formulario);p.append('origen',location.hostname||'web');fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}
     fmMedir('registro');
     var url='https://wa.me/'+WA+'?text='+encodeURIComponent(armarMsg(d));
     f.style.display='none'; var ok=ROOT.querySelector('.listo'); ok.style.display='block';
