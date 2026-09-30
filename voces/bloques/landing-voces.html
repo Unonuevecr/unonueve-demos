@@ -389,7 +389,7 @@
     var monto=/speaker/i.test(d.acceso)?100:(/marca/i.test(d.acceso)?75:50);
     var eid='voces-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
     medir('lead',{acceso:d.acceso,monto:monto,eid:eid});
-    if(WEBHOOK){try{var p=new URLSearchParams(d); p.append('origen', location.hostname||'Landing VOCES CR'); p.append('event_id',eid); fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}}
+    if(WEBHOOK){try{var p=new URLSearchParams(d); p.set('whatsapp',"'"+d.whatsapp); p.append('origen', location.hostname||'Landing VOCES CR'); p.append('event_id',eid); fetch(WEBHOOK,{method:'POST',mode:'no-cors',keepalive:true,body:p});}catch(err){}}
     document.getElementById('regForm').style.display='none';
     var ok=document.getElementById('okMsg'); ok.style.display='block';
     document.getElementById('waLink').href=url; window.open(url,'_blank');
