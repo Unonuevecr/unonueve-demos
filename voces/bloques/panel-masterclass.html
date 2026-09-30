@@ -65,10 +65,20 @@
 #fmp .fmp-login{max-width:380px;margin:60px auto;background:#fff;border:1px solid var(--suave);border-radius:10px;padding:28px}
 #fmp .fmp-login h1{font-size:26px;margin-bottom:6px}
 #fmp .fmp-oculto{display:none!important}
+#fmp .fmp-tabs{display:flex;gap:8px;margin:0 0 18px;border-bottom:2px solid var(--suave)}
+#fmp .fmp-tab{background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 16px;cursor:pointer;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px;color:#8a7f7b}
+#fmp .fmp-tab.fmp-on{color:var(--terra);border-bottom-color:var(--terra)}
+#fmp .fmp-tab b{display:inline-block;background:var(--suave);color:var(--ciruela);border-radius:20px;padding:1px 8px;font-size:11px;margin-left:6px}
+#fmp .fmp-acceso{display:inline-block;border-radius:20px;padding:2px 10px;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px;color:#fff;background:var(--mauve);margin-left:6px;vertical-align:3px}
+#fmp .fmp-acceso.fmp-marca{background:var(--ciruela)} #fmp .fmp-acceso.fmp-speaker{background:var(--terra)}
+#fmp .fmp-pago{display:grid;grid-template-columns:1fr;gap:4px}
+#fmp .fmp-pago button{border:1.5px solid var(--suave);background:#fff;border-radius:5px;padding:9px 6px;cursor:pointer;font-family:'Roboto Condensed',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12px;color:var(--ciruela)}
+#fmp .fmp-pago button.fmp-pagado{background:#E8F7EE;border-color:var(--wa);color:#12733a}
+#fmp .fmp-kpis.fmp-seis{grid-template-columns:repeat(6,minmax(0,1fr))}
 #fmp .fmp-toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:30px;padding:10px 18px;font-size:13.5px;z-index:9999;opacity:0;transition:opacity .25s;pointer-events:none}
 #fmp .fmp-toast.fmp-ver{opacity:1}
 @media(max-width:860px){
- #fmp .fmp-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #fmp .fmp-kpis,#fmp .fmp-kpis.fmp-seis{grid-template-columns:repeat(2,minmax(0,1fr))}
  #fmp .fmp-dos{grid-template-columns:1fr}
  #fmp .fmp-p{grid-template-columns:1fr}
  #fmp h1{font-size:25px}
@@ -82,7 +92,7 @@
 
 <!-- acceso -->
 <div class="fmp-login" id="fmpLogin">
-  <h1>Panel de la masterclass</h1>
+  <h1>Panel de registros</h1>
   <p class="fmp-ayuda" style="margin-bottom:10px">Ingresá la clave del panel. Queda guardada en este dispositivo.</p>
   <label for="fmpClave">Clave</label>
   <input type="password" id="fmpClave" autocomplete="current-password" placeholder="Tu clave">
@@ -91,6 +101,9 @@
 
 <!-- panel -->
 <div class="fmp-wrap fmp-oculto" id="fmpPanel">
+  <div class="fmp-tabs"><button class="fmp-tab fmp-on" data-tab="MC" type="button">📚 Masterclass<b id="tMC">0</b></button><button class="fmp-tab" data-tab="VC" type="button">🎤 VOCES CR 2026<b id="tVC">0</b></button></div>
+  <label class="fmp-web"><input type="checkbox" id="fmpWeb"> Estoy en la computadora: abrir en WhatsApp Web</label>
+  <div id="fmpTabMC">
   <h1>Masterclass «Comunicá con autoridad»</h1>
   <div class="fmp-sub">Jueves 15 de octubre · 7:00 p. m. · Zoom · <span id="fmpActual">—</span></div>
 
@@ -124,8 +137,7 @@
 
   <div class="fmp-caja">
     <h2>Personas registradas</h2>
-    <label class="fmp-web"><input type="checkbox" id="fmpWeb"> Estoy en la computadora: abrir en WhatsApp Web</label>
-    <div class="fmp-filtros">
+    <div class="fmp-filtros" id="fmpFiltrosMC">
       <button class="fmp-chip fmp-on" data-f="todas" type="button">Todas</button>
       <button class="fmp-chip" data-f="zoom" type="button">Falta Zoom</button>
       <button class="fmp-chip" data-f="asis" type="button">Falta marcar asistencia</button>
@@ -138,6 +150,42 @@
     </div>
     <div class="fmp-lista" id="fmpLista"></div>
   </div>
+  </div>
+
+  <div id="fmpTabVC" class="fmp-oculto">
+  <h1>VOCES CR 2026 · IC&amp;SF Costa Rica</h1>
+  <div class="fmp-sub">Sábado 7 de noviembre · 5:30 p. m. · <span id="fmpActualV">—</span></div>
+  <div class="fmp-kpis fmp-seis">
+    <div class="fmp-kpi"><b id="vTotal">0</b><span>Reservas</span></div>
+    <div class="fmp-kpi"><b id="vGen">0</b><span>General</span></div>
+    <div class="fmp-kpi"><b id="vMarca">0/10</b><span>Marca</span></div>
+    <div class="fmp-kpi"><b id="vSpk">0/10</b><span>Speaker</span></div>
+    <div class="fmp-kpi"><b id="vPag">0</b><span>Pagadas</span></div>
+    <div class="fmp-kpi"><b id="vCob">$0</b><span id="vCobTxt">Cobrado</span></div>
+  </div>
+  <div class="fmp-caja" style="margin-bottom:18px">
+    <h2>Mensaje para confirmar la reserva<small>Se envía por WhatsApp para coordinar el pago.</small></h2>
+    <textarea id="fmpMsgVoces"></textarea>
+    <p class="fmp-ayuda"><b>{nombre}</b> = nombre · <b>{acceso}</b> = acceso elegido · <b>{monto}</b> = monto en dólares. Poné tus datos de pago donde dice [escribí aquí los datos de pago].</p>
+    <div class="fmp-fila"><button class="fmp-btn" id="fmpGuardarV" type="button">Guardar mensaje</button><span id="fmpGuardarVMsg"></span></div>
+  </div>
+  <div class="fmp-caja">
+    <h2>Reservas</h2>
+    <div class="fmp-filtros" id="fmpFiltrosVC">
+      <button class="fmp-chip fmp-on" data-f="todas" type="button">Todas</button>
+      <button class="fmp-chip" data-f="pend" type="button">Pendientes de pago</button>
+      <button class="fmp-chip" data-f="pag" type="button">Pagadas</button>
+      <button class="fmp-chip" data-f="cont" type="button">Sin contactar</button>
+      <button class="fmp-chip" data-f="General" type="button">General</button>
+      <button class="fmp-chip" data-f="Marca" type="button">Marca</button>
+      <button class="fmp-chip" data-f="Speaker" type="button">Speaker</button>
+      <input type="search" class="fmp-buscar" id="fmpBuscarV" placeholder="Buscar por nombre, empresa, teléfono o correo">
+      <button class="fmp-btn fmp-sec fmp-mini" id="fmpRefrescarV" type="button">↻ Actualizar</button>
+      <button class="fmp-btn fmp-sec fmp-mini" id="fmpCsvV" type="button">⤓ Descargar lista</button>
+    </div>
+    <div class="fmp-lista" id="fmpListaV"></div>
+  </div>
+  </div>
 </div>
 <div class="fmp-toast" id="fmpToast"></div>
 
@@ -145,7 +193,7 @@
 (function(){
   var API='https://n8n-unonueve-n8n.i5i6e4.easypanel.host/webhook/fabiola-panel';
   var LS='fmpClaveMasterclass', LSW='fmpWhatsWeb';
-  var estado={registros:[],zoom:'',mensaje:'',pdf:'',mensajePdf:'',filtro:'todas',busca:''};
+  var estado={registros:[],voces:[],zoom:'',mensaje:'',pdf:'',mensajePdf:'',mensajeVoces:'',filtro:'todas',busca:'',filtroV:'todas',buscaV:'',tab:'MC'};
   var clave='';
   var PAISES={'506':'Costa Rica','507':'Panamá','505':'Nicaragua','504':'Honduras','503':'El Salvador','502':'Guatemala','52':'México','57':'Colombia','58':'Venezuela','593':'Ecuador','51':'Perú','591':'Bolivia','56':'Chile','54':'Argentina','598':'Uruguay','595':'Paraguay','1':'EE. UU./Caribe','53':'Cuba','55':'Brasil','34':'España'};
   function $(id){return document.getElementById(id);}
@@ -190,10 +238,61 @@
     else { est.textContent=deshabilitado?motivo:'Pendiente'; }
     box.appendChild(est); return box;
   }
+  function pintarVoces(){
+    var rs=estado.voces, g=0, m=0, sp=0, pag=0, cob=0, tot=0;
+    rs.forEach(function(r){ var a=r.acceso.toLowerCase(), mo=parseFloat(r.monto)||0; tot+=mo; if(a.indexOf('general')===0) g++; if(a.indexOf('marca')===0) m++; if(a.indexOf('speaker')===0) sp++; if(/^pagado/i.test(r.estado)){ pag++; cob+=mo; } });
+    $('vTotal').textContent=rs.length; $('vGen').textContent=g; $('vMarca').textContent=m+'/10'; $('vSpk').textContent=sp+'/10'; $('vPag').textContent=pag; $('vCob').textContent='$'+cob; $('vCobTxt').textContent='Cobrado de $'+tot; $('tVC').textContent=rs.length;
+    var q=estado.buscaV.toLowerCase(), f=estado.filtroV;
+    var vis=rs.filter(function(r){
+      var pagado=/^pagado/i.test(r.estado);
+      if(f==='pend' && pagado) return false; if(f==='pag' && !pagado) return false; if(f==='cont' && r.contactado) return false;
+      if((f==='General'||f==='Marca'||f==='Speaker') && r.acceso.indexOf(f)!==0) return false;
+      if(q){ var s=(r.nombre+' '+r.negocio+' '+r.whatsapp+' '+r.correo+' '+r.observaciones).toLowerCase(); if(s.indexOf(q)===-1) return false; }
+      return true;
+    });
+    vis.sort(function(a,b){ return String(b.fecha).localeCompare(String(a.fecha)); });
+    var cont=$('fmpListaV'); cont.textContent='';
+    if(!vis.length){ var v=document.createElement('div'); v.className='fmp-vacio'; v.textContent=rs.length?'No hay reservas en esta vista.':'Todavía no hay reservas.'; cont.appendChild(v); return; }
+    vis.forEach(function(r){
+      var tel=numero(r.whatsapp), pagado=/^pagado/i.test(r.estado);
+      var card=document.createElement('div'); card.className='fmp-p'+(pagado?' fmp-hecho':(r.contactado?' fmp-z':''));
+      var izq=document.createElement('div');
+      var nom=document.createElement('div'); nom.className='fmp-nom'; nom.textContent=r.nombre||'(sin nombre)';
+      var ac=document.createElement('span'); var tipo=(r.acceso.split(' ')[0]||'').toLowerCase(); ac.className='fmp-acceso'+(tipo==='marca'?' fmp-marca':(tipo==='speaker'?' fmp-speaker':'')); ac.textContent=r.acceso; nom.appendChild(ac); izq.appendChild(nom);
+      var meta=document.createElement('div'); meta.className='fmp-meta';
+      var t=document.createElement('span'); t.textContent='📱 +'+tel.n+(tel.pais?' · '+tel.pais:''); if(tel.revisar) t.className='fmp-alerta'; meta.appendChild(t);
+      [['✉️ ',r.correo],['🏢 ',r.negocio],['🕒 ',r.fecha]].forEach(function(x){ if(!x[1]) return; var s=document.createElement('span'); s.textContent=x[0]+x[1]; meta.appendChild(s); });
+      izq.appendChild(meta);
+      if(r.observaciones){ var o=document.createElement('div'); o.className='fmp-mot'; var b=document.createElement('b'); b.textContent='Observaciones'; o.appendChild(b); o.appendChild(document.createTextNode(r.observaciones)); izq.appendChild(o); }
+      card.appendChild(izq);
+      var acc=document.createElement('div'); acc.className='fmp-acc';
+      acc.appendChild(paso('Escribir por WhatsApp','fmp-wa',r.contactado,!tel.n,'Sin número',function(){ enviarVoces(r,tel.n); },function(){ marcar(r,'voces_contacto',{quitar:true}); }));
+      var pg=document.createElement('div'); pg.className='fmp-pago';
+      var bp=document.createElement('button'); bp.type='button'; bp.className=pagado?'fmp-pagado':''; bp.textContent=pagado?'✓ Pagado · tocar para deshacer':'💵 Marcar como pagado ($'+(r.monto||'0')+')';
+      bp.addEventListener('click',function(){ cambiarPago(r,pagado?'Pendiente de pago':'Pagado'); }); pg.appendChild(bp); acc.appendChild(pg);
+      var asis=document.createElement('div'); asis.className='fmp-asis';
+      var bs=document.createElement('button'); bs.type='button'; bs.textContent='✓ Asistió'; if(r.asistencia==='si') bs.className='fmp-si-on';
+      bs.addEventListener('click',function(){ marcar(r,'voces_asistencia',{valor:r.asistencia==='si'?'':'si'}); });
+      var bn=document.createElement('button'); bn.type='button'; bn.textContent='✗ No asistió'; if(r.asistencia==='no') bn.className='fmp-no-on';
+      bn.addEventListener('click',function(){ marcar(r,'voces_asistencia',{valor:r.asistencia==='no'?'':'no'}); });
+      asis.appendChild(bs); asis.appendChild(bn); acc.appendChild(asis);
+      card.appendChild(acc); cont.appendChild(card);
+    });
+  }
+  function enviarVoces(r,num){
+    var txt=String(estado.mensajeVoces||'').split('{nombre}').join(primerNombre(r.nombre)).split('{acceso}').join(r.acceso).split('{monto}').join(r.monto);
+    var web=$('fmpWeb').checked, e=encodeURIComponent(txt);
+    window.open(web?('https://web.whatsapp.com/send?phone='+num+'&text='+e):('https://wa.me/'+num+'?text='+e),'_blank');
+    marcar(r,'voces_contacto',{});
+  }
+  function cambiarPago(r,est){
+    pedir('voces_estado',{fila:r.fila,estado:est}).then(function(d){ cargarDatos(d); toast(est==='Pagado'?'✓ '+primerNombre(r.nombre)+': pagado':'Marcado como pendiente de pago'); })
+      .catch(function(){ toast('No se pudo guardar el cambio. Revisá tu conexión.'); });
+  }
   function pintar(){
     var regs=estado.registros, z=0, si=0, no=0, pdf=0;
     regs.forEach(function(p){ if(p.enviado) z++; if(p.asistencia==='si') si++; if(p.asistencia==='no') no++; if(p.pdfEnviado) pdf++; });
-    $('kTotal').textContent=regs.length; $('kZoom').textContent=z; $('kSi').textContent=si; $('kNo').textContent=no; $('kPdf').textContent=pdf;
+    $('tMC').textContent=regs.length; $('kTotal').textContent=regs.length; $('kZoom').textContent=z; $('kSi').textContent=si; $('kNo').textContent=no; $('kPdf').textContent=pdf;
     var vis=regs.filter(pasa);
     vis.sort(function(a,b){ return String(b.fecha).localeCompare(String(a.fecha)); });
     var cont=$('fmpLista'); cont.textContent='';
@@ -233,15 +332,15 @@
   function marcar(p,tipo,extra){
     var datos={id:p.id,tipo:tipo}; for(var k in extra){ datos[k]=extra[k]; }
     pedir('marcar',datos).then(function(d){ cargarDatos(d);
-      if(tipo==='asistencia'){ toast(extra.valor==='si'?'✓ '+primerNombre(p.nombre)+' asistió':(extra.valor==='no'?primerNombre(p.nombre)+' no asistió':'Asistencia sin marcar')); }
-      else { toast(extra.quitar?'Marcado como pendiente':'✓ '+primerNombre(p.nombre)+': '+(tipo==='pdf'?'PDF':'Zoom')+' enviado'); }
+      if(tipo==='asistencia'||tipo==='voces_asistencia'){ toast(extra.valor==='si'?'✓ '+primerNombre(p.nombre)+' asistió':(extra.valor==='no'?primerNombre(p.nombre)+' no asistió':'Asistencia sin marcar')); }
+      else { toast(extra.quitar?'Marcado como pendiente':'✓ '+primerNombre(p.nombre)+': '+(tipo==='pdf'?'PDF enviado':(tipo==='voces_contacto'?'contactada':'Zoom enviado'))); }
     }).catch(function(){ toast('No se pudo guardar el cambio. Revisá tu conexión.'); });
   }
   function cargarDatos(d){
-    estado.registros=d.registros||[]; estado.zoom=d.zoom||''; estado.mensaje=d.mensaje||''; estado.pdf=d.pdf||''; estado.mensajePdf=d.mensajePdf||'';
-    [['fmpZoom','zoom'],['fmpMsg','mensaje'],['fmpPdf','pdf'],['fmpMsgPdf','mensajePdf']].forEach(function(x){ if(document.activeElement!==$(x[0])) $(x[0]).value=estado[x[1]]; });
-    $('fmpActual').textContent='Actualizado '+(d.actualizado||'');
-    pintar();
+    estado.registros=d.registros||[]; estado.voces=d.voces||[]; estado.mensajeVoces=d.mensajeVoces||''; estado.zoom=d.zoom||''; estado.mensaje=d.mensaje||''; estado.pdf=d.pdf||''; estado.mensajePdf=d.mensajePdf||'';
+    [['fmpZoom','zoom'],['fmpMsg','mensaje'],['fmpPdf','pdf'],['fmpMsgPdf','mensajePdf'],['fmpMsgVoces','mensajeVoces']].forEach(function(x){ if(document.activeElement!==$(x[0])) $(x[0]).value=estado[x[1]]; });
+    $('fmpActual').textContent='Actualizado '+(d.actualizado||''); $('fmpActualV').textContent='Actualizado '+(d.actualizado||'');
+    pintar(); pintarVoces();
   }
   function listar(silencio){
     return pedir('listar').then(function(d){ cargarDatos(d); return true; })
@@ -269,15 +368,32 @@
     pedir('guardar',{zoom:z,mensaje:$('fmpMsg').value,pdf:pd,mensajePdf:$('fmpMsgPdf').value}).then(function(d){ cargarDatos(d); m.className='fmp-ok'; m.textContent='✓ Guardado'; setTimeout(function(){m.textContent='';},2500); })
       .catch(function(){ m.className='fmp-err'; m.textContent='No se pudo guardar.'; });
   });
-  document.querySelectorAll('#fmp .fmp-chip').forEach(function(c){ c.addEventListener('click',function(){ document.querySelectorAll('#fmp .fmp-chip').forEach(function(x){x.classList.remove('fmp-on');}); c.classList.add('fmp-on'); estado.filtro=c.getAttribute('data-f'); pintar(); }); });
+  document.querySelectorAll('#fmpFiltrosMC .fmp-chip').forEach(function(c){ c.addEventListener('click',function(){ document.querySelectorAll('#fmpFiltrosMC .fmp-chip').forEach(function(x){x.classList.remove('fmp-on');}); c.classList.add('fmp-on'); estado.filtro=c.getAttribute('data-f'); pintar(); }); });
+  document.querySelectorAll('#fmpFiltrosVC .fmp-chip').forEach(function(c){ c.addEventListener('click',function(){ document.querySelectorAll('#fmpFiltrosVC .fmp-chip').forEach(function(x){x.classList.remove('fmp-on');}); c.classList.add('fmp-on'); estado.filtroV=c.getAttribute('data-f'); pintarVoces(); }); });
+  $('fmpBuscarV').addEventListener('input',function(){ estado.buscaV=this.value||''; pintarVoces(); });
+  $('fmpRefrescarV').addEventListener('click',function(){ listar().then(function(ok){ if(ok) toast('Lista actualizada'); }); });
+  function verTab(t){ estado.tab=t; ls('fmpTab',t); document.querySelectorAll('#fmp .fmp-tab').forEach(function(b){ b.classList.toggle('fmp-on',b.getAttribute('data-tab')===t); }); $('fmpTabMC').classList.toggle('fmp-oculto',t!=='MC'); $('fmpTabVC').classList.toggle('fmp-oculto',t!=='VC'); }
+  document.querySelectorAll('#fmp .fmp-tab').forEach(function(b){ b.addEventListener('click',function(){ verTab(b.getAttribute('data-tab')); }); });
+  if(ls('fmpTab')==='VC') verTab('VC');
+  $('fmpGuardarV').addEventListener('click',function(){ var m=$('fmpGuardarVMsg'); m.className=''; m.textContent='Guardando…';
+    pedir('guardar',{mensajeVoces:$('fmpMsgVoces').value}).then(function(d){ cargarDatos(d); m.className='fmp-ok'; m.textContent='✓ Guardado'; setTimeout(function(){m.textContent='';},2500); })
+      .catch(function(){ m.className='fmp-err'; m.textContent='No se pudo guardar.'; }); });
+  $('fmpCsvV').addEventListener('click',function(){
+    var filas=[['Fecha','Nombre','WhatsApp','Correo','Acceso','Monto (USD)','Empresa','Observaciones','Estado','Contactada','Asistencia']];
+    estado.voces.forEach(function(r){ filas.push([r.fecha,r.nombre,'+'+numero(r.whatsapp).n,r.correo,r.acceso,r.monto,r.negocio,r.observaciones,r.estado,r.contactado,r.asistencia==='si'?'Asistió':(r.asistencia==='no'?'No asistió':'')]); });
+    descargar(filas,'reservas-voces-cr-2026.csv');
+  });
   $('fmpBuscar').addEventListener('input',function(){ estado.busca=this.value||''; pintar(); });
   $('fmpRefrescar').addEventListener('click',function(){ listar().then(function(ok){ if(ok) toast('Lista actualizada'); }); });
   $('fmpCsv').addEventListener('click',function(){
     var filas=[['Fecha','Nombre','WhatsApp','Correo','Quiere mejorar','Zoom enviado','Asistencia','PDF enviado']];
     estado.registros.forEach(function(p){ filas.push([p.fecha,p.nombre,'+'+numero(p.whatsapp).n,p.correo,p.motivo,p.enviado,p.asistencia==='si'?'Asistió':(p.asistencia==='no'?'No asistió':''),p.pdfEnviado]); });
-    var csv=filas.map(function(f){ return f.map(function(c){ return '"'+String(c==null?'':c).replace(/"/g,'""')+'"'; }).join(','); }).join('\r\n');
-    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'})); a.download='registros-masterclass.csv'; document.body.appendChild(a); a.click(); a.remove();
+    descargar(filas,'registros-masterclass.csv');
   });
+  function descargar(filas,nombre){
+    var csv=filas.map(function(f){ return f.map(function(c){ return '"'+String(c==null?'':c).replace(/"/g,'""')+'"'; }).join(','); }).join('\r\n');
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'})); a.download=nombre; document.body.appendChild(a); a.click(); a.remove();
+  }
   setInterval(function(){ if(clave && !document.hidden) listar(true); },60000);
   var guardada=ls(LS); if(guardada){ $('fmpClave').value=guardada; entrar(); }
 })();
