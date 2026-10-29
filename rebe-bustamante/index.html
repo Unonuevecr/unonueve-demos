@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rebe Bustamante — Cultura organizacional y liderazgo consciente</title>
+<meta name="description" content="Rebe Bustamante ayuda a las empresas a crecer sin deshumanizarse: cultura organizacional, selección con evidencia, desarrollo de liderazgo y capacitación corporativa. Fundadora de GTI y autora de «Bendito Desierto».">
+<!-- DEMO: vista previa para aprobación. Quitar noindex cuando pase a rebebcr.com -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F7F5F1">
+<link rel="icon" href="img/logo-rebe.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#F7F5F1; --crema-2:#EFEAE1; --arena:#F2E7D5; --arena-2:#E8D7BA;
+  --navy:#0D2240; --navy-2:#1B3358; --tinta:#2B3446; --gris:#5E6675;
+  --oro:#C9A227; --oro-vivo:#EAB33A; --oro-texto:#8A6F14; --linea:rgba(13,34,64,.12);
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Manrope", system-ui, sans-serif;
+  --r:22px; --gutter:clamp(16px,5vw,64px); --max:1240px;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--crema);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input{font:inherit}
+.serif{font-family:var(--serif);font-variant-numeric:lining-nums}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+em.oro,.oro-i{font-style:italic;color:var(--oro-texto);position:relative}
+.brillo{background:linear-gradient(100deg,var(--oro-texto) 0%,var(--oro-texto) 40%,#E9CB6B 50%,var(--oro-texto) 60%,var(--oro-texto) 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:brillo 5s var(--ease) infinite}
+@keyframes brillo{0%{background-position:100% 0}60%,100%{background-position:-50% 0}}
+.etiqueta{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--oro-texto)}
+.etiqueta::before{content:"";width:28px;height:1px;background:var(--oro)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--navy);line-height:1.05;font-variant-numeric:lining-nums}
+h2{font-size:clamp(36px,6.4vw,68px);letter-spacing:-.01em}
+h3{font-size:clamp(24px,3.2vw,32px)}
+p.lead{font-size:clamp(17px,2vw,19px);color:var(--tinta);max-width:62ch}
+section{position:relative}
+.sec{padding:clamp(80px,12vw,150px) 0}
+
+/* ---------- barra demo + progreso ---------- */
+.demo-bar{position:relative;z-index:60;background:var(--navy);color:#E9DDBF;font-size:12px;letter-spacing:.06em;text-align:center;padding:7px 16px}
+.demo-bar b{color:var(--oro-vivo);font-weight:600}
+.progreso{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--oro),var(--oro-vivo));z-index:80}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;transition:background .4s,box-shadow .4s,backdrop-filter .4s}
+.nav.solida{background:rgba(247,245,241,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--linea)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav .marca img{height:44px;width:auto}
+.nav ul{display:none;list-style:none;gap:30px;font-size:14px;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--navy);position:relative;padding:6px 0}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--oro);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav ul a:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 26px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s,background .35s,color .35s;will-change:transform;white-space:nowrap}
+.btn-navy{background:var(--navy);color:var(--crema);box-shadow:0 10px 30px -12px rgba(13,34,64,.55)}
+.btn-navy:hover{background:var(--navy-2);box-shadow:0 18px 40px -14px rgba(13,34,64,.6)}
+.btn-oro{background:linear-gradient(135deg,#D9B04A,#B8901C);color:#fff;box-shadow:0 10px 30px -12px rgba(160,120,20,.7)}
+.btn-linea{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1px rgba(13,34,64,.25)}
+.btn-linea:hover{box-shadow:inset 0 0 0 1px var(--navy)}
+.btn .flecha{transition:transform .35s var(--ease)}
+.btn:hover .flecha{transform:translateX(4px)}
+.btn-chico{padding:11px 18px;font-size:13px}
+.menu-btn{display:inline-flex;width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);background:transparent;align-items:center;justify-content:center;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:1.5px;background:var(--navy);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--navy);transition:transform .3s}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.nav .cta-nav{display:none}
+.panel{position:fixed;inset:0;z-index:70;background:var(--crema);display:flex;flex-direction:column;justify-content:center;padding:0 28px;clip-path:circle(0% at calc(100% - 40px) 40px);transition:clip-path .7s var(--ease);visibility:hidden}
+.panel.abierto{clip-path:circle(150% at calc(100% - 40px) 40px);visibility:visible}
+.panel a{font-family:var(--serif);font-size:40px;color:var(--navy);text-decoration:none;line-height:1.5}
+.panel .cerrar{position:absolute;top:18px;right:18px}
+@media(min-width:960px){.nav ul{display:flex}.menu-btn{display:none}.nav .cta-nav{display:inline-flex}}
+
+/* ---------- precarga ---------- */
+.precarga{position:fixed;inset:0;z-index:100;background:var(--crema);display:grid;place-items:center;transition:opacity .8s var(--ease),visibility .8s}
+.precarga img{width:min(260px,60vw);opacity:0;transform:scale(.94);animation:logoIn 1.1s var(--ease) .1s forwards}
+.precarga .hilo{position:absolute;bottom:42%;left:50%;width:0;height:1px;background:var(--oro);transform:translateX(-50%);animation:hilo 1.2s var(--ease) .3s forwards}
+@keyframes logoIn{to{opacity:1;transform:none}}
+@keyframes hilo{to{width:min(240px,50vw)}}
+body.listo .precarga{opacity:0;visibility:hidden}
+
+/* ---------- hero ---------- */
+.hero{min-height:calc(100svh - 72px);display:flex;align-items:stretch;overflow:hidden;background:
+  radial-gradient(60% 55% at 78% 40%,rgba(234,179,58,.20),transparent 70%),
+  radial-gradient(50% 40% at 10% 90%,rgba(201,162,39,.10),transparent 70%),var(--crema)}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:0;width:100%;align-items:end}
+.hero-texto{padding:28px 0 0;position:relative;z-index:3}
+.hero-logo{width:min(300px,68vw);margin-bottom:22px}
+.hero-nombre{font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.hero-nombre::after{content:"";flex:0 0 46px;height:1px;background:var(--oro)}
+.hero h1{font-size:clamp(42px,6vw,80px);letter-spacing:-.015em;margin-bottom:22px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln>span{display:inline-block;transform:translateY(110%);transition:transform 1.2s var(--ease)}
+body.listo .hero h1 .ln>span{transform:none}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.12s}.hero h1 .ln:nth-child(3)>span{transition-delay:.24s}
+.hero .frase{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,26px);color:var(--oro-texto);margin-bottom:30px}
+.hero .botones{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.hero-foto{position:relative;height:clamp(420px,62svh,760px);margin-top:10px;display:flex;justify-content:center;align-items:flex-end}
+.hero-foto .aro{position:absolute;left:50%;bottom:8%;width:min(92vw,560px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(circle at 50% 45%,#FBF4E4 0%,#F3E3C2 55%,#EAD3A2 100%);box-shadow:inset 0 0 0 1px rgba(201,162,39,.35)}
+.hero-foto .giro{position:absolute;left:50%;bottom:calc(8% - 22px);width:calc(min(92vw,560px) + 44px);aspect-ratio:1;transform:translateX(-50%);animation:gira 60s linear infinite}
+.hero-foto .giro svg{width:100%;height:100%}
+@keyframes gira{to{transform:translateX(-50%) rotate(360deg)}}
+.hero-foto img.persona{position:relative;z-index:2;height:100%;width:auto;object-fit:contain;object-position:bottom;filter:drop-shadow(0 30px 40px rgba(13,34,64,.18));opacity:0;transform:translateY(40px);transition:opacity 1.3s var(--ease) .25s,transform 1.6s var(--ease) .25s}
+body.listo .hero-foto img.persona{opacity:1;transform:none}
+.chip{position:absolute;z-index:3;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(201,162,39,.35);border-radius:16px;padding:10px 16px;box-shadow:0 18px 40px -20px rgba(13,34,64,.35);opacity:0;transform:translateY(16px) scale(.96);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.chip b{display:block;font-family:var(--serif);font-size:30px;line-height:1;color:var(--navy);font-weight:600;font-variant-numeric:lining-nums}
+.chip small{font-size:11.5px;color:var(--gris);letter-spacing:.02em}
+body.listo .chip{opacity:1;transform:none}
+.chip.c1{transition-delay:.9s}.chip.c2{transition-delay:1.05s}.chip.c3{transition-delay:1.2s}
+.hero-foto .chip{display:none}
+.hero-cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 8px}
+.hero-cifras .chip{position:relative;padding:10px 10px}
+.hero-cifras .chip b{font-size:26px}
+.hero-cifras .chip small{display:block;font-size:11px;line-height:1.3}
+.hero-foto img.persona{margin-left:9%;max-width:none}
+html.captura .hero{min-height:0}html.captura .precarga{display:none}html.captura *{transition:none!important}html.captura .hero-foto{height:560px}
+.nav .marca{opacity:0;transform:translateY(-6px);transition:opacity .5s,transform .5s var(--ease)}
+.nav.solida .marca,.panel.abierto~* .nav .marca{opacity:1;transform:none}
+.chip .flota{animation:flota 6s ease-in-out infinite}
+@keyframes flota{50%{transform:translateY(-6px)}}
+@media(min-width:960px){
+  .hero .wrap{grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .hero-texto{padding:40px 0}
+  .hero h1{font-size:clamp(48px,4.7vw,70px)}
+  .hero-foto{height:min(86svh,820px);align-self:end;margin-top:0}
+  .hero-foto .aro{bottom:6%}
+  .hero-cifras{display:none}
+  html.captura .hero-foto{height:800px}
+  .hero-foto .chip{display:block}
+  .hero-foto img.persona{margin-left:0}
+  .chip.c1{left:-8%;bottom:30%}.chip.c2{right:-10%;top:10%}.chip.c3{right:-6%;bottom:12%}
+}
+
+/* ---------- cinta ---------- */
+.cinta{background:var(--navy);color:#EFE4C8;overflow:hidden;padding:18px 0;position:relative;z-index:4}
+.cinta .pista{display:flex;width:max-content;animation:cinta 38s linear infinite}
+.cinta span{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);font-style:italic;padding:0 26px;white-space:nowrap;display:inline-flex;align-items:center;gap:52px}
+.cinta span::after{content:"✦";font-style:normal;font-size:13px;color:var(--oro-vivo)}
+@keyframes cinta{to{transform:translateX(-50%)}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}.rv-d4{transition-delay:.4s}
+.mascara img{clip-path:inset(100% 0 0 0);transform:scale(1.15);transition:clip-path 1.4s var(--ease),transform 2s var(--ease)}
+.mascara.in img{clip-path:inset(0 0 0 0);transform:scale(1)}
+
+/* ---------- libro ---------- */
+.libro{overflow:hidden;background:linear-gradient(180deg,var(--crema) 0%,var(--arena) 22%,#F6EEDF 70%,var(--crema) 100%)}
+.libro .dunas{position:absolute;left:0;right:0;bottom:0;height:60%;pointer-events:none;opacity:.9}
+.libro .dunas path{animation:duna 14s ease-in-out infinite alternate}
+.libro .dunas path:nth-child(2){animation-duration:18s}.libro .dunas path:nth-child(3){animation-duration:22s}
+@keyframes duna{to{transform:translateX(-6%)}}
+.polvo{position:absolute;inset:0;pointer-events:none}
+.polvo i{position:absolute;width:4px;height:4px;border-radius:50%;background:radial-gradient(circle,#F3D27A,rgba(234,179,58,0));animation:polvo linear infinite;opacity:0}
+@keyframes polvo{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(-90px,-260px);opacity:0}}
+.libro .grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;position:relative;z-index:2}
+.sello{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#F3E3B5;border-radius:999px;padding:8px 16px 8px 10px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+.sello .punto{width:10px;height:10px;border-radius:50%;background:var(--oro-vivo);box-shadow:0 0 0 0 rgba(234,179,58,.7);animation:late 1.8s infinite}
+@keyframes late{70%{box-shadow:0 0 0 12px rgba(234,179,58,0)}100%{box-shadow:0 0 0 0 rgba(234,179,58,0)}}
+.libro h2{font-size:clamp(54px,10vw,112px);margin-bottom:14px}
+.libro .sub{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,27px);color:var(--navy-2);margin-bottom:26px;max-width:30ch;line-height:1.3}
+.libro-escena{position:relative;display:grid;place-items:center;min-height:440px;perspective:1200px}
+.libro-escena .halo{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(234,179,58,.45),rgba(234,179,58,0) 68%);filter:blur(6px);animation:respira 6s ease-in-out infinite}
+@keyframes respira{50%{transform:scale(1.08);opacity:.8}}
+.libro-3d{position:relative;width:min(330px,70vw);transform-style:preserve-3d;transition:transform .6s var(--ease)}
+.libro-3d .flota{animation:flotaLibro 7s ease-in-out infinite}
+@keyframes flotaLibro{50%{transform:translateY(-14px) rotate(-1deg)}}
+.libro-3d img{width:100%;filter:drop-shadow(0 40px 40px rgba(60,40,10,.28))}
+.libro-3d .brilla{position:absolute;inset:0;pointer-events:none;-webkit-mask:url(img/libro-3d.webp) center/contain no-repeat;mask:url(img/libro-3d.webp) center/contain no-repeat;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 48%,transparent 60%);background-size:300% 100%;animation:brillaLibro 6s var(--ease) infinite 1.5s}
+@keyframes brillaLibro{0%{background-position:120% 0}40%,100%{background-position:-60% 0}}
+.libro .sombra-piso{position:absolute;bottom:6%;width:46%;height:22px;border-radius:50%;background:radial-gradient(rgba(60,40,10,.28),transparent 70%);animation:sombra 7s ease-in-out infinite}
+@keyframes sombra{50%{transform:scale(.88);opacity:.7}}
+.datos-libro{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0 30px}
+.datos-libro div{border-top:1px solid rgba(201,162,39,.5);padding-top:10px}
+.datos-libro b{font-family:var(--serif);font-size:34px;color:var(--navy);font-weight:600;line-height:1;display:block;font-variant-numeric:lining-nums}
+.datos-libro span{font-size:13px;color:var(--gris)}
+.ruta{margin:8px 0 34px}
+.ruta .letras{display:grid;grid-template-columns:repeat(8,minmax(0,52px));gap:6px}
+.ruta button{width:100%;height:52px;border-radius:12px;border:1px solid rgba(201,162,39,.45);background:rgba(255,255,255,.55);font-family:var(--serif);font-size:26px;font-weight:600;color:var(--navy);cursor:pointer;transition:background .3s,color .3s,transform .4s var(--ease)}
+.ruta button:hover,.ruta button.activa{background:var(--navy);color:var(--oro-vivo);transform:translateY(-4px)}
+.ruta .paso{min-height:52px;margin-top:12px;font-size:14.5px;color:var(--tinta)}
+.ruta .paso b{font-family:var(--serif);font-size:21px;color:var(--navy);font-weight:600;display:block}
+.lista-espera{background:rgba(255,255,255,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(201,162,39,.35);border-radius:var(--r);padding:clamp(22px,4vw,34px);box-shadow:0 30px 60px -36px rgba(13,34,64,.45)}
+.lista-espera h3{margin-bottom:6px}
+.lista-espera p{font-size:14.5px;color:var(--gris);margin-bottom:18px}
+.campo{position:relative;margin-bottom:12px}
+.campo input{width:100%;border:1px solid rgba(13,34,64,.18);background:#fff;border-radius:14px;padding:22px 16px 8px;font-size:16px;color:var(--navy);outline:none;transition:border-color .3s,box-shadow .3s}
+.campo label{position:absolute;left:16px;top:15px;font-size:15px;color:var(--gris);pointer-events:none;transition:all .25s var(--ease)}
+.campo input:focus{border-color:var(--oro);box-shadow:0 0 0 4px rgba(201,162,39,.15)}
+.campo input:focus+label,.campo input:not(:placeholder-shown)+label{top:6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--oro-texto)}
+.campo.err input{border-color:#B4432F}
+.trampa{position:absolute;left:-9999px;opacity:0}
+.lista-espera .btn{width:100%;margin-top:6px}
+.lista-espera .fino{font-size:12px;color:var(--gris);margin:12px 0 0}
+.gracias{display:none;text-align:center;padding:16px 0}
+.gracias .ok{width:62px;height:62px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:var(--navy);color:var(--oro-vivo);font-size:28px}
+.lista-espera.enviada form{display:none}.lista-espera.enviada .gracias{display:block}
+.cita-libro{margin-top:40px;text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(28px,4.4vw,48px);color:var(--navy);line-height:1.2}
+.cita-libro small{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-texto)}
+@media(min-width:960px){.libro .grid{grid-template-columns:.95fr 1.05fr;gap:70px}.libro-escena{min-height:640px}.libro-3d{width:min(400px,32vw)}.datos-libro{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- lo que hace ---------- */
+.hace .cabeza{display:grid;gap:28px;margin-bottom:60px}
+.hace .cabeza h2{max-width:16ch}
+.verbos{display:grid;grid-template-columns:1fr;gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;margin-bottom:80px}
+.verbo{background:var(--crema);padding:24px 22px;position:relative;overflow:hidden;transition:background .5s}
+.verbo::before{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--oro),var(--oro-vivo));transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
+.verbo:hover{background:#fff}.verbo:hover::before{transform:scaleX(1)}
+.verbo .ico{width:46px;height:46px;margin-bottom:18px;color:var(--oro)}
+.verbo .ico path,.verbo .ico circle,.verbo .ico line,.verbo .ico polyline{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1.8s var(--ease)}
+.verbo.in .ico *{stroke-dashoffset:0}
+.verbo h3{font-size:34px;margin-bottom:8px}
+.verbo p{font-size:15px;color:var(--gris)}
+@media(min-width:720px){.verbos{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1080px){.verbos{grid-template-columns:repeat(4,1fr)}.hace .cabeza{grid-template-columns:1.1fr .9fr;align-items:end}}
+.bio{display:grid;grid-template-columns:1fr;gap:44px;align-items:center;margin-bottom:90px}
+.bio-foto{position:relative;border-radius:calc(var(--r) + 6px);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(13,34,64,.5)}
+.bio-foto img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.bio-foto .marco{position:absolute;inset:14px;border:1px solid rgba(255,255,255,.65);border-radius:var(--r);pointer-events:none}
+.bio-texto p{margin-bottom:16px}
+.bio-texto .cita{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,30px);line-height:1.25;color:var(--navy);border-left:2px solid var(--oro);padding-left:20px;margin:28px 0}
+@media(min-width:960px){.bio{grid-template-columns:.8fr 1.2fr;gap:80px}}
+.construyo h3.titulo{font-size:clamp(30px,4.4vw,46px);margin:10px 0 30px}
+.empresas-eco{display:grid;grid-template-columns:1fr;gap:20px}
+.eco{position:relative;border-radius:var(--r);background:#fff;border:1px solid var(--linea);padding:clamp(24px,4vw,40px);overflow:hidden;transition:transform .6s var(--ease),box-shadow .6s;display:flex;flex-direction:column}
+.eco:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(13,34,64,.45)}
+.eco::after{content:"";position:absolute;right:-30%;top:-40%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(234,179,58,.16),transparent 70%);transition:transform 1s var(--ease)}
+.eco:hover::after{transform:scale(1.3)}
+.eco .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:24px}
+.eco .top img{height:58px;width:auto}
+.eco .rol{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--arena);border-radius:999px;padding:7px 12px;white-space:nowrap}
+.eco h4{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--navy);line-height:1.1;margin-bottom:10px}
+.eco p{font-size:15.5px;color:var(--tinta);margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chips span{font-size:13px;border:1px solid var(--linea);border-radius:999px;padding:6px 12px;color:var(--navy);background:var(--crema)}
+.eco .enlace{margin-top:auto;display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--oro);align-self:flex-start;padding-bottom:3px}
+.eco .enlace:hover .flecha{transform:translateX(4px)}
+.eco .enlace .flecha{transition:transform .35s var(--ease)}
+@media(min-width:960px){.empresas-eco{grid-template-columns:1fr 1fr}}
+
+/* ---------- empresas (navy) ---------- */
+.banda{background:var(--navy);color:#E7E2D6;overflow:hidden}
+.banda h2{color:#fff}
+.banda .etiqueta{color:var(--oro-vivo)}
+.banda .luz{position:absolute;width:70vw;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(234,179,58,.18),transparent 65%);top:-30%;left:-20%;animation:pasea 18s ease-in-out infinite alternate;pointer-events:none}
+@keyframes pasea{to{transform:translate(60vw,30%)}}
+.sectores{display:grid;grid-template-columns:1fr;gap:18px;margin:50px 0 70px}
+.sector{border:1px solid rgba(233,203,107,.28);border-radius:var(--r);padding:30px;background:rgba(255,255,255,.03);transition:background .5s,border-color .5s}
+.sector:hover{background:rgba(255,255,255,.06);border-color:rgba(233,203,107,.6)}
+.sector .num{font-family:var(--sans);font-weight:600;letter-spacing:.2em;color:var(--oro-vivo);font-size:13px}
+.sector h3{color:#fff;font-size:34px;margin:6px 0 10px}
+.sector p{color:#C9CFDA;font-size:15.5px}
+@media(min-width:900px){.sectores{grid-template-columns:1fr 1fr}}
+.cifras{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 18px;margin-bottom:70px}
+.cifra b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(56px,9vw,104px);line-height:.95;color:#fff;font-variant-numeric:lining-nums}
+.cifra b sup{font-size:.45em;color:var(--oro-vivo);vertical-align:top;margin-left:2px}
+.cifra>span{display:block;font-size:14px;color:#C9CFDA;max-width:22ch;border-top:1px solid rgba(233,203,107,.35);padding-top:10px;margin-top:10px}
+@media(min-width:900px){.cifras{grid-template-columns:repeat(4,1fr)}}
+.logos-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px;margin-bottom:22px}
+.logos-head p{color:#C9CFDA;font-size:15px;max-width:60ch}
+.logos{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.logos .pista{display:flex;gap:16px;width:max-content;animation:cinta 40s linear infinite}
+.logo-slot{width:190px;height:96px;border:1.5px dashed rgba(233,203,107,.45);border-radius:16px;display:grid;place-items:center;text-align:center;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(233,203,107,.85);padding:10px}
+.nota-demo{display:inline-flex;gap:8px;align-items:center;margin-top:16px;font-size:12.5px;color:#0D2240;background:var(--oro-vivo);border-radius:8px;padding:6px 10px;font-weight:600}
+.alcance{margin-top:60px;display:grid;gap:14px;font-family:var(--serif);font-size:clamp(22px,3vw,30px);color:#fff;line-height:1.3}
+.alcance em{color:var(--oro-vivo)}
+
+/* ---------- programas ---------- */
+.prog-cabeza{display:grid;gap:24px;margin-bottom:40px}
+@media(min-width:960px){.prog-cabeza{grid-template-columns:1.2fr .8fr;align-items:end}}
+.filtros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+.filtros button{border:1px solid var(--linea);background:transparent;border-radius:999px;padding:10px 18px;font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;transition:all .35s var(--ease)}
+.filtros button.activo{background:var(--navy);color:var(--crema);border-color:var(--navy)}
+.programas{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:760px){.programas{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.programas{grid-template-columns:repeat(3,1fr)}}
+.prog{position:relative;border-radius:var(--r);background:#fff;border:1px solid var(--linea);overflow:hidden;display:flex;flex-direction:column;transition:transform .6s var(--ease),box-shadow .6s,opacity .45s,filter .45s}
+.prog:hover{transform:translateY(-8px);box-shadow:0 40px 70px -40px rgba(13,34,64,.5)}
+.prog.fuera{opacity:.18;filter:grayscale(1);transform:scale(.97);pointer-events:none}
+.prog .foto{aspect-ratio:16/10;overflow:hidden;position:relative}
+.prog .foto img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.prog:hover .foto img{transform:scale(1.07)}
+.prog .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(13,34,64,.55))}
+.prog .tipo{position:absolute;left:16px;bottom:14px;z-index:2;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#fff}
+.prog .n{position:absolute;right:16px;top:12px;z-index:2;font-family:var(--serif);font-style:italic;font-size:30px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.prog .cuerpo{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.prog h3{font-size:29px;margin-bottom:10px}
+.prog p{font-size:15px;color:var(--tinta);margin-bottom:16px}
+.prog .ficha{font-size:12.5px;font-weight:600;color:var(--oro-texto);letter-spacing:.04em;margin-top:auto;padding-top:14px;border-top:1px solid var(--linea)}
+
+/* ---------- en escena ---------- */
+.escena{overflow:hidden;padding-bottom:clamp(80px,10vw,120px)}
+.galeria{margin-top:44px;overflow:hidden}
+.galeria .pista{display:flex;gap:16px;width:max-content;animation:cinta 60s linear infinite}
+.galeria:hover .pista{animation-play-state:paused}
+.galeria figure{height:clamp(260px,40vw,420px);border-radius:var(--r);overflow:hidden;flex:none;position:relative}
+.galeria figure img{height:100%;width:auto;object-fit:cover;transition:transform 1.2s var(--ease),filter .6s}
+.galeria figure:hover img{transform:scale(1.05)}
+.medios{display:grid;grid-template-columns:1fr;gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;margin-top:60px}
+.medio{background:var(--crema);padding:24px;transition:background .4s}
+.medio:hover{background:#fff}
+.medio small{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--oro-texto);font-weight:700}
+.medio h4{font-family:var(--serif);font-size:24px;color:var(--navy);font-weight:600;line-height:1.15;margin-top:6px}
+@media(min-width:760px){.medios{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.medios{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- frase grande ---------- */
+.frase-grande{padding:clamp(90px,13vw,170px) 0;text-align:center;background:radial-gradient(60% 80% at 50% 50%,rgba(234,179,58,.16),transparent 70%),var(--crema-2);overflow:hidden}
+.frase-grande blockquote{font-family:var(--serif);font-size:clamp(38px,7vw,86px);line-height:1.05;color:var(--navy);max-width:16ch;margin:0 auto}
+.frase-grande blockquote .pal{display:inline-block;opacity:.12;transition:opacity .6s}
+.frase-grande blockquote .pal.on{opacity:1}
+.frase-grande cite{display:block;margin-top:26px;font-style:normal;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--oro-texto)}
+
+/* ---------- contacto ---------- */
+.contacto .caja{display:grid;grid-template-columns:1fr;border-radius:calc(var(--r) + 8px);overflow:hidden;background:#fff;border:1px solid var(--linea);box-shadow:0 50px 90px -60px rgba(13,34,64,.5)}
+.contacto .foto{position:relative;min-height:380px;background:linear-gradient(180deg,#F4EFE6,#E9DFCD)}
+.contacto .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.contacto .txt{padding:clamp(28px,5vw,64px)}
+.contacto h2{font-size:clamp(36px,5.4vw,58px);margin:12px 0 18px}
+.preguntas{list-style:none;margin:24px 0 30px;display:grid;gap:10px}
+.preguntas li{display:flex;gap:12px;font-family:var(--serif);font-size:21px;font-style:italic;color:var(--navy);line-height:1.3}
+.preguntas li::before{content:"";flex:none;width:18px;height:1px;background:var(--oro);margin-top:14px}
+.contacto .botones{display:flex;flex-wrap:wrap;gap:12px}
+.contacto .datos{margin-top:24px;font-size:14px;color:var(--gris)}
+.contacto .datos a{text-decoration:none;border-bottom:1px solid rgba(201,162,39,.6)}
+@media(min-width:960px){.contacto .caja{grid-template-columns:.85fr 1.15fr}}
+
+/* ---------- pie ---------- */
+footer{padding:70px 0 40px;border-top:1px solid var(--linea);margin-top:clamp(80px,10vw,130px)}
+footer .arriba{display:grid;gap:34px;grid-template-columns:1fr}
+footer .logo{width:180px}
+footer .lema{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--navy);margin-top:14px;max-width:26ch}
+footer h5{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-texto);margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px;font-size:15px}
+footer ul a{text-decoration:none;color:var(--navy)}
+footer ul a:hover{color:var(--oro-texto)}
+.redes{display:flex;gap:10px}
+.redes a{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);display:grid;place-items:center;color:var(--navy);transition:all .35s var(--ease)}
+.redes a:hover{background:var(--navy);color:var(--oro-vivo);transform:translateY(-3px)}
+.redes svg{width:18px;height:18px}
+footer .abajo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:50px;padding-top:22px;border-top:1px solid var(--linea);font-size:13px;color:var(--gris)}
+@media(min-width:900px){footer .arriba{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+
+/* WhatsApp flotante */
+.wa-flota{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:56px;height:56px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 16px 36px -14px rgba(13,34,64,.7);transform:scale(0);transition:transform .5s var(--ease)}
+.wa-flota.ver{transform:scale(1)}
+.wa-flota svg{width:26px;height:26px;color:var(--oro-vivo)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero h1 .ln>span,.hero-foto img.persona,.chip{opacity:1!important;transform:none!important}
+  .mascara img{clip-path:none!important}.frase-grande .pal{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<div class="precarga" aria-hidden="true"><img src="img/logo-rebe.png" alt=""><span class="hilo"></span></div>
+<div class="progreso" aria-hidden="true"></div>
+<div class="demo-bar"><b>Vista previa</b> · demo de la web nueva de rebebcr.com para aprobación</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="marca" aria-label="Rebe Bustamante, inicio"><img src="img/logo-rebe.png" alt="Rebe B"></a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="#libro">El libro</a></li>
+      <li><a href="#lo-que-hace">Lo que hace</a></li>
+      <li><a href="#empresas">Empresas</a></li>
+      <li><a href="#programas">Programas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul></nav>
+    <a href="#contacto" class="btn btn-navy btn-chico cta-nav">Conversemos <span class="flecha">→</span></a>
+    <button class="menu-btn" aria-label="Abrir menú" id="abrirMenu"><span></span></button>
+  </div>
+</header>
+<div class="panel" id="panel" aria-hidden="true">
+  <button class="menu-btn cerrar" aria-label="Cerrar menú" id="cerrarMenu">✕</button>
+  <a href="#libro">El libro</a><a href="#lo-que-hace">Lo que hace</a><a href="#empresas">Empresas</a><a href="#programas">Programas</a><a href="#contacto">Contacto</a>
+</div>
+
+<main>
+<!-- ============ 1. PORTADA / MARCA ============ -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-texto">
+      <img class="hero-logo rv" src="img/logo-rebe.png" alt="Rebe B — logo de Rebe Bustamante">
+      <div class="hero-nombre rv rv-d1">Rebe Bustamante</div>
+      <h1><span class="ln"><span>Empresas que crecen</span></span><span class="ln"><span><em class="oro-i brillo">sin perder</em></span></span><span class="ln"><span><em class="oro-i brillo">su humanidad.</em></span></span></h1>
+      <p class="frase rv rv-d2">«Todo lo que necesitas ya está dentro de ti.»</p>
+      <div class="hero-cifras">
+        <div class="chip"><b class="serif">20</b><small>años en recursos humanos</small></div>
+        <div class="chip"><b class="serif">+500</b><small>empresas capacitadas</small></div>
+        <div class="chip"><b class="serif">15+</b><small>países con conferencias</small></div>
+      </div>
+      <div class="botones rv rv-d3">
+        <a class="btn btn-navy magnet" href="#contacto">Conversemos sobre su empresa <span class="flecha">→</span></a>
+        <a class="btn btn-linea magnet" href="#libro">Bendito Desierto · muy pronto</a>
+      </div>
+    </div>
+    <div class="hero-foto" data-parallax="0.08">
+      <div class="aro"></div>
+      <div class="giro" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0"/></defs><circle cx="100" cy="100" r="98" fill="none" stroke="#C9A227" stroke-width=".35" stroke-dasharray="1 3"/><text font-family="Manrope" font-size="6.2" letter-spacing="3.2" fill="#8A6F14"><textPath href="#circ">CULTURA ORGANIZACIONAL · LIDERAZGO CONSCIENTE · GESTIÓN HUMANA · </textPath></text></svg></div>
+      <img class="persona" src="img/rebe-pie.webp" alt="Rebe Bustamante" fetchpriority="high">
+      <div class="chip c1"><div class="flota"><b class="serif">20</b><small>años en recursos humanos</small></div></div>
+      <div class="chip c2"><div class="flota" style="animation-delay:-2s"><b class="serif">+500</b><small>empresas capacitadas</small></div></div>
+      <div class="chip c3"><div class="flota" style="animation-delay:-4s"><b class="serif">15+</b><small>países con conferencias</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cinta" aria-hidden="true"><div class="pista">
+  <span>Cultura organizacional</span><span>Selección con evidencia</span><span>Desarrollo de liderazgo</span><span>Clima laboral</span><span>Capacitación a la medida</span><span>Psicometría</span>
+  <span>Cultura organizacional</span><span>Selección con evidencia</span><span>Desarrollo de liderazgo</span><span>Clima laboral</span><span>Capacitación a la medida</span><span>Psicometría</span>
+</div></div>
+
+<!-- ============ 2. BENDITO DESIERTO ============ -->
+<section class="libro sec" id="libro">
+  <svg class="dunas" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 260 C 240 200 420 300 720 250 S 1200 190 1600 260 L1600 400 L0 400Z" fill="#EEDDBE" opacity=".55"/>
+    <path d="M0 310 C 300 260 520 340 820 300 S 1250 250 1600 320 L1600 400 L0 400Z" fill="#E8D2A8" opacity=".45"/>
+    <path d="M0 350 C 260 320 560 380 900 345 S 1300 320 1600 360 L1600 400 L0 400Z" fill="#F7F5F1" opacity=".9"/>
+  </svg>
+  <div class="polvo" id="polvo" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="grid">
+      <div class="libro-escena rv" id="escenaLibro">
+        <div class="halo"></div>
+        <div class="libro-3d" id="libro3d"><div class="flota"><img src="img/libro-3d.webp" alt="Libro Bendito Desierto de Rebe Bustamante"><span class="brilla"></span></div></div>
+        <div class="sombra-piso"></div>
+      </div>
+      <div>
+        <div class="sello rv"><span class="punto"></span>Muy pronto · Lanzamiento</div>
+        <h2 class="rv rv-d1">Bendito <em class="oro-i brillo">Desierto</em></h2>
+        <p class="sub rv rv-d2">El dolor que casi me destruyó… fue el mismo que me enseñó a volar.</p>
+        <p class="lead rv rv-d2">Una historia de vida convertida en método. En doce capítulos, Rebe cuenta los desiertos que casi la quiebran y cómo cada uno se volvió un paso de la <strong>Ruta M.A.R.I.P.O.S.A.</strong>: mirar de frente la propia historia, soltar lo que pesa y alzar las alas desde quien uno realmente es.</p>
+        <p class="lead rv rv-d3" style="margin-top:14px">Un libro escrito desde la fe, para quien lleva demasiado tiempo siendo fuerte para todos: gente de gestión humana, líderes de empresa, madres y padres que sostienen una casa.</p>
+        <div class="datos-libro rv rv-d3">
+          <div><b>12</b><span>capítulos</span></div>
+          <div><b>8</b><span>pasos de la Ruta</span></div>
+          <div><b>12</b><span>«Líderes en el Desierto»</span></div>
+          <div><b>1</b><span>guía para grupos y equipos</span></div>
+        </div>
+        <div class="lista-espera rv rv-d4" id="listaEspera">
+          <form id="formLista" novalidate>
+            <h3>Sea de los primeros en tenerlo</h3>
+            <p>Únase a la lista de espera y le avisamos el día del lanzamiento.</p>
+            <div class="campo"><input id="fNombre" name="nombre" placeholder=" " autocomplete="name" required><label for="fNombre">Nombre completo</label></div>
+            <div class="campo"><input id="fWhats" name="whatsapp" placeholder=" " inputmode="tel" autocomplete="tel" required><label for="fWhats">WhatsApp</label></div>
+            <div class="campo"><input id="fCorreo" name="correo" type="email" placeholder=" " autocomplete="email" required><label for="fCorreo">Correo electrónico</label></div>
+            <input class="trampa" name="sitio" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn-oro magnet" type="submit">Quiero estar en la lista <span class="flecha">→</span></button>
+            <p class="fino">Sus datos se usan solo para avisarle del libro. Nada de mensajes de más.</p>
+          </form>
+          <div class="gracias">
+            <div class="ok">✓</div>
+            <h3>¡Ya está en la lista!</h3>
+            <p id="graciasTxt">Le escribiremos el día del lanzamiento.</p>
+          </div>
+        </div>
+        <div class="ruta rv" style="margin-top:34px">
+          <div class="etiqueta" style="margin-bottom:12px">La Ruta M.A.R.I.P.O.S.A.</div>
+          <div class="letras" id="letras"></div>
+          <div class="paso" id="paso" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+    <p class="cita-libro rv">«No sobreviviste para vivir pequeño.»<small>Bendito Desierto</small></p>
+  </div>
+</section>
+
+<!-- ============ 3. LO QUE HACE ============ -->
+<section class="hace sec" id="lo-que-hace">
+  <div class="wrap">
+    <div class="cabeza">
+      <div>
+        <div class="etiqueta rv">Lo que hace</div>
+        <h2 class="rv rv-d1" style="margin-top:18px">Convierte la gestión humana en <em class="oro-i">resultados que se sostienen.</em></h2>
+      </div>
+      <p class="lead rv rv-d2">Veinte años en recursos humanos le enseñaron que las empresas no cambian desde el organigrama, sino desde la conciencia de quienes las dirigen. Por eso une el rigor de la gestión —procesos, métricas, psicometría— con una pregunta que pocos hacen en la sala de juntas: <em>¿cómo está realmente la gente detrás de los números?</em></p>
+    </div>
+
+    <div class="verbos">
+      <div class="verbo rv"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="21" cy="21" r="12"/><line x1="30" y1="30" x2="41" y2="41"/><polyline points="14,23 19,18 23,22 28,16"/></svg><h3>Diagnostica</h3><p>El clima, la cultura y el desempeño de su organización, para decidir con datos y no con intuiciones.</p></div>
+      <div class="verbo rv rv-d1"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="24" cy="15" r="7"/><path d="M10 41c1.5-8 7-12 14-12s12.5 4 14 12"/><polyline points="30,22 34,26 42,17"/></svg><h3>Selecciona</h3><p>Al talento con evidencia: psicometría, entrevistas por competencias y evaluación objetiva de cada candidato.</p></div>
+      <div class="verbo rv rv-d2"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 18l18-9 18 9-18 9z"/><path d="M13 22v9c0 3 5 6 11 6s11-3 11-6v-9"/><line x1="42" y1="18" x2="42" y2="30"/></svg><h3>Forma</h3><p>A líderes y equipos con programas a la medida de la etapa de su empresa, no con charlas de catálogo.</p></div>
+      <div class="verbo rv rv-d3"><svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 34c6 0 8-8 14-8s8 8 14 8 6-4 8-6"/><path d="M6 22c6 0 8-8 14-8s8 8 14 8 6-4 8-6"/></svg><h3>Acompaña</h3><p>El cambio de cultura, de la estrategia a la práctica diaria, hasta que se nota en cómo trabaja la gente.</p></div>
+    </div>
+
+    <div class="bio">
+      <div class="bio-foto mascara"><img src="img/rebe-blanco.jpg" alt="Rebe Bustamante" loading="lazy"><span class="marco"></span></div>
+      <div class="bio-texto">
+        <div class="etiqueta rv">Quién está detrás</div>
+        <h3 class="rv rv-d1" style="font-size:clamp(32px,4.6vw,48px);margin:14px 0 22px">Rebe Bustamante</h3>
+        <p class="rv rv-d1">Fundó <strong>GTI, Gestionadora de Talento Integral</strong>, la firma desde la que acompaña a empresas en todo el ciclo de su gente: atraerla, evaluarla, administrarla y desarrollarla.</p>
+        <p class="rv rv-d2">Hace trece años trajo a Costa Rica <strong>Psicoweb</strong>, la plataforma de evaluación psicométrica con la que hoy las organizaciones seleccionan y desarrollan talento con datos. Es su <strong>Growth Partner</strong> en el país.</p>
+        <p class="rv rv-d2">Ha capacitado a más de 500 empresas y ha llevado sus conferencias a más de 15 países de Latinoamérica. Es conferencista acreditada por la International Coaching &amp; Speaker Federation y autora de «Bendito Desierto».</p>
+        <p class="cita rv rv-d3">«Nadie puede liderar a otros si primero no aprende a liderarse a sí mismo.»</p>
+      </div>
+    </div>
+
+    <div class="construyo">
+      <div class="etiqueta rv">Lo que construyó</div>
+      <h3 class="titulo rv rv-d1">Dos empresas que respaldan <em class="oro-i">cada proceso</em></h3>
+      <div class="empresas-eco">
+        <article class="eco rv">
+          <div class="top"><img src="img/logo-gti.png" alt="GTI Gestionadora de Talento Integral"><span class="rol">Fundadora</span></div>
+          <h4>GTI · Gestionadora de Talento Integral</h4>
+          <p>Integra en una sola relación lo que una empresa suele repartir entre muchos proveedores. No llega como un proveedor más: se vuelve una extensión estratégica de su equipo.</p>
+          <div class="chips"><span>Atracción y selección</span><span>Evaluación del talento</span><span>Outsourcing y planillas</span><span>Desarrollo organizacional</span><span>Capacitación</span><span>Asesoría legal</span><span>Servicios contables</span><span>Soluciones tecnológicas</span></div>
+          <a class="enlace" href="https://gticr.net" target="_blank" rel="noopener">Conocer GTI <span class="flecha">→</span></a>
+        </article>
+        <article class="eco rv rv-d1">
+          <div class="top"><img src="img/logo-psicoweb.png" alt="Psicoweb" style="height:44px;margin-top:8px"><span class="rol">Growth Partner</span></div>
+          <h4>Psicoweb Costa Rica</h4>
+          <p>La plataforma de evaluación que Rebe trajo al país en 2013: pruebas psicométricas en línea para contratar y promover con evidencia, desde pymes en crecimiento hasta grandes instituciones.</p>
+          <div class="chips"><span>Psicometría</span><span>LPC</span><span>TPS</span><span>CONOCIWEB</span></div>
+          <a class="enlace" href="https://psicowebcr.com" target="_blank" rel="noopener">Conocer Psicoweb <span class="flecha">→</span></a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. PARA QUIÉN TRABAJA ============ -->
+<section class="banda sec" id="empresas">
+  <div class="luz" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <div class="etiqueta rv">Para quién trabaja</div>
+    <h2 class="rv rv-d1" style="margin-top:18px;max-width:18ch">Empresas <em class="oro-i" style="color:var(--oro-vivo)">públicas y privadas</em> que se toman en serio a su gente.</h2>
+    <div class="sectores">
+      <div class="sector rv"><span class="num">01</span><h3>Sector público</h3><p>Procesos de selección y evaluación objetivos y medibles, y formación para jefaturas y equipos que atienden a la ciudadanía.</p></div>
+      <div class="sector rv rv-d1"><span class="num">02</span><h3>Sector privado</h3><p>De pymes en crecimiento a multinacionales: alta rotación, contratación masiva, puestos críticos o de confianza, y líderes que hay que formar para la siguiente etapa.</p></div>
+    </div>
+    <div class="cifras">
+      <div class="cifra rv"><b class="serif"><span class="contar" data-n="20">0</span></b><span>años en gestión de recursos humanos</span></div>
+      <div class="cifra rv rv-d1"><b class="serif"><span class="contar" data-n="500">0</span><sup>+</sup></b><span>empresas capacitadas</span></div>
+      <div class="cifra rv rv-d2"><b class="serif"><span class="contar" data-n="15">0</span><sup>+</sup></b><span>países con conferencias impartidas</span></div>
+      <div class="cifra rv rv-d3"><b class="serif"><span class="contar" data-n="13">0</span></b><span>años con Psicoweb en Costa Rica</span></div>
+    </div>
+    <div class="logos-head rv"><div class="etiqueta">Empresas que han confiado en su trabajo</div><p>Con autorización de cada empresa.</p></div>
+    <div class="logos rv" aria-label="Espacio para logos de clientes">
+      <div class="pista" id="pistaLogos"></div>
+    </div>
+    <div class="nota-demo">DEMO · aquí van los logos de empresas privadas que Rebe autorice publicar</div>
+    <div class="alcance rv">
+      <p>Desde Costa Rica, con alianzas en <em>Centroamérica, México y el Caribe</em>.</p>
+      <p>Con conferencias en México, Costa Rica, Panamá, Ecuador, Colombia, Perú <em>y más</em>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. PROGRAMAS ============ -->
+<section class="sec" id="programas">
+  <div class="wrap">
+    <div class="prog-cabeza">
+      <div>
+        <div class="etiqueta rv">Programas</div>
+        <h2 class="rv rv-d1" style="margin-top:18px">Para que el cambio <em class="oro-i">no se quede en la sala.</em></h2>
+      </div>
+      <p class="lead rv rv-d2">Cada programa se ajusta a su empresa: virtual o presencial, para equipos de recursos humanos, jefaturas o la alta gerencia.</p>
+    </div>
+    <div class="filtros rv" id="filtros">
+      <button class="activo" data-f="todos">Todos</button>
+      <button data-f="capacitacion">Capacitación</button>
+      <button data-f="taller">Talleres</button>
+      <button data-f="conferencia">Conferencias</button>
+    </div>
+    <div class="programas">
+      <article class="prog rv" data-t="capacitacion">
+        <div class="foto"><img src="img/escena-taller.jpg" alt="Rebe Bustamante en un curso-taller" loading="lazy"><span class="n">01</span><span class="tipo">Curso-taller</span></div>
+        <div class="cuerpo"><h3>Psicometría estratégica para RH</h3><p>Enseña a su equipo de recursos humanos a usar las pruebas psicométricas para decidir: a quién contratar, a quién promover y cómo desarrollar a cada persona.</p><div class="ficha">4 sesiones · 8 horas · virtual o presencial · con certificado</div></div>
+      </article>
+      <article class="prog rv rv-d1" data-t="capacitacion">
+        <div class="foto"><img src="img/escena-aula.jpg" alt="Rebe Bustamante capacitando a un equipo" loading="lazy" style="object-position:center 30%"><span class="n">02</span><span class="tipo">Capacitación corporativa</span></div>
+        <div class="cuerpo"><h3>Capacitación a la medida</h3><p>Liderazgo, comunicación, servicio al cliente, trabajo en equipo y gestión del cambio, diseñados después de entender dónde está hoy su organización.</p><div class="ficha">Programas a la medida · para jefaturas y equipos</div></div>
+      </article>
+      <article class="prog rv rv-d2" data-t="capacitacion">
+        <div class="foto"><img src="img/escena-micro.jpg" alt="Rebe Bustamante dando un programa de servicio" loading="lazy" style="object-position:center 25%"><span class="n">03</span><span class="tipo">Programa de servicio</span></div>
+        <div class="cuerpo"><h3>Metodología y Cultura Disney</h3><p>Lleva a su equipo los principios de calidad de servicio de la metodología Disney, en la que Rebe está certificada, para que la experiencia del cliente deje de depender de la buena voluntad.</p><div class="ficha">Calidad de servicio · certificación de Rebe</div></div>
+      </article>
+      <article class="prog rv" data-t="taller">
+        <div class="foto"><img src="img/escena-publico.jpg" alt="Rebe Bustamante con un grupo en taller" loading="lazy" style="object-position:center 35%"><span class="n">04</span><span class="tipo">Taller transformacional</span></div>
+        <div class="cuerpo"><h3>Método M.A.R.I.P.O.S.A.</h3><p>Ocho movimientos para que personas, líderes y equipos suelten lo que ya no los sostiene y asuman la identidad, el propósito y la responsabilidad que nacen después.</p><div class="ficha">Metodología propia · nace de «Bendito Desierto»</div></div>
+      </article>
+      <article class="prog rv rv-d1" data-t="conferencia">
+        <div class="foto"><img src="img/escena-podio.jpg" alt="Rebe Bustamante en el podio" loading="lazy" style="object-position:center 30%"><span class="n">05</span><span class="tipo">Conferencia</span></div>
+        <div class="cuerpo"><h3>It's Lonely at the Top</h3><p>Para directores y alta gerencia: el peso de decidir desde arriba y por qué liderar a otros empieza por liderarse a uno mismo.</p><div class="ficha">Alta gerencia · keynote ejecutivo</div></div>
+      </article>
+      <article class="prog rv rv-d2" data-t="conferencia">
+        <div class="foto"><img src="img/escena-conf4.jpg" alt="Rebe Bustamante en conferencia con micrófono" loading="lazy" style="object-position:center 20%"><span class="n">06</span><span class="tipo">Conferencia</span></div>
+        <div class="cuerpo"><h3>No sobreviviste para vivir pequeño</h3><p>Nace de «Bendito Desierto»: convierte lo vivido en criterio para liderar, decidir y servir mejor, en la empresa y en la vida.</p><div class="ficha">Abierta o corporativa · desde el libro</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EN ESCENA ============ -->
+<section class="escena" id="escena">
+  <div class="wrap">
+    <div class="etiqueta rv">En escena</div>
+    <h2 class="rv rv-d1" style="margin-top:18px;max-width:16ch">Del escenario a la <em class="oro-i">sala de juntas.</em></h2>
+  </div>
+  <div class="galeria"><div class="pista" id="pistaGaleria"></div></div>
+  <div class="wrap">
+    <div class="medios">
+      <div class="medio rv"><small>Podcast</small><h4>«Entre Llamadas y Abrazos»</h4></div>
+      <div class="medio rv rv-d1"><small>Programa de TV</small><h4>«Panorama RH — Recursos Humanos TV»</h4></div>
+      <div class="medio rv rv-d2"><small>Acreditación</small><h4>International Coaching &amp; Speaker Federation · Leader/Master Speaker</h4></div>
+      <div class="medio rv rv-d3"><small>Gremio</small><h4>Directiva de la Asociación Costarricense de Gestores de RH (2015–2017)</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRASE ============ -->
+<section class="frase-grande">
+  <div class="wrap">
+    <blockquote id="fraseGrande">Ningún resultado vale la pérdida de humanidad.</blockquote>
+    <cite>Rebe Bustamante</cite>
+  </div>
+</section>
+
+<!-- ============ 6. CONTACTO ============ -->
+<section class="contacto sec" id="contacto">
+  <div class="wrap">
+    <div class="caja rv">
+      <div class="foto mascara"><img src="img/rebe-retrato.jpg" alt="Rebe Bustamante" loading="lazy"></div>
+      <div class="txt">
+        <div class="etiqueta">Conversemos</div>
+        <h2>El próximo desafío de su empresa <em class="oro-i">empieza con una conversación.</em></h2>
+        <ul class="preguntas">
+          <li>¿Dónde está hoy su organización?</li>
+          <li>¿Qué limita el desempeño de sus equipos?</li>
+          <li>¿Qué necesita cambiar para la siguiente etapa?</li>
+        </ul>
+        <div class="botones">
+          <a class="btn btn-navy magnet" id="btnWa" href="#" target="_blank" rel="noopener">Escribir por WhatsApp <span class="flecha">→</span></a>
+          <a class="btn btn-linea magnet" href="mailto:rbustamante@gticr.net">Enviar un correo</a>
+        </div>
+        <p class="datos">WhatsApp <a href="#" class="waTxt">8533-3516</a> · <a href="mailto:rbustamante@gticr.net">rbustamante@gticr.net</a> · San José, Costa Rica</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="arriba">
+      <div><img class="logo" src="img/logo-rebe.png" alt="Rebe B"><p class="lema">«Las personas no son recursos, son universos.»</p></div>
+      <div><h5>Navegar</h5><ul><li><a href="#libro">Bendito Desierto</a></li><li><a href="#lo-que-hace">Lo que hace</a></li><li><a href="#programas">Programas</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+      <div><h5>Su ecosistema</h5><ul><li><a href="https://gticr.net" target="_blank" rel="noopener">GTI · Gestionadora de Talento Integral</a></li><li><a href="https://psicowebcr.com" target="_blank" rel="noopener">Psicoweb Costa Rica</a></li></ul></div>
+      <div><h5>Redes</h5><div class="redes">
+        <a href="https://www.linkedin.com/in/rebe-bustamante-%F0%9F%87%A8%F0%9F%87%B7-a7463952" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+        <a href="https://instagram.com/rebe_bustamante_speaker" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/people/Rebe-Bustamante-Conferencista/61589663987737/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3C16.7 2.2 15.6 2 14.4 2 11.8 2 10 3.6 10 6.5v2H7.3v3.6H10V22h4v-9.9h2.9l.5-3.6z"/></svg></a>
+        <a href="#" class="waTxt" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"/></svg></a>
+      </div></div>
+    </div>
+    <div class="abajo"><span>© 2026 Rebe Bustamante · San José, Costa Rica</span><span>Sitio por UNONUEVECR</span></div>
+  </div>
+</footer>
+
+<a class="wa-flota waTxt" id="waFlota" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"/></svg></a>
+
+<script>
+/* ===== Ajustes (cambiar aquí al pasar a rebebcr.com) ===== */
+const AJUSTES = {
+  whatsapp: "50685333516",                       // GTI · 8533-3516 (confirmar con Gerson)
+  mensajeWa: "Hola Rebe, vengo de su sitio web y quisiera conversar sobre mi empresa.",
+  // Webhook de n8n para la lista de espera del libro. VACÍO = modo demo: no se envía nada a ningún lado.
+  listaEndpoint: ""
+};
+
+const $ = (s, c=document) => c.querySelector(s), $$ = (s, c=document) => [...c.querySelectorAll(s)];
+const reducido = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (location.search.includes("captura")){ document.documentElement.classList.add("captura"); document.body.classList.add("listo"); } // solo para capturas de revisión
+
+// precarga
+addEventListener("load", () => setTimeout(() => document.body.classList.add("listo"), reducido ? 0 : 900));
+setTimeout(() => document.body.classList.add("listo"), 3500);
+
+// WhatsApp
+const waUrl = `https://wa.me/${AJUSTES.whatsapp}?text=${encodeURIComponent(AJUSTES.mensajeWa)}`;
+$$("#btnWa, .waTxt").forEach(a => a.href = waUrl);
+
+// menú
+const panel = $("#panel");
+$("#abrirMenu").onclick = () => { panel.classList.add("abierto"); panel.setAttribute("aria-hidden","false"); };
+const cerrar = () => { panel.classList.remove("abierto"); panel.setAttribute("aria-hidden","true"); };
+$("#cerrarMenu").onclick = cerrar; $$("#panel a").forEach(a => a.onclick = cerrar);
+
+// nav sólida + progreso + parallax + wa flotante
+const nav = $("#nav"), prog = $(".progreso"), wa = $("#waFlota");
+const para = $$("[data-parallax]");
+let ticking = false;
+function alScroll(){
+  const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+  nav.classList.toggle("solida", y > 30);
+  prog.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
+  wa.classList.toggle("ver", y > innerHeight * .8);
+  if (!reducido && innerWidth >= 960) para.forEach(el => el.style.transform = `translateY(${y * parseFloat(el.dataset.parallax)}px)`);
+  ticking = false;
+}
+addEventListener("scroll", () => { if (!ticking){ requestAnimationFrame(alScroll); ticking = true; } }, {passive:true});
+alScroll();
+
+// apariciones
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.14, rootMargin:"0px 0px -6% 0px"});
+$$(".rv, .mascara, .verbo").forEach(el => io.observe(el));
+
+// contadores
+const ioN = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return; ioN.unobserve(e.target);
+  const el = e.target, fin = +el.dataset.n, t0 = performance.now(), dur = reducido ? 0 : 1800;
+  const paso = t => { const p = dur ? Math.min(1, (t - t0) / dur) : 1; el.textContent = Math.round(fin * (1 - Math.pow(1 - p, 4))); if (p < 1) requestAnimationFrame(paso); };
+  requestAnimationFrame(paso);
+}), {threshold:.6});
+$$(".contar").forEach(el => ioN.observe(el));
+
+// Ruta M.A.R.I.P.O.S.A.
+const RUTA = [
+  ["M","Mirar el desierto","Reconocer los dolores que se cargan."],
+  ["A","Aceptar la herida","No negar que duele."],
+  ["R","Reconocer la máscara","La versión que se construyó para sobrevivir."],
+  ["I","Identificar el mensaje que creyó","Qué mentira empezó a gobernar la identidad."],
+  ["P","Ponerle nombre al proceso","Resignificar la historia con más conciencia."],
+  ["O","Ordenar lo que debe soltar","Escribir lo que ya no puede seguir atrapado adentro."],
+  ["S","Soltar sin negar la historia","Honrar lo vivido sin que siga decidiendo."],
+  ["A","Alzar las alas","La identidad, el propósito y la responsabilidad que nacen después."]
+];
+const letras = $("#letras"), pasoEl = $("#paso");
+let auto, idx = 0;
+function mostrar(i){
+  idx = i; $$("#letras button").forEach((b,j) => b.classList.toggle("activa", j === i));
+  pasoEl.innerHTML = `<b>${RUTA[i][1]}</b>${RUTA[i][2]}`;
+}
+RUTA.forEach((r,i) => { const b = document.createElement("button"); b.type = "button"; b.textContent = r[0]; b.setAttribute("aria-label", r[1]);
+  b.onmouseenter = b.onclick = () => { clearInterval(auto); mostrar(i); }; letras.appendChild(b); });
+mostrar(0);
+if (!reducido) auto = setInterval(() => mostrar((idx + 1) % RUTA.length), 2600);
+
+// libro: inclinación con el mouse / el giroscopio
+const esc = $("#escenaLibro"), libro = $("#libro3d");
+if (!reducido){
+  esc.addEventListener("pointermove", e => { const r = esc.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    libro.style.transform = `rotateY(${x * 18}deg) rotateX(${-y * 12}deg)`; });
+  esc.addEventListener("pointerleave", () => libro.style.transform = "");
+}
+// polvo dorado
+const polvo = $("#polvo");
+if (!reducido) for (let i = 0; i < 26; i++){ const p = document.createElement("i");
+  p.style.left = Math.random()*100 + "%"; p.style.top = 40 + Math.random()*60 + "%";
+  p.style.animationDuration = 7 + Math.random()*9 + "s"; p.style.animationDelay = -Math.random()*12 + "s";
+  const s = 2 + Math.random()*4; p.style.width = p.style.height = s + "px"; polvo.appendChild(p); }
+
+// lista de espera
+const form = $("#formLista"), caja = $("#listaEspera");
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (form.sitio.value) return;                         // trampa para robots
+  const nombre = form.nombre.value.trim(), whats = form.whatsapp.value.replace(/[^\d+]/g,""), correo = form.correo.value.trim();
+  const ok = { nombre: nombre.length > 2, whatsapp: whats.replace(/\D/g,"").length >= 8, correo: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo) };
+  $$(".campo", form).forEach(c => c.classList.toggle("err", !ok[c.querySelector("input").name]));
+  if (!ok.nombre || !ok.whatsapp || !ok.correo) return;
+  const datos = { nombre, whatsapp: whats, correo, lista: "bendito-desierto", origen: location.hostname || "demo", fecha: new Date().toISOString() };
+  const btn = form.querySelector("button"); btn.disabled = true; btn.firstChild.textContent = "Enviando… ";
+  if (AJUSTES.listaEndpoint){
+    try { const r = await fetch(AJUSTES.listaEndpoint, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(datos) }); if (!r.ok) throw 0; }
+    catch { btn.disabled = false; btn.firstChild.textContent = "Intentar de nuevo "; return; }
+  } else {
+    $("#graciasTxt").textContent = "Demo: el formulario funciona, pero todavía no guarda los datos en ningún lado (falta conectarlo a n8n).";
+  }
+  caja.classList.add("enviada");
+});
+
+// logos (espacios para los que Rebe autorice)
+const pl = $("#pistaLogos");
+for (let k = 0; k < 2; k++) for (let i = 1; i <= 8; i++){ const d = document.createElement("div"); d.className = "logo-slot"; d.textContent = `Logo de empresa ${i}`; pl.appendChild(d); }
+
+// galería
+const FOTOS = [["escena-sala.jpg","Rebe Bustamante en conferencia ante un auditorio"],["escena-micro.jpg","Rebe Bustamante en una charla"],["publico-salon.jpg","Público en un evento corporativo"],["medios-tv.jpg","Rebe Bustamante en un set de televisión"],["escena-podio.jpg","Rebe Bustamante en el podio"],["medios-firma.jpg","Rebe Bustamante en una firma institucional"],["rebe-rosa.jpg","Retrato de Rebe Bustamante"],["publico-mesa.jpg","Equipos en una capacitación"],["medios-reconoce.jpg","Rebe Bustamante recibiendo un reconocimiento"]];
+const pg = $("#pistaGaleria");
+for (let k = 0; k < 2; k++) FOTOS.forEach(([f,a]) => { const fig = document.createElement("figure"); fig.innerHTML = `<img src="img/${f}" alt="${k ? "" : a}" loading="lazy">`; pg.appendChild(fig); });
+
+// frase palabra por palabra
+const fr = $("#fraseGrande");
+fr.innerHTML = fr.textContent.split(" ").map(w => `<span class="pal">${w}</span>`).join(" ");
+const pals = $$(".pal", fr);
+function iluminar(){ const r = fr.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (innerHeight * .55)));
+  pals.forEach((s,i) => s.classList.toggle("on", reducido || i < Math.ceil(p * pals.length))); }
+addEventListener("scroll", () => requestAnimationFrame(iluminar), {passive:true}); iluminar();
+
+// filtros de programas
+$$("#filtros button").forEach(b => b.onclick = () => {
+  $$("#filtros button").forEach(x => x.classList.toggle("activo", x === b));
+  $$(".prog").forEach(p => p.classList.toggle("fuera", b.dataset.f !== "todos" && p.dataset.t !== b.dataset.f));
+});
+
+// botones magnéticos (solo con mouse)
+if (matchMedia("(hover:hover) and (pointer:fine)").matches && !reducido)
+  $$(".magnet").forEach(m => { m.addEventListener("pointermove", e => { const r = m.getBoundingClientRect();
+    m.style.transform = `translate(${(e.clientX - r.left - r.width/2) * .18}px, ${(e.clientY - r.top - r.height/2) * .28}px)`; });
+    m.addEventListener("pointerleave", () => m.style.transform = ""); });
+</script>
+</body>
+</html>
