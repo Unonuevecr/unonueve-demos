@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reservas del lanzamiento — panel</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0D2240">
+<link rel="icon" href="../../img/logo-rebe.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--crema:#F7F5F1;--arena:#F2E7D5;--navy:#0D2240;--tinta:#2B3446;--gris:#5E6675;--oro:#C9A227;--oro-texto:#8A6F14;--linea:rgba(13,34,64,.12);
+  --verde:#1F7A4D;--verde-cl:#E3F2EA;--rojo:#A3341F;--rojo-cl:#FBEDEA;--ambar:#9A6B00;--ambar-cl:#FFF4DB;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--crema);color:var(--tinta);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;flex-wrap:wrap;padding-block:8px}
+header h1{font:700 22px var(--serif);letter-spacing:.01em}
+header small{color:#C7CFDB;font-size:12px;display:block}
+.tabs{display:flex;gap:6px}
+.tabs button{border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:999px;padding:7px 14px;font-weight:700;cursor:pointer;font-size:13px}
+.tabs button[aria-pressed="true"]{background:#EAB33A;color:var(--navy);border-color:#EAB33A}
+.login{max-width:380px;margin:12vh auto;background:#fff;border:1px solid var(--linea);border-radius:20px;padding:28px;display:grid;gap:12px}
+.login h2{font:700 30px var(--serif);color:var(--navy)}
+input,select,textarea{border:1.5px solid rgba(13,34,64,.2);border-radius:10px;padding:10px 12px;background:#fff;width:100%}
+.btn{border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;background:var(--navy);color:#fff;white-space:nowrap}
+.btn.sec{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.chico{padding:6px 11px;font-size:12.5px}
+.btn.wa{background:#fff;color:var(--verde);border:1.5px solid var(--verde)}
+.btn.wa.hoy{background:var(--verde);color:#fff}
+.btn.wa.hecho{background:var(--verde-cl);color:var(--verde);border-color:transparent}
+.btn.peligro{background:#fff;color:var(--rojo);border:1.5px solid var(--rojo)}
+.cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:18px 0}
+.cifra{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:12px 14px}
+.cifra small{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.cifra b{display:block;font:700 30px var(--serif);color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+.cifra.oro b{color:var(--oro-texto)}
+.barra{height:8px;border-radius:99px;background:rgba(13,34,64,.1);overflow:hidden;margin-top:8px}
+.barra i{display:block;height:100%;background:linear-gradient(90deg,var(--oro),#EAB33A)}
+.herr{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.herr input{flex:1 1 220px;width:auto}
+.herr select{width:auto}
+.lista{display:grid;gap:10px;margin-bottom:40px}
+.tarjeta{background:#fff;border:1px solid var(--linea);border-radius:16px;padding:14px 16px;display:grid;gap:10px}
+.fila1{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
+.nombre{font-weight:800;color:var(--navy);font-size:16px}
+.nombre small{font-weight:600;color:var(--gris);font-size:13px}
+.meta{font-size:13px;color:var(--gris);display:flex;flex-wrap:wrap;gap:4px 14px}
+.chip{display:inline-block;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800}
+.chip.Pendiente{background:var(--ambar-cl);color:var(--ambar)}
+.chip.Pagado{background:var(--verde-cl);color:var(--verde)}
+.chip.No{background:var(--rojo-cl);color:var(--rojo)}
+.controles{display:grid;gap:10px}
+@media(min-width:820px){.controles{grid-template-columns:180px 1fr}}
+.botones{display:flex;flex-wrap:wrap;gap:6px}
+.nota{min-height:40px;resize:vertical;font-size:14px}
+.pie{display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between;align-items:center}
+.vacio{text-align:center;color:var(--gris);padding:40px 0}
+/* puerta */
+.puerta .tarjeta{grid-template-columns:1fr;gap:8px}
+.entrada{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px dashed var(--linea);padding-top:8px}
+.entrada:first-of-type{border-top:0;padding-top:0}
+.marcar{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer;background:var(--navy);color:#fff;min-width:150px}
+.marcar.si{background:var(--verde)}
+.alerta{font-size:12px;font-weight:800;color:var(--rojo)}
+.modal{position:fixed;inset:0;background:rgba(6,15,34,.55);display:grid;place-items:center;padding:16px;z-index:50}
+.modal[hidden]{display:none}
+.modal .caja{background:#fff;border-radius:18px;padding:22px;max-width:460px;width:100%;display:grid;gap:10px;max-height:90vh;overflow:auto}
+.modal h3{font:700 26px var(--serif);color:var(--navy)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--navy);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;z-index:60;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.ver{opacity:1}
+</style>
+</head>
+<body>
+
+<div id="pantallaLogin" class="wrap">
+  <form class="login" id="formLogin">
+    <h2>Reservas del lanzamiento</h2>
+    <p style="color:var(--gris);font-size:14px">Bendito Desierto · 16 de enero de 2027. Escriba la clave del equipo.</p>
+    <input id="clave" type="password" placeholder="Clave" autocomplete="current-password">
+    <button class="btn" type="submit">Entrar</button>
+    <p id="loginErr" style="color:var(--rojo);font-size:14px" hidden>Clave incorrecta.</p>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header>
+    <div class="wrap">
+      <div><h1>Lanzamiento · Bendito Desierto</h1><small>Sábado 16 de enero · Casa Protocolo · cupo 50</small></div>
+      <div class="tabs">
+        <button data-vista="reservas" aria-pressed="true">Reservas y cobros</button>
+        <button data-vista="puerta" aria-pressed="false">Control de entrada</button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="cifras" id="cifras"></div>
+    <div class="herr">
+      <input id="buscar" placeholder="Buscar por nombre, invitado o teléfono…">
+      <select id="filtro">
+        <option value="">Todas</option><option>Pendiente</option><option>Pagado</option><option>No asiste</option>
+        <option value="dentro">Ya ingresaron</option><option value="fuera">Aún no ingresan</option>
+      </select>
+      <button class="btn sec" id="btnAgregar">+ Agregar reserva</button>
+      <button class="btn sec" id="btnCsv">Descargar Excel</button>
+      <button class="btn sec" id="btnRefrescar">↻</button>
+    </div>
+    <div class="lista" id="lista"></div>
+  </main>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <form class="caja" id="formAgregar">
+    <h3>Agregar reserva</h3>
+    <label>Nombre y apellidos<input id="aNombre" required></label>
+    <label>WhatsApp<input id="aTel" inputmode="tel" required></label>
+    <label>Correo (opcional)<input id="aCorreo" type="email"></label>
+    <label>Invitado (opcional)<input id="aInv"></label>
+    <label>Pago<select id="aPago"><option>Pendiente</option><option>Pagado</option></select></label>
+    <label>Nota<textarea id="aNota" class="nota"></textarea></label>
+    <p id="aErr" style="color:var(--rojo);font-size:14px" hidden></p>
+    <div style="display:flex;gap:8px;justify-content:flex-end"><button type="button" class="btn sec" id="aCancelar">Cancelar</button><button class="btn" type="submit">Guardar</button></div>
+  </form>
+</div>
+<div class="modal" id="modalBorrar" hidden>
+  <div class="caja">
+    <h3>¿Eliminar esta reserva?</h3>
+    <p id="bTxt"></p>
+    <p style="font-size:13px;color:var(--gris)">Libera sus cupos. En el Sheet queda marcada como «Eliminada».</p>
+    <div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn sec" id="bNo">Cancelar</button><button class="btn peligro" id="bSi">Sí, eliminar</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const EVENTO = { hora: '', endpoint: 'https://n8n-unonueve-n8n.i5i6e4.easypanel.host/webhook/rebe-lanzamiento', precio: 50, waze: 'https://waze.com/ul/hd1u0wbfmz' };
+const $ = (id) => document.getElementById(id);
+let CLAVE = '';
+try { CLAVE = localStorage.getItem('rebe-gala-clave') || ''; } catch (e) {}
+let FILAS = [], RES = {}, vista = 'reservas', borrarTel = null;
+
+function api(datos) {
+  return fetch(EVENTO.endpoint, { method: 'POST', body: new URLSearchParams({ data: JSON.stringify(Object.assign({ clave: CLAVE }, datos)) }) }).then(r => r.json());
+}
+function toast(t) { const e = $('toast'); e.textContent = t; e.classList.add('ver'); clearTimeout(toast.t); toast.t = setTimeout(() => e.classList.remove('ver'), 2200); }
+const fmtTel = (t) => t.slice(0, 4) + '-' + t.slice(4);
+const hora = (iso) => iso ? new Date(iso).toLocaleTimeString('es-CR', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Costa_Rica' }) : '';
+const dia = (iso) => iso ? new Date(iso).toLocaleDateString('es-CR', { day: 'numeric', month: 'short', timeZone: 'America/Costa_Rica' }) : '';
+const primerNombre = (n) => (n || '').trim().split(/\s+/)[0];
+
+function cargar(silencioso) {
+  return api({ accion: 'lista' }).then(r => {
+    if (!r.ok) { if (r.error === 'clave') salir(true); return; }
+    FILAS = r.filas; RES = r.resumen; pintar();
+    if (!silencioso) toast('Lista actualizada');
+  }).catch(() => toast('Sin conexión'));
+}
+function salir(err) {
+  try { localStorage.removeItem('rebe-gala-clave'); } catch (e) {}
+  CLAVE = ''; $('app').hidden = true; $('pantallaLogin').hidden = false; $('loginErr').hidden = !err;
+}
+$('formLogin').addEventListener('submit', (e) => {
+  e.preventDefault(); CLAVE = $('clave').value.trim();
+  api({ accion: 'lista' }).then(r => {
+    if (!r.ok) return salir(true);
+    try { localStorage.setItem('rebe-gala-clave', CLAVE); } catch (e) {}
+    $('pantallaLogin').hidden = true; $('app').hidden = false; FILAS = r.filas; RES = r.resumen; pintar();
+  }).catch(() => { $('loginErr').hidden = false; $('loginErr').textContent = 'Sin conexión.'; });
+});
+
+function cifras() {
+  const r = RES, p = Math.round(100 * r.personas / r.cupo);
+  const c = (t, v, cl, extra) => '<div class="cifra ' + (cl || '') + '"><small>' + t + '</small><b>' + v + '</b>' + (extra || '') + '</div>';
+  $('cifras').innerHTML = vista === 'puerta'
+    ? c('Esperados', r.personas) + c('Ya ingresaron', r.ingresaron, 'oro') + c('Faltan', Math.max(0, r.personas - r.ingresaron)) + c('Sin pagar', r.pendientes)
+    : c('Personas', r.personas + ' / ' + r.cupo, '', '<div class="barra"><i style="width:' + p + '%"></i></div>') + c('Quedan', r.quedan, 'oro') + c('Reservas', r.reservas) +
+      c('Pagadas', r.pagados + ' pers.') + c('Pendientes', r.pendientes + ' pers.') + c('Cobrado', '$' + r.cobrado) + c('Por cobrar', '$' + r.por_cobrar);
+}
+
+const HOY = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Costa_Rica' });
+const RECORD = { r15: '2027-01-01', r7: '2027-01-09', r1: '2027-01-15' };
+function mensaje(tipo, f) {
+  const n = primerNombre(f.nombre), total = '$' + (f.personas * EVENTO.precio);
+  const cuando = 'el sábado 16 de enero' + (EVENTO.hora ? ' a las ' + EVENTO.hora : '') + ' en Casa Protocolo, Barrio Amón';
+  const quien = f.invitado ? 'usted y ' + f.invitado : 'usted';
+  const T = {
+    confirmar: 'Hola, ' + n + '. Le saluda el equipo de Rebe Bustamante. ¡Gracias por reservar! Su lugar para la cena de gala y presentación de Bendito Desierto quedó apartado: ' + cuando + '.\n\nReserva #' + f.id + ' · ' + quien + ' · ' + f.personas + (f.personas === 1 ? ' persona' : ' personas') + ' · total ' + total + '.\n\nCómo llegar (Waze): ' + EVENTO.waze,
+    pago: 'Hola, ' + n + '. Le recordamos que su reserva #' + f.id + ' para el lanzamiento de Bendito Desierto queda confirmada con el pago de ' + total + ' (' + f.personas + (f.personas === 1 ? ' persona' : ' personas') + '). ¿Le enviamos los datos para el pago?',
+    r15: 'Hola, ' + n + '. ¡Faltan 15 días para la cena de gala y presentación de Bendito Desierto! Le esperamos ' + cuando + '. Waze: ' + EVENTO.waze,
+    r7: 'Hola, ' + n + '. Falta una semana para el lanzamiento de Bendito Desierto. Le esperamos ' + cuando + '. Waze: ' + EVENTO.waze,
+    r1: 'Hola, ' + n + '. ¡Mañana es el lanzamiento de Bendito Desierto! Le esperamos ' + cuando + '. Waze: ' + EVENTO.waze + '\n\nRebe le tiene preparado un regalo. ¡Nos vemos!'
+  };
+  return T[tipo];
+}
+const ETQ = { confirmar: 'Confirmar reserva', pago: 'Recordar pago', r15: 'Faltan 15 días', r7: 'Falta 1 semana', r1: 'Es mañana' };
+
+function filtradas() {
+  const q = $('buscar').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''), fl = $('filtro').value;
+  return FILAS.filter(f => {
+    const txt = (f.nombre + ' ' + f.invitado + ' ' + f.telefono).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    if (q && !txt.includes(q.replace(/-/g, ''))) return false;
+    if (fl === 'dentro') return f.ingreso || f.ingreso_inv;
+    if (fl === 'fuera') return f.pago !== 'No asiste' && (!f.ingreso || (f.invitado && !f.ingreso_inv));
+    if (fl) return f.pago === fl;
+    return true;
+  });
+}
+function el(tag, props, hijos) {
+  const e = document.createElement(tag); Object.assign(e, props || {});
+  (hijos || []).forEach(h => e.append(h)); return e;
+}
+
+function tarjetaReserva(f) {
+  const chipCl = f.pago === 'No asiste' ? 'No' : f.pago;
+  const t = el('div', { className: 'tarjeta' });
+  const nom = el('div', { className: 'nombre' }, ['#' + f.id + ' · ' + f.nombre]);
+  if (f.invitado) nom.append(el('small', {}, [' + ' + f.invitado]));
+  t.append(el('div', { className: 'fila1' }, [nom, el('span', { className: 'chip ' + chipCl }, [f.pago])]));
+  t.append(el('div', { className: 'meta' }, ['📲 ' + fmtTel(f.telefono), f.personas + (f.personas === 1 ? ' persona' : ' personas') + ' · $' + f.personas * EVENTO.precio,
+    f.correo ? '✉️ ' + f.correo : '', 'Reservó el ' + dia(f.fecha) + (f.origen !== 'Web' ? ' · ' + f.origen : '')].filter(Boolean).map(x => el('span', {}, [x]))));
+  const sel = el('select', {});
+  ['Pendiente', 'Pagado', 'No asiste'].forEach(o => sel.append(el('option', { value: o, textContent: o, selected: o === f.pago })));
+  sel.addEventListener('change', () => guardar(f, { pago: sel.value }, 'Pago: ' + sel.value));
+  const nota = el('textarea', { className: 'nota', placeholder: 'Notas de seguimiento (quién lo atiende, cómo pagó…)', value: f.nota });
+  nota.addEventListener('change', () => guardar(f, { nota: nota.value }, 'Nota guardada'));
+  t.append(el('div', { className: 'controles' }, [sel, nota]));
+  const bots = el('div', { className: 'botones' });
+  Object.keys(ETQ).forEach(k => {
+    if (k === 'pago' && f.pago !== 'Pendiente') return;
+    const hecho = f.envios && f.envios[k];
+    const b = el('a', { className: 'btn chico wa' + (hecho ? ' hecho' : (RECORD[k] === HOY ? ' hoy' : '')), target: '_blank', rel: 'noopener',
+      href: 'https://wa.me/506' + f.telefono + '?text=' + encodeURIComponent(mensaje(k, f)), textContent: (hecho ? '✓ ' : '') + ETQ[k] + (hecho ? ' (' + dia(hecho) + ')' : '') });
+    b.addEventListener('click', () => guardar(f, { envio: k }, 'Marcado como enviado', true));
+    bots.append(b);
+  });
+  const borrar = el('button', { className: 'btn chico peligro', textContent: 'Eliminar' });
+  borrar.addEventListener('click', () => { borrarTel = f.telefono; $('bTxt').textContent = '#' + f.id + ' · ' + f.nombre + (f.invitado ? ' + ' + f.invitado : ''); $('modalBorrar').hidden = false; });
+  t.append(el('div', { className: 'pie' }, [bots, borrar]));
+  return t;
+}
+
+function botonEntrada(f, campo, quien) {
+  const dentro = f[campo];
+  const b = el('button', { className: 'marcar' + (dentro ? ' si' : ''), textContent: dentro ? '✓ Ingresó ' + hora(dentro) : 'Marcar ingreso' });
+  b.addEventListener('click', () => {
+    const d = {}; d[campo] = dentro ? 'no' : 'si';
+    guardar(f, d, dentro ? quien + ': ingreso desmarcado' : quien + ' ingresó');
+  });
+  return b;
+}
+function tarjetaPuerta(f) {
+  const t = el('div', { className: 'tarjeta' });
+  const linea1 = el('div', { className: 'entrada' }, [el('div', {}, [el('div', { className: 'nombre' }, [f.nombre]),
+    el('div', { className: 'meta' }, [el('span', {}, ['#' + f.id + ' · ' + fmtTel(f.telefono)]), f.pago !== 'Pagado' ? el('span', { className: 'alerta' }, ['⚠ ' + f.pago]) : el('span', {}, ['Pagado'])])]),
+    botonEntrada(f, 'ingreso', primerNombre(f.nombre))]);
+  t.append(linea1);
+  if (f.invitado) t.append(el('div', { className: 'entrada' }, [el('div', {}, [el('div', { className: 'nombre' }, [f.invitado, el('small', {}, [' · invitado de ' + primerNombre(f.nombre)])])]), botonEntrada(f, 'ingreso_inv', primerNombre(f.invitado))]));
+  return t;
+}
+
+function pintar() {
+  cifras();
+  const fs = filtradas().filter(f => vista === 'reservas' || f.pago !== 'No asiste');
+  const L = $('lista'); L.className = 'lista' + (vista === 'puerta' ? ' puerta' : '');
+  L.replaceChildren(...(fs.length ? fs.map(vista === 'puerta' ? tarjetaPuerta : tarjetaReserva) : [el('p', { className: 'vacio', textContent: FILAS.length ? 'Nada coincide con la búsqueda.' : 'Todavía no hay reservas.' })]));
+  $('btnAgregar').hidden = vista === 'puerta'; $('btnCsv').hidden = vista === 'puerta';
+}
+
+function guardar(f, cambios, txt, silencioso) {
+  return api(Object.assign({ accion: 'actualizar', telefono: f.telefono }, cambios)).then(r => {
+    if (!r.ok) { toast(r.error === 'lleno' ? 'No hay cupo para reactivarla (quedan ' + r.quedan + ')' : 'No se pudo guardar'); return cargar(true); }
+    FILAS = r.filas; RES = r.resumen;
+    if (!silencioso) pintar(); else setTimeout(pintar, 400);
+    toast(txt);
+  }).catch(() => toast('Sin conexión: no se guardó'));
+}
+
+document.querySelectorAll('[data-vista]').forEach(b => b.addEventListener('click', () => {
+  vista = b.dataset.vista; document.querySelectorAll('[data-vista]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  if (vista === 'puerta') $('filtro').value = ''; pintar(); $('buscar').focus();
+}));
+$('buscar').addEventListener('input', pintar);
+$('filtro').addEventListener('change', pintar);
+$('btnRefrescar').addEventListener('click', () => cargar());
+setInterval(() => { if (!$('app').hidden && document.activeElement.tagName !== 'TEXTAREA') cargar(true); }, 30000);
+
+$('btnAgregar').addEventListener('click', () => { $('formAgregar').reset(); $('aErr').hidden = true; $('modal').hidden = false; $('aNombre').focus(); });
+$('aCancelar').addEventListener('click', () => { $('modal').hidden = true; });
+const ERR = { nombre: 'Falta nombre y apellido.', telefono: 'El WhatsApp debe tener 8 dígitos.', correo: 'Correo inválido.', invitado: 'Falta nombre y apellido del invitado (o déjelo vacío).',
+  telefono_repetido: 'Ese WhatsApp ya tiene una reserva.', nombre_repetido: 'Ya hay una reserva con ese nombre.', invitado_repetido: 'El invitado ya aparece en otra reserva.', lleno: 'No hay cupo suficiente.' };
+$('formAgregar').addEventListener('submit', (e) => {
+  e.preventDefault();
+  api({ accion: 'agregar', nombre: $('aNombre').value, telefono: $('aTel').value, correo: $('aCorreo').value, invitado: $('aInv').value, pago: $('aPago').value, nota: $('aNota').value })
+    .then(r => {
+      if (!r.ok) { $('aErr').textContent = ERR[r.error] || 'No se pudo guardar.'; $('aErr').hidden = false; return; }
+      FILAS = r.filas; RES = r.resumen; $('modal').hidden = true; pintar(); toast('Reserva agregada');
+    }).catch(() => { $('aErr').textContent = 'Sin conexión.'; $('aErr').hidden = false; });
+});
+$('bNo').addEventListener('click', () => { $('modalBorrar').hidden = true; });
+$('bSi').addEventListener('click', () => {
+  api({ accion: 'borrar', telefono: borrarTel }).then(r => { $('modalBorrar').hidden = true; if (r.ok) { FILAS = r.filas; RES = r.resumen; pintar(); toast('Reserva eliminada'); } else toast('No se pudo eliminar'); });
+});
+
+$('btnCsv').addEventListener('click', () => {
+  const cab = ['N°', 'Fecha', 'Nombre', 'WhatsApp', 'Correo', 'Invitado', 'Personas', 'Total USD', 'Pago', 'Ingreso', 'Ingreso invitado', 'Nota', 'Origen'];
+  const q = (v) => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+  const filas = FILAS.map(f => [f.id, dia(f.fecha), f.nombre, fmtTel(f.telefono), f.correo, f.invitado, f.personas, f.personas * EVENTO.precio, f.pago, hora(f.ingreso), hora(f.ingreso_inv), f.nota, f.origen]);
+  const csv = '﻿' + [cab].concat(filas).map(r => r.map(q).join(';')).join('\n');
+  const a = el('a', { href: URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' })), download: 'reservas-lanzamiento-bendito-desierto.csv' });
+  document.body.append(a); a.click(); a.remove();
+});
+
+if (CLAVE) {
+  api({ accion: 'lista' }).then(r => {
+    if (!r.ok) return salir(false);
+    $('pantallaLogin').hidden = true; $('app').hidden = false; FILAS = r.filas; RES = r.resumen; pintar();
+  }).catch(() => {});
+}
+</script>
+</body>
+</html>
